@@ -1,0 +1,27 @@
+.FooterOverall {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: white;
+    padding: .4rem .5rem;
+
+  }
+  
+.FooterOverall a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.FooterOverall a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.FooterCopyright {
+  padding-right: 1rem;
+}
+
+.FooterCopyright p {
+  margin-bottom: 0;
+}

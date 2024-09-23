@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Montserrat regular';
+    src: url('./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat italic';;
+    src: url('./assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto regular';
+    src: url('./assets/fonts/Roboto/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto italic';
+    src: url('./assets/fonts/Roboto/RobotoCondensed-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+.app {
+    display: flex;
+    background: #09131c;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('./components/images/e6772c88e4987be466f5b0e67b68d372.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.main {
+    flex: 1 0 auto;
+    padding: 2rem 1rem;
+    max-width: 100rem;
+    align-self: center;
+    background: linear-gradient(to left, #09131c00, #09131c85 25%, #09131c85 75%, #09131c00 100%);
+    text-shadow: 2px 2px #09131c;
+    height: 100%;
+}
+
+.burger {
+    height: 100%;
+}
+
+.footer {
+    flex-shrink: 0;
+    border-top: 1px solid #bed3e400;
+}
