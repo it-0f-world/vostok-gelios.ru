@@ -1,15 +1,16 @@
-import { pushRotate as Menu } from 'react-burger-menu';
+import { scaleDown as Menu } from 'react-burger-menu';
 import {NavLink} from "react-router-dom";
 import {BiMap} from 'react-icons/bi';
-import { GrGrid, GrCpu, GrMemory, GrServers, GrSelection, GrCatalog, GrCodeSandbox } from "react-icons/gr";
+import { GrMemory, GrServers, GrSelection, GrCatalog, GrCodeSandbox } from "react-icons/gr";
 import './burgerMenu.css';
+import LogoWhite from '../../assets/images/logo/Logo-white.svg';
 
 const BurgerMenu = (props) => {
     return (
         <Menu {...props}>
           <div className='bm-logo'>
             <NavLink to="/">
-              <GrCodeSandbox style={{ fontSize: '6rem' }}/>
+              <img src={LogoWhite} alt="Logo" style={{ width: '16rem' }} />
             </NavLink>
           </div>
           <div style={{

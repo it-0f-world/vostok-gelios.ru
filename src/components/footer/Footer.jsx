@@ -1,6 +1,4 @@
 import React from 'react';
-import { FaYoutube, FaTelegram } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
 import style from './Footer.module.css';
 
 class Footer extends React.Component {

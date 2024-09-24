@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div>
       <BurgerMenu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } className={style.burger} />
-      <div id="outer-container" className={style.app}>
+      <div id="outer-container"  className={style.app}>
       <main className={style.main} id="page-wrap">
         <Routes>
           <Route path="/" exact element={<Main />} />
