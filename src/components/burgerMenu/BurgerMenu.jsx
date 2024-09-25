@@ -2,8 +2,7 @@ import { scaleDown as Menu } from 'react-burger-menu';
 import {NavLink} from "react-router-dom";
 import {BiMap} from 'react-icons/bi';
 import { GrMemory, GrServers, GrSelection, GrCatalog } from "react-icons/gr";
-import { FiPhoneCall } from "react-icons/fi";
-import { RiHomeOfficeLine } from "react-icons/ri";
+import { FiPhoneCall, FiMail } from "react-icons/fi";
 import './burgerMenu.css';
 import LogoWhite from '../../assets/images/logo/Logo-white-pure.svg';
 
@@ -13,8 +12,8 @@ const BurgerMenu = (props) => {
           <div className='bm-logo'>
             <NavLink to="/">
               <img src={LogoWhite} alt="Logo" style={{ width: '16rem' }} />
-              <h4 style={{ textTransform: 'uppercase', fontWeight: 'normal', fontSize: '1.7rem' }}>Восток Гелиос</h4>
             </NavLink>
+              <h4 style={{ textTransform: 'uppercase', fontWeight: 'normal', fontSize: '1.7rem' }}>Восток Гелиос</h4>
           </div>
           <div>
             <NavLink to="/" className={({ isActive }) => isActive ? "bm-item-active" : ""}><GrMemory style={{ fontSize: '2.1rem', marginBottom: '-.4rem' }}/> Солнечные электростанции</NavLink>
@@ -24,8 +23,8 @@ const BurgerMenu = (props) => {
             <NavLink to="/contacts" className={({ isActive }) => isActive ? "bm-item-active" : ""}><BiMap style={{ paddingRight: '.25rem' }}/> Контакты</NavLink>
           </div>
           <div className='bm-address'>
-            <p><RiHomeOfficeLine style={{ fontSize: '1.6em'}} /> 143930, Московская обл., г. Балашиха, мкр. Салтыковка, ш. Разинское, д. 69, помещ. 171, офис 522А</p>
-            <p><FiPhoneCall style={{ fontSize: '1.5em'}} /> +7 (495) 000-00-00</p>
+            <a href="mailto:info@vostok-gelios.ru"><FiMail style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> info@vostok-gelios.ru</a>
+            <p style={{padding: '.5em 0'}}><FiPhoneCall style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> +7 (495) 000-00-00</p>
           </div>
         </Menu>
     );
