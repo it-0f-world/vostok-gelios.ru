@@ -42,6 +42,7 @@
   
   /* General sidebar styles */
   .bm-menu {
+    position: relative;
     width: 21rem;
     background: #1B1F3D;;
     padding: 2.5em 1em 0;
@@ -64,12 +65,14 @@
   /* Individual item */
   .bm-item {
     display: inline-block;
+    margin-top: .75rem;
+    margin-left: .16rem;
     color: #fff;
     text-align: left;
     text-decoration: none !important;
     transition: color 0.2s;
-    font-family: "Montserrat regular", sans-serif;
-    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
   }
   
   .bm-item a {
@@ -93,12 +96,24 @@
   }
   
   .bm-logo {
-    max-width: 8rem;
-
+    display: flex;
+    width: 100%;
   }
   
   .bm-icon {
     margin-bottom: .5rem;
+  }
+
+  .bm-address {
+    position: absolute; /* Position the address container */
+    bottom: 1rem; /* Stick it to the bottom with some padding */
+    width: calc(100% - 3.2em); /* Ensure it fits within the padding */
+  }
+
+  .bm-address p {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    text-align: justify;
   }
   
   @media (max-width: 1200px) {

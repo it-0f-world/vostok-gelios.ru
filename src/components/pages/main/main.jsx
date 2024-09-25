@@ -4,18 +4,11 @@ export default function Main() {
     return (
         <>
           <header className={style.header}>
-            <div className={style.headerContent}>
-              <div className={style.headerLeft}>
-                <h1>ПРОЕКТИРОВАНИЕ, МОНТАЖ И НАЛАДКА<br /> СОЛНЕЧНЫХ ЭЛЕКТРОСТАНЦИЙ<br /> ЛЮБОЙ СЛОЖНОСТИ</h1>
-                <p>Стабильность, надежность и качество на каждом этапе.</p>
-                <div className={style.buttonContainer}>
-                  <button className={style.buttonOrder}>ОПРОСНЫЙ ЛИСТ</button>
-                  <button className={style.buttonContacts}>КОНТАКТЫ</button>
-                </div>
-              </div>
-              <div className={style.headerRight}>
-                <h2>ПОЛНЫЙ ЦИКЛ ИНЖИНИРИНГОВЫХ РАБОТ</h2>
-              </div>
+            <h1>ПРОЕКТИРОВАНИЕ, МОНТАЖ И НАЛАДКА<br /> СОЛНЕЧНЫХ ЭЛЕКТРОСТАНЦИЙ<br /> ЛЮБОЙ СЛОЖНОСТИ</h1>
+            <p>Стабильность, надежность и качество на каждом этапе.</p>
+            <div className={style.buttonContainer}>
+              <button className={style.buttonOrder}>ОПРОСНЫЙ ЛИСТ</button>
+               <button className={style.buttonContacts}>КОНТАКТЫ</button>
             </div>
           </header>
           <div className={style.content}>

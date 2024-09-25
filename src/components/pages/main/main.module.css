@@ -9,22 +9,8 @@
     padding: 8rem 12rem;
 }
 
-.headerContent {
-    display: flex;
-    justify-content: space-between; /* Ensure they stay side by side with no gaps */
-    width: 100%; /* Make sure headerContent spans the full width */
-    gap: 2rem;
-}
-
-.headerLeft, .headerRight {
-    width: 50%; /* Set each side to take up half of the space */
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box; /* Ensure padding and borders are included in the width */
-}
-
-.headerLeft {
-    justify-content: center; /* Center the content vertically */
+.header p {
+    text-shadow: 2px 2px #09131c;
 }
 
 .buttonContainer {
@@ -43,7 +29,6 @@
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     text-transform: uppercase;
-    font-family: "Montserrat regular";
     font-weight: 500;
 }
 
@@ -64,7 +49,6 @@
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     text-transform: uppercase;
-    font-family: "Montserrat regular";
     font-weight: 600;
 }
 
@@ -75,25 +59,10 @@
     border: 1px solid white;
 }
 
-.headerRight {
-    gap: 2rem;
-    border: 1px solid #c0c0c0;
-    border-radius: .5rem;
-    align-items: center; /* Center the content horizontally */
-    background-color: #0800001c;
-}
-
 .header h1 {
     color: white;
     text-transform: uppercase;
-    font-family: "Montserrat regular";
-}
-
-.headerRight h2 {
-    text-align: center;
-    color: white;
-    text-transform: uppercase;;
-    font-family: "Montserrat regular";
+    font-size: 3em;
 }
 
 .header p {
