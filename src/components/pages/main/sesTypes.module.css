@@ -37,7 +37,6 @@
 .typesLeftContent h2 {
     position: relative;
     z-index: 1;
-    text-shadow: none;
     color: #1B1F3D;
     font-size: 3rem;
     padding: 5rem 0 8rem;
@@ -130,12 +129,11 @@
     border: 2px solid #ff8c00;
     background-color: #e4e4e4;
     color: #1B1F3D;
-    text-shadow: 1px 1px #09131c;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .buttonTypesDesc:hover {
