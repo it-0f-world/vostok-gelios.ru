@@ -59,7 +59,7 @@ export default function Types() {
                 <div className={style.b04}>
                     <div>
                         <p>04</p>
-                        <h2><span style={{ color: '#ff8c00' }}>С</span>олнечная <span style={{ color: '#ff8c00' }}>Э</span>лектро <br/><span style={{ color: '#ff8c00' }}>С</span>танция на земле</h2>
+                        <h2><span style={{ color: '#ffd700' }}>С</span>олнечная <span style={{ color: '#ffd700' }}>Э</span>лектро <br/><span style={{ color: '#ffd700' }}>С</span>танция на земле</h2>
                         <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '20%'}}></div>
                         <ul>
                             <li>простота конструкции</li>
