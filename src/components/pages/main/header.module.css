@@ -42,7 +42,6 @@
     border: 2px solid #C0C0C0;
     background-color: #1B1F3D;
     color: white;
-    text-shadow: 1px 1px #09131c;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -55,6 +54,7 @@
     color: #1B1F3D;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: 2px solid #1B1F3D;
+    font-weight: 700;
 }
 
 .buttonContacts {
