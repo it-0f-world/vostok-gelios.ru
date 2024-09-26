@@ -1,0 +1,146 @@
+.types {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 6rem;
+    gap: 1rem;
+}
+
+.typesLeft {
+    width: 40%;
+    display: flex;
+}
+
+.typesRight {
+    width: 60%;
+    display: flex;
+}
+
+.orangeSquare {
+    background-color: #ff8c00;
+    width: 53px;
+    height: 53px;
+    margin-right: 1rem;
+}
+
+.blueTitle {
+    background-color: #1B1F3D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.typesLeftContent h2 {
+    position: relative;
+    z-index: 1;
+    text-shadow: none;
+    color: #1B1F3D;
+    font-size: 3rem;
+    padding: 5rem 0 8rem;
+    width: 260%;
+    text-shadow: 1px 1px #e4e4e4;
+}
+
+.typesLeftContent p {
+    text-align: right;
+    padding: 1rem .5em 4rem 0;
+}
+
+.typesLeftL {
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.typesLeftR {
+    width: 64%;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.typesLeftR {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-image: url(./img/typesLeft.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.typesRight {
+    flex-direction: column;
+}
+
+.typesRightT {
+    display: flex;
+    justify-content: space-between;
+}
+
+.typresRightT1, .typresRightT2, .typresRightT3 {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    justify-content: space-between;
+}
+
+.typresRightT1 h2, .typresRightT2 h2, .typresRightT3 h2 {
+    padding: 0 0 1rem;
+}
+
+.typesRightTn {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 0;
+}
+
+.typresRightTn1, .typresRightTn2, .typresRightTn3 {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    justify-content: space-between;
+}
+
+.typesRightB h2 {
+    padding: 1.6rem 0 0;
+    font-size: 2rem;
+}
+
+.typesRightTn1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 2rem;
+}
+
+.typesRightB p {
+    font-family: "Roboto";
+}
+
+.buttonTypesDesc {
+    display: inline-block;
+    width: auto;
+    align-self: flex-start;
+    padding: .8rem 1.6rem;
+    border: 2px solid #ff8c00;
+    background-color: #e4e4e4;
+    color: #1B1F3D;
+    text-shadow: 1px 1px #09131c;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.buttonTypesDesc:hover {
+    background-color: white;
+    color: #0d3d91;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ffd700;
+}
