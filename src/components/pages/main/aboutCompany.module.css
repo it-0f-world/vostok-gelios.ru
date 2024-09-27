@@ -1,0 +1,125 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    padding: 0 6rem;
+    margin: 0 0 -4px;
+    z-index: 1;
+}
+
+.topContent {
+    display: flex;
+}
+
+.topContentL, .topContentR {
+    width: 50%;
+}
+
+.topContentR {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem;
+}
+
+.topContentR p {
+    text-align: justify;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.orangeSquare {
+    background-color: #ff8c00;
+    width: 53px;
+    height: 53px;
+    margin-right: 1rem;
+}
+
+.blueTitle {
+    background-color: #1B1F3D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.top h2 {
+    color: #1B1F3D;
+    font-size: 2.1rem;
+    padding: 3rem 0;
+    text-shadow: 1px 1px #e4e4e4;
+}
+
+.bottom {
+    display: flex;
+    min-height: 32rem;
+}
+
+.bottom h2 {
+    color: white;
+    text-shadow: 2px 2px #09131c;
+    font-size: 2rem;
+    padding: 0 0 1rem;
+}
+
+.squareForIcon {
+    display: inline-flex;
+    width: fit-content; /* Ensures the width only wraps the content */
+    height: fit-content; /* Also make height fit the content */
+    color: white;
+    font-size: 6rem;
+    padding: 2rem;
+    background-color: #ff8c00;
+    align-items: center;
+    justify-content: center;
+}
+
+.b01, .b02, .b03, .b04 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 2rem 2rem 4rem;
+    justify-content: space-between;
+}
+
+.b01 {
+    background-image: 
+    linear-gradient(#1b1f3da7, #1b1f3da7),
+    url(./img/Design.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.b02 {
+    background-image: 
+    linear-gradient(#1b1f3da7, #1b1f3da7),
+    url(./img/procurement.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.b03 {
+    background-image: 
+    linear-gradient(#1b1f3da7, #1b1f3da7),
+    url(./img/assembling.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.b04 {
+    background-image: 
+    linear-gradient(#1b1f3da7, #1b1f3da7),
+    url(./img/service.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

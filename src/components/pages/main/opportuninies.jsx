@@ -1,7 +1,7 @@
 import style from "./opportuninies.module.css";
 import { BsFileEarmarkBarGraph } from "react-icons/bs";
 
-export default function opportuninies() {
+export default function Opportuninies() {
     return (
         <div className={style.container}>
             <div className={style.c1}>
