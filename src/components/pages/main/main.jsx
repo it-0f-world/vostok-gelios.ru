@@ -3,6 +3,7 @@ import Types from "./sesTypes.jsx";
 import InstallVar from "./installationVariants.jsx";
 import Opportuninies from "./opportuninies.jsx";
 import AboutCompany from "./aboutCompany.jsx";
+import Partners from './partners.jsx';
 export default function Main() {
     return (
         <>
@@ -11,6 +12,7 @@ export default function Main() {
           <InstallVar />
           <Opportuninies />
           <AboutCompany />
+          <Partners />
         </>
     )
 }
