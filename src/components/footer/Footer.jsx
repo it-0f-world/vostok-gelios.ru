@@ -9,7 +9,7 @@ class Footer extends React.Component {
     return (
       <div className={style.FooterOverall}>
         <div className={style.FooterCopyright}>
-          <p>© Зарегестрировано 2023-{this.state.curYear} ООО «Восток Гелиос» | Все права защищены | Ресурс заряжен на <a href="https://reactjs.org/" rel="noopener">React-JSX</a> | Программирование от <a href="https://it.0f.world" rel="noopener">it.0f.world</a></p>
+          <p>© Зарегестрировано 2023-{this.state.curYear} ООО «Восток Гелиос» | Все права защищены | Ресурс заряжен на <a href="https://react.dev" rel="noreferrer" target="_blank">React-JSX</a> | Программирование от <a href="https://it.0f.world" rel="noreferrer" target="_blank">it.0f.world</a></p>
         </div>
       </div>
     )
