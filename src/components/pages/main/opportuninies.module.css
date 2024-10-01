@@ -17,6 +17,11 @@
     padding-bottom: 2rem;
 }
 
+.c1topDescription {
+    color:#1B1F3D;
+    font-size: 1.2rem;
+}
+
 .c1, .c2 {
     overflow: visible;
 }
@@ -29,7 +34,7 @@
     width: 200%;
 }
 
-.c1top p {
+.c1topPeriod {
     color: #ff8c00;
     font-size: 4.4rem;
     font-weight: 700;
@@ -83,14 +88,21 @@
 
 .c3content {
     padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
-.c3top {
+.c3Icon {
+    display: flex;
+    gap: 1rem;
     font-size: 6rem;
+    justify-content: space-around;
 }
 
 .c3 h3 {
-    font-size: 2.3rem;
+    font-size: 1.6rem;
     padding: 1rem 0;
 }
 

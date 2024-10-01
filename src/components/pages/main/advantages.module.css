@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 6rem 1rem;
+    gap: 1rem;
+}
+
+.orangeSquare {
+    background-color: #ff8c00;
+    width: 53px;
+    height: 53px;
+    margin-right: 1rem;
+}
+
+.blueTitle {
+    background-color: #1B1F3D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.content {
+    display: flex;
+    gap: 2%;
+    justify-content: space-between;
+    background-image: linear-gradient(#1b1f3dda, #1b1f3dda), url(./img/advantages-BG1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 2rem;
+    background-color: #1B1F3D;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 1rem;
+    width: 48%;
+    
+}
+
+.colContent {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 2rem 0 0;
+    
+}
+
+.colContent h4 {
+    font-size: 1.6rem;
+    text-shadow: 2px 2px #09131c;
+}
+
+.col p {
+    text-align: justify;
+    text-shadow: 2px 2px #09131c;
+}
+
+.container h3 {
+    font-size: 2.1rem;
+    color: #1B1F3D;
+}

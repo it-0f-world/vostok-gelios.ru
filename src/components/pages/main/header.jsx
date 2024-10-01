@@ -1,15 +1,41 @@
 import style from "./header.module.css";
+import Logo from "../../../assets/images/logo/Logo-white-pure.svg";
+import { LuFactory } from "react-icons/lu";
+import { BiBuildingHouse } from "react-icons/bi";
+import { FiPhoneCall, FiMail, FiPhoneForwarded, FiList } from "react-icons/fi";
+import { HiOutlineOfficeBuilding } from "react-icons/hi";
 
 export default function Header() {
     return (
         <header className={style.header}>
-            <h1>ПРОЕКТИРОВАНИЕ, МОНТАЖ И НАЛАДКА<br /> СОЛНЕЧНЫХ ЭЛЕКТРОСТАНЦИЙ<br /> ЛЮБОЙ СЛОЖНОСТИ</h1>
-            <p style={{ padding: '1em 0' }}>Стабильность, надежность и качество на каждом этапе.</p>
-            <div className={style.buttonContainer}>
-                <button className={style.buttonOrder}>ОПРОСНЫЙ ЛИСТ</button>
-                <button className={style.buttonContacts}>КОНТАКТЫ</button>
+            <div className={style.сap}>
+                <div className={style.logo}>
+                    <img src={Logo} className={style.logoImg} alt="logo"/>
+                    <h2>ВОСТОК ГЕЛИОС</h2>
+                </div>
+                <div className={style.сapContacts}>
+                    <div>
+                        <a className={style.сapContactsItem} href="mailto:info@vostok-gelios.ru"><FiMail style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> info@vostok-gelios.ru</a>
+                    </div>
+                    <div>
+                        <a className={style.сapContactsItem} href="callto:+7495000000"><FiPhoneCall style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> +7 (495) 000-00-00</a>
+                    </div>
+                    <div>
+                        <p className={style.сapContactsItem}><HiOutlineOfficeBuilding style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> Московская область, г. Балашиха</p>
+                    </div>
+                </div>
+                <div className={style.variants}>
+                    <div className={style.varBiz}><a><LuFactory className={style.buttonIcon} /> ДЛЯ БИЗНЕСА</a></div>
+                    <div className={style.divider}></div>
+                    <div className={style.varHouse}><a><BiBuildingHouse className={style.buttonIcon} /> ДЛЯ ДОМОВЛАДЕНИЯ</a></div>
+                </div>
             </div>
-            <p className={style.headerDescription}>Солнечные панели представляют собой эффективное и экологичное решение для снижения затрат на электроэнергию и снижения выбросов углекислого газа. Солнечная энергия является надежным источником возобновляемой энергии как для жилых, так и для промышленных целей. При минимальном техническом обслуживании и длительном сроке службы солнечные панели помогают вам добиться энергетической независимости, защитить от роста цен на электроэнергию и сделать планету более зеленой. Выбирайте солнечную энергию для получения более чистой, разумной и экономичной энергии сегодня и завтра.</p>
+            <h1>Солнечная энергия для Вашего бизнеса и дома. <br />Ваш путь к экономии и независимости.</h1>
+            <div className={style.buttonContainer}>
+                <button className={style.buttonOrder}>< FiPhoneForwarded style={{ fontSize: '1.5em', marginBottom: '-.2em', paddingRight: '.5rem'}} /> ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</button>
+                <button className={style.buttonContacts}>< FiList style={{ fontSize: '1.5em', marginBottom: '-.2em', paddingRight: '.5rem'}} /> ЗАПОЛНИТЬ ОПРОСНЫЙ ЛИСТ</button>
+            </div>
+            <p className={style.headerDescription}>Эффективные решения по установке солнечных станций для бизнеса и частных домов. Выбирайте свое будущее с солнечной энергией.</p>
         </header>
     )
 } 
