@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem 6rem 1rem;
+    padding: 1rem 6rem;
     gap: 1rem;
 }
 
@@ -67,4 +67,14 @@
 .container h3 {
     font-size: 2.1rem;
     color: #1B1F3D;
+}
+
+.icon {
+    font-size: 3.1rem;
+    padding: 0 1rem 0 0;
+}
+
+.header {
+    display: flex;
+    align-items: end;
 }

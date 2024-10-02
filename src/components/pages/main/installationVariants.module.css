@@ -1,7 +1,6 @@
 .container {
     display: flex;
     flex-direction: column;
-    padding: 0 0 2rem;
 }
 
 .top {
@@ -32,7 +31,7 @@
 .top h2 {
     color: #1B1F3D;
     font-size: 3rem;
-    padding: 3rem 0;
+    padding: 2rem 0;
     text-shadow: 1px 1px #e4e4e4;
 }
 
@@ -94,35 +93,29 @@
 
 .b01 {
     background-image: 
-    linear-gradient(#1b1f3da7, #1b1f3da7),
+    linear-gradient(#1b1f3dbe, #1b1f3dbe),
     url(./img/flatRoofInstall.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .b02 {
     background-image: 
-    linear-gradient(#1b1f3da7, #1b1f3da7),
+    linear-gradient(#1b1f3dbe, #1b1f3dbe),
     url(./img/parkingInstallation.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .b03 {
     background-image: 
-    linear-gradient(#1b1f3da7, #1b1f3da7),
+    linear-gradient(#1b1f3dbe, #1b1f3dbe),
     url(./img/pitchedRoof.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .b04 {
     background-image: 
-    linear-gradient(#1b1f3da7, #1b1f3da7),
+    linear-gradient(#1b1f3dbe, #1b1f3dbe),
     url(./img/earthInstallation.webp);
+}
+
+.b01, .b02, .b03, .b04 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

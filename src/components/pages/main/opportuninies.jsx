@@ -29,11 +29,11 @@ export default function Opportuninies() {
             <div className={style.c3}>
                 <div className={style.c3content}>
                     <div>
-                        <div className={style.c3Icon}><FontAwesomeIcon icon={faSun} /><FontAwesomeIcon icon={faSolarPanel} /><FontAwesomeIcon icon={faPlugCircleBolt} /></div>
+                        <div className={style.c3Icon} ><FontAwesomeIcon icon={faSun} /><FontAwesomeIcon icon={faSolarPanel} /><FontAwesomeIcon icon={faPlugCircleBolt} /></div>
                         <h3>Повысите качество напряжения для своих нужд при минимальном обслуживании.</h3>
                     </div>
                     <div>
-                        <div className={style.c3Icon} style={{float: 'right'}}><FontAwesomeIcon icon={faTree} /></div>
+                        <div className={style.c3Icon} style={{float: 'right', color: 'green' }}><FontAwesomeIcon icon={faTree} /></div>
                         <h3>Статус инновационной экологичной компании или прогрессивного хозяина.</h3>
                     </div>
                 </div>
