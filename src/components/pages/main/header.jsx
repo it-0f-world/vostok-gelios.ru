@@ -27,7 +27,7 @@ export default function Header() {
                 <div className={style.variants}>
                     <div className={style.varBiz}><a><LuFactory className={style.buttonIcon} /> ДЛЯ БИЗНЕСА</a></div>
                     <div className={style.divider}></div>
-                    <div className={style.varHouse}><a><BiBuildingHouse className={style.buttonIcon} /> ДЛЯ ДОМОВЛАДЕНИЯ</a></div>
+                    <div className={style.varHouse}><a><BiBuildingHouse className={style.buttonIcon} /> ДЛЯ ЧАСТНОГО ДОМА</a></div>
                 </div>
             </div>
             <h1>Солнечная энергия для Вашего бизнеса и дома. <br />Ваш путь к экономии и независимости.</h1>

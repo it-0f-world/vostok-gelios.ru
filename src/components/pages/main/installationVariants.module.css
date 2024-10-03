@@ -37,7 +37,7 @@
 
 .bottom {
     display: flex;
-    min-height: 44rem;
+    min-height: 36rem;
 }
 
 .b01, .b02, .b03, .b04 {
@@ -87,31 +87,31 @@
 
 .bottom ul {
     color: white;
-    text-shadow: 1px 1px #09131c;
+    text-shadow: 2px 2px 3px #09131c;
     padding: .5rem 0 0 1.6rem;
 }
 
 .b01 {
     background-image: 
-    linear-gradient(#1b1f3dbe, #1b1f3dbe),
+    linear-gradient(#1b1f3d8e, #1b1f3d8e),
     url(./img/flatRoofInstall.webp);
 }
 
 .b02 {
     background-image: 
-    linear-gradient(#1b1f3dbe, #1b1f3dbe),
+    linear-gradient(#1b1f3d8e, #1b1f3d8e),
     url(./img/parkingInstallation.webp);
 }
 
 .b03 {
     background-image: 
-    linear-gradient(#1b1f3dbe, #1b1f3dbe),
+    linear-gradient(#1b1f3d8e, #1b1f3d8e),
     url(./img/pitchedRoof.webp);
 }
 
 .b04 {
     background-image: 
-    linear-gradient(#1b1f3dbe, #1b1f3dbe),
+    linear-gradient(#1b1f3d8e, #1b1f3d8e),
     url(./img/earthInstallation.webp);
 }
 

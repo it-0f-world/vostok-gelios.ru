@@ -5,14 +5,23 @@ import Vladimir from "../../../assets/images/portfolio/vladimir/gallery1.webp";
 import Voronezh from "../../../assets/images/portfolio/voronezh_airport/gallery.webp";
 import Ivanovo from "../../../assets/images/portfolio/ivanovo/gallery.webp";
 import Lukoil from "../../../assets/images/portfolio/lukoil/gallery.webp";
+import Sber from "../../../assets/images/portfolio/sbercity/gallery.webp";
+import Hohland from "../../../assets/images/portfolio/hohland/gallery.webp";
+import Moscow from "../../../assets/images/portfolio/moscow_household/gallery.webp";
+import Rosinki from "../../../assets/images/portfolio/rosinki/gallery.webp";
 
 
 export default function Portfolio() {
       const WithStyles = ({ description, headline, image }) => (
         <div className={style.imageContainer}>
           <img src={image} alt={headline} className={style.image} />
-          <h3>{headline}</h3>
-          <p>{description}</p>
+          <div className={style.description}>
+            <div>
+                <h3>{headline}</h3>
+                <p>{description}</p>
+            </div>
+            <button className={style.buttonDesc}>детализация</button>
+          </div>
         </div>
       );
       const responsive = {
@@ -37,7 +46,7 @@ export default function Portfolio() {
             <div className={style.top}>
                 <div style={{ display: 'flex' }}>
                     <div className={style.orangeSquare}></div>
-                    <div className={style.blueTitle}><h6>Портфолио</h6></div>
+                    <div className={style.blueTitle}><h6>Проекты</h6></div>
                 </div>
                 <div className={style.header}>
                     <div className={style.title}>
@@ -48,7 +57,7 @@ export default function Portfolio() {
                     </div>
                     
                     <div className={style.buttonContainer}>
-                        <button className={style.button}>СТРАНИЦА ПОРТФОЛИО ПРОЕКТОВ</button>
+                        <button className={style.button}>ПОДРОБНЕЕ О РЕАЛИЗОВАННЫХ ПРОЕКТАХ</button>
                     </div>
                 </div>
                 <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '25%'}}></div>
@@ -57,7 +66,7 @@ export default function Portfolio() {
                 additionalTransfrom={0}
                 arrows
                 autoPlay
-                autoPlaySpeed={2300}
+                autoPlaySpeed={2400}
                 centerMode={false}
                 className=""
                 containerClass="container-with-dots"
@@ -84,24 +93,44 @@ export default function Portfolio() {
                 swipeable
                 >
                 <WithStyles
-                    description="44КВт на плоской кровле"
-                    headline="г. Владимир"
+                    description="23 кВт. Расчётная выработка 19,5 МВт·ч/год"
+                    headline="г. Владимир, частный дом"
                     image={Vladimir}
                 />
                 <WithStyles
-                    description="96КВт на плоской кровле"
-                    headline="г. Воронеж, Аэропорт"
+                    description="102,4 кВт. Расчётная выработка 102 МВт·ч/год"
+                    headline="г. Воронеж, аэропорт"
                     image={Voronezh}
                 />
                 <WithStyles
-                    description="153КВт на земле"
-                    headline="г. Иваново"
+                    description="155,52 кВт. Расчётная выработка 127,5 МВт·ч/год"
+                    headline="г. Иваново, кондитерская фабрика"
                     image={Ivanovo}
                 />
                 <WithStyles
-                    description="32Квт на плоской кровле в городской застройке"
+                    description="59,3 кВт. Расчётная выработка 47 МВт·ч/год"
                     headline="г. Москва, офис Лукоил"
                     image={Lukoil}
+                />
+                <WithStyles
+                    description="115,2 кВт. Фасадные и крышные СЭС"
+                    headline="г. Москва, ЖК Сберсити"
+                    image={Sber}
+                />
+                <WithStyles
+                    description="117,5 кВт. Двухсторонние фотоэлектрические модули"
+                    headline="г. Москва, производство Хохланд"
+                    image={Hohland}
+                />
+                <WithStyles
+                    description="25,9 кВт. Расчётная выработка 18,1 МВт·ч/год"
+                    headline="г. Красногорск, частный дом"
+                    image={Moscow}
+                />
+                <WithStyles
+                    description="13,4 кВт. Расчётная выработка 11,4 МВт·ч/год"
+                    headline="г. Москва, частный дом"
+                    image={Rosinki}
                 />
             </Carousel>
         </div>

@@ -90,4 +90,37 @@
     position: relative;
     
 }
-  
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.buttonDesc {
+    display: inline-block;
+    width: auto;
+    align-self: flex-start;
+    padding: .6rem 1.2rem;
+    border: 2px solid #ff8c00;
+    background-color: rgba(255, 140, 0, 0);
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.buttonDesc:hover {
+    background-color: white;
+    border: 2px solid #ff8c00;
+    color: #ff8c00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: .5px .5px #ffffff;
+    font-weight: 700;
+}
+
+.react-multiple-carousel__arrow {
+    border-radius: 0px;
+}

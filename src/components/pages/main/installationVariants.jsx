@@ -31,7 +31,7 @@ export default function Types() {
                 <div className={style.b02}>
                     <div>
                         <p>02</p>
-                        <h2>Крышная СЭС <br/>для парковок</h2>
+                        <h2>Фасадная СЭС</h2>
                         <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '20%'}}></div>
                         <ul>
                             <li>современный и лаконичный дизайн</li>
