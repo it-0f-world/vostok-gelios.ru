@@ -1,43 +1,35 @@
-import style from './contactForm.module.css'
-import { useForm } from 'react-hook-form'
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
-import API_KEY from '../../../assets/apiKey'
+import style from './contactForm.module.css';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function ContactForm() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const router = useNavigate();
-    
-    async function onSubmitForm(values) {
-        
-        let config = {
-            method: 'post',
-            url: `${API_KEY.url}/api/contactapi`,
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            data: values,
-        };
+    const navigate = useNavigate();  // Correctly named navigate
 
+    // Updated onSubmitForm function
+    async function onSubmitForm(values) {
         try {
-            const response = await axios(config);
-            console.log(response);
-            if (response.status == 200) {
-                reset();
-                router.push('/');
+            const response = await axios.post('http://localhost:5000/api/contactapi', values); // API call to backend server
+            if (response.status === 200) {
+                reset();  // Reset form after successful submission
+                navigate('/');  // Use navigate instead of router.push
             }
-        } catch (err) { console.log(err); }
+        } catch (err) {
+            console.log(err);  // Log any errors
+        }
     }
+
     return (
         <div className={style.container}>
-                <h2>Отправить заявку:</h2>
-                <form onSubmit={handleSubmit(onSubmitForm)}>
+            <h2>Отправить заявку:</h2>
+            <form onSubmit={handleSubmit(onSubmitForm)}>
                 <div className={style.Row}>
                     <input
                         type="text"
                         name="name"
-                        {...register("name", { required: { value: true, message: 'You must enter you name' } })}
-                        placeholder="Name"
+                        {...register("name", { required: { value: true, message: 'Вам нужно ввести ваше имя' } })}
+                        placeholder="Как к Вам обращаться?"
                     />
                     <span>{errors?.name?.message}</span>
                 </div>
@@ -46,26 +38,26 @@ export default function ContactForm() {
                         type="text"
                         name="email"
                         {...register("email", {
-                            required: { value: false, message: 'You must enter you email address' },
-                            minLength: { value: 7, message: 'This is not long enough to be an email' },
-                            maxLength: { value: 120, message: 'This is too long' },
-                            pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: 'This needs to be a valid email address' }
+                            required: { value: false, message: 'Вам нужно ввести ваш e-mail адрес' },
+                            minLength: { value: 7, message: 'Не меньше 7 символов' },
+                            maxLength: { value: 120, message: 'Слишком много символов' },
+                            pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: 'Введите почту в правильном формате' }
                         })}
-                        placeholder="E-mail"
+                        placeholder="Электронная почта"
                     />
                     <span>{errors?.email?.message}</span>
                 </div>
                 <div className={style.Row}>
-                    <input                        
+                    <input
                         type="phone"
                         name="phone"
                         {...register("phone", {
-                            required: { value: true, message: "You need to enter your phone" },
-                            minLength: { value: 4, message: "Your phone must be longer than this" },
-                            maxLength: { value: 12, message: 'This is too long' },
-                            pattern: { value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g, message: "Wrong format" },
+                            required: { value: true, message: "Вам нужно ввести ваш номер телефона" },
+                            minLength: { value: 4, message: "Телефон должен быть длинее 4 символов" },
+                            maxLength: { value: 12, message: 'Слишком много цифр' },
+                            pattern: { value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g, message: "Неверный формат" },
                         })}
-                        placeholder="Phone"
+                        placeholder="Телефон"
                     />
                     <span>{errors?.phone?.message}</span>
                 </div>
@@ -75,27 +67,27 @@ export default function ContactForm() {
                         name="message"
                         rows="5"
                         {...register("message", {
-                            required: { value: false, message: "You need to enter your message" },
-                            maxLength: { value: 1618, message: "Your message can't be more than 1618 characters" },
-                            minLength: { value: 4, message: "Your message must be longer than this" }
+                            required: { value: false, message: "Вам нужно ввести здесь ваше сообщение" },
+                            maxLength: { value: 1618, message: "Сообщение не может быть больше 1618 символов" },
+                            minLength: { value: 4, message: "Сообщение должно быть длиннее 4 символов" }
                         })}
-                        placeholder="Message"></textarea>
+                        placeholder="Сообщение"></textarea>
                     <span>{errors?.message?.message}</span>
                 </div>
                 <div className={style.RowButtonChoose}>
-                    <label htmlFor="picture">Select a file</label>
+                    <label htmlFor="picture">Выберите файл изображений:</label>
                     <input
                         type="file"
                         id="picture"
                         name="picture"
                         multiple
-                        {...register("picture", { required: false })}                              
+                        {...register("picture", { required: false })}
                     />
                 </div>
                 <div className={style.RowButtonSend}>
-                    <button className="primary">Send request</button>
+                    <button className="primary">Отправить Заявку</button>
                 </div>
             </form>
         </div>
-    )
+    );
 }
