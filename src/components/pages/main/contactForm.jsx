@@ -5,15 +5,31 @@ import { useNavigate } from 'react-router-dom';
 
 export default function ContactForm() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const navigate = useNavigate();  // Correctly named navigate
+    const navigate = useNavigate();
 
-    // Updated onSubmitForm function
-    async function onSubmitForm(values) {
+    async function onSubmitForm(data) {
+        const formData = new FormData();
+    
+        // Append all form data to FormData object
+        formData.append('name', data.name);
+        formData.append('email', data.email);
+        formData.append('phone', data.phone);
+        formData.append('message', data.message);
+    
+        // Append the selected file (if any)
+        if (data.picture && data.picture.length > 0) {
+            formData.append('picture', data.picture[0]); // Only send one file
+        }
+    
         try {
-            const response = await axios.post('http://localhost:5000/api/contactapi', values); // API call to backend server
+            const response = await axios.post('http://localhost:5000/api/contactapi', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
             if (response.status === 200) {
                 reset();  // Reset form after successful submission
-                navigate('/');  // Use navigate instead of router.push
+                navigate('/');  // Redirect to homepage or another route
             }
         } catch (err) {
             console.log(err);  // Log any errors
@@ -80,12 +96,11 @@ export default function ContactForm() {
                         type="file"
                         id="picture"
                         name="picture"
-                        multiple
                         {...register("picture", { required: false })}
                     />
                 </div>
                 <div className={style.RowButtonSend}>
-                    <button className="primary">Отправить Заявку</button>
+                    <button className={style.primary}>Отправить Заявку</button>
                 </div>
             </form>
         </div>
