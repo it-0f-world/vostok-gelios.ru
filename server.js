@@ -1,6 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const API_KEY = require('./apiKey');
 
 const app = express();
 app.use(express.json());
@@ -11,26 +12,26 @@ app.post('/api/contactapi', async (req, res) => {
 
   // Create a transporter object using your domain's SMTP details
   const transporter = nodemailer.createTransport({
-    host: 'mail.of-all.world',
+    host: API_KEY.host,
     port: 465,
     secure: true,
     auth: {
-      user: 'test@of-all.world',
-      pass: 'HCHMPLi8lNV-0Ba',
+      user: API_KEY.user,
+      pass: API_KEY.pass
     },
   });
 
   try {
     // Send an email using Nodemailer
     const emailRes = await transporter.sendMail({
-      from: 'test@of-all.world',
+      from: API_KEY.user,
       to: '79278500916@ya.ru',
-      subject: `Contact form submission from ${name}`,
-      html: `<p>You have a new contact form submission</p><br>
-            <p><strong>Name:</strong> ${name}</p><br>
+      subject: `Данные формы обратной связи от ${name}`,
+      html: `<p>На сайте "ВОСТОК ГЕЛИОС" заполнили форму обратной связи</p><br>
+            <p><strong>Имя:</strong> ${name}</p><br>
             <p><strong>Email:</strong> ${email}</p><br>
-            <p><strong>Phone:</strong> ${phone}</p><br>
-            <p><strong>Message:</strong> ${message}</p><br>
+            <p><strong>Телефон:</strong> ${phone}</p><br>
+            <p><strong>Сообщение:</strong> ${message}</p><br>
             <p><strong>File:</strong> ${picture}</p><br>`,
     });
 
