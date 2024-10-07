@@ -91,12 +91,13 @@ export default function ContactForm() {
                     <span>{errors?.message?.message}</span>
                 </div>
                 <div className={style.RowButtonChoose}>
-                    <label htmlFor="picture">Выберите файл изображений:</label>
+                    <label htmlFor="picture" className={style.customFileLabel}>Выберите файл изображений:</label>
                     <input
                         type="file"
                         id="picture"
                         name="picture"
                         {...register("picture", { required: false })}
+                        className={style.hiddenFileInput}
                     />
                 </div>
                 <div className={style.RowButtonSend}>
