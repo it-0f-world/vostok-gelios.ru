@@ -124,3 +124,9 @@
 .react-multiple-carousel__arrow {
     border-radius: 0px;
 }
+
+@media screen and (max-width: 1600px) {
+    .top {
+        padding: 0 2rem 0;
+    }
+}

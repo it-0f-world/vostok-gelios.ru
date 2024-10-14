@@ -15,13 +15,13 @@ export default function Header() {
                 </div>
                 <div className={style.сapContacts}>
                     <div>
-                        <a className={style.сapContactsItem} href="mailto:info@vostok-gelios.ru"><FiMail style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> info@vostok-gelios.ru</a>
+                        <a className={style.сapContactsItem} href="mailto:info@vostok-gelios.ru"><FiMail className={style.сapContactsItemIcon} /> info@vostok-gelios.ru</a>
                     </div>
                     <div>
-                        <a className={style.сapContactsItem} href="callto:+7495000000"><FiPhoneCall style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> +7 (495) 000-00-00</a>
+                        <a className={style.сapContactsItem} href="callto:+7495000000"><FiPhoneCall className={style.сapContactsItemIcon} /> +7 (495) 000-00-00</a>
                     </div>
                     <div>
-                        <p className={style.сapContactsItem}><HiOutlineOfficeBuilding style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> Московская область, г. Балашиха</p>
+                        <p className={style.сapContactsItem}><HiOutlineOfficeBuilding className={style.сapContactsItemIcon} /> Московская область, г. Балашиха</p>
                     </div>
                 </div>
                 <div className={style.variants}>

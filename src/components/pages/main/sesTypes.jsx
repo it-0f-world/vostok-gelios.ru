@@ -5,17 +5,24 @@ export default function Types() {
         <div className={style.types}>
             <div className={style.typesLeft}>
               <div className={style.typesLeftL}>
-                <div style={{ display: 'flex' }}>
+                <div className={style.squares}>
                   <div className={style.orangeSquare}></div>
                   <div className={style.blueTitle}><h6>Типы СЭС</h6></div>
                 </div>
                 <div className={style.typesLeftContent}>
                   <h2>ОСНОВНЫЕ ТИПЫ <br/>ПРИМЕНЯЕМЫХ <br/>В НАСТОЯЩЕЕ ВРЕМЯ <span style={{color: '#ff8c00'}}>СЭС</span></h2>
-                  <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '25%', float: 'right', marginRight: '.5rem'}}></div>
-                  <p>Наши предложения <br/>по постройке солнечных <br/>электростанций</p>
+                  <div className={style.typesLeftContentDescription}>
+                    <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '25%', float: 'right', marginRight: '.5rem'}}></div>
+                    <p>Наши предложения <br/>по постройке солнечных <br/>электростанций</p>
+                  </div>
                 </div>
               </div>
-              <div className={style.typesLeftR}></div>
+              <div className={style.typesLeftR}>
+                <div className={style.typesLeftContentDescription2}>
+                    <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '25%', float: 'right'}}></div>
+                    <p>Наши предложения <br/>по постройке солнечных <br/>электростанций</p>
+                </div>
+              </div>
             </div>
             <div className={style.typesRight}>
                 <div className={style.typesRightT}>

@@ -124,3 +124,16 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@media screen and (max-width: 1400px) {
+    .top {
+        padding: 0 2rem;
+    }
+    .bottom h2 {
+        font-size: 1.6rem;
+    }
+    .squareForIcon{
+        font-size: 3.6rem;
+        padding: 1rem;
+    }
+}

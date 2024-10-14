@@ -120,3 +120,16 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@media only screen and (max-width: 1600px) {
+    .top {
+        padding: 0 2rem;
+    }
+    .top h2 {
+        padding: 1rem 0;
+        font-size: 2rem;
+    }
+    .bottom h2 {
+        font-size: 1.6rem;
+    }
+}
