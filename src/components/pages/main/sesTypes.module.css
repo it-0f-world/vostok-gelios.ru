@@ -154,6 +154,31 @@
     display: none;
 }
 
+.ModalWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.ModalWrapper button {
+    border: none;
+    background-color: transparent;
+}
+
+.CloseModal {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: auto;
+}
+  
+.CloseModal:hover {
+   color: #ffd700;
+   cursor: pointer;
+}
+
+.ModalContent {
+    display: flex;
+}
+
 @media screen and (max-width: 1600px) {
     .types {
         padding: 2rem 1rem;

@@ -1,8 +1,46 @@
-import style from "./sesTypes.module.css";
+import style from "./sesTypes.module.css"
+import {useState} from 'react'
+import { ImCross } from 'react-icons/im'
+import Modal from 'react-modal'
+
+Modal.setAppElement('#root')
 
 export default function Types() {
+    const [WebSPP, setWebSPP] = useState(false)
     return (
         <div className={style.types}>
+            <Modal
+            isOpen={WebSPP}
+            onRequestClose={() => setWebSPP(false)}
+            contentLabel={"Working group for formation and control implementation of the roadmap"}
+            style={
+                {
+                    overlay: {
+                    backgroundColor: 'rgba(0, 0, 0, .7)',
+                    zIndex: '16'
+                    },
+                    content: {
+                    zIndex: '16'
+                    }
+                }
+            }
+            >
+                <div className={style.ModalWrapper}>
+                <button onClick={() => setWebSPP(false)} className={style.CloseModal}><ImCross /></button>
+                <div className={style.ModalContent}>
+                    <div className={style.image}>
+
+                    </div>
+                    <div className={style.slogan}>
+
+                    </div>
+                    <div className={style.description}>
+                        <h3>ПРИНЦИП РАБОТЫ</h3>
+                        <p className={style.ModalP}>Вся выработанная ФЭМ электроэнергия поступает через инвертор в электрическую сеть объекта, значительно уменьшая потребление электроэнергии из сети.</p>
+                    </div>
+                </div>
+                </div>
+            </Modal>
             <div className={style.typesLeft}>
               <div className={style.typesLeftL}>
                 <div className={style.squares}>
@@ -96,7 +134,7 @@ export default function Types() {
                 </div>
                 <div className={style.typesRightTn1}>
                     <div className={style.typresRightTn1}>
-                        <button className={style.buttonTypesDesc}>ПОДРОБНЕЕ</button>
+                        <button onClick={() => setWebSPP(true)} className={style.buttonTypesDesc}>ПОДРОБНЕЕ</button>
                     </div>
                     <div className={style.typresRightTn2}>
                         <button className={style.buttonTypesDesc}>ПОДРОБНЕЕ</button>

@@ -1,6 +1,7 @@
-import style from "./portfolio.module.css";
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import style from "./portfolio.module.css";
+import './portfolio-carousel.css';
+import Carousel from 'react-multi-carousel';
 import Vladimir from "../../../assets/images/portfolio/vladimir/gallery1.webp";
 import Voronezh from "../../../assets/images/portfolio/voronezh_airport/gallery.webp";
 import Ivanovo from "../../../assets/images/portfolio/ivanovo/gallery.webp";
