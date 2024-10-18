@@ -67,10 +67,6 @@
     width: 64%;
     display: flex;
     flex-direction: column;
-    overflow: visible;
-}
-
-.typesLeftR {
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -152,35 +148,6 @@
 
 .typesLeftContentDescription2 {
     display: none;
-}
-
-.ModalWrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.ModalWrapper button {
-    border: none;
-    background-color: transparent;
-}
-
-.CloseModal {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-left: auto;
-}
-  
-.CloseModal:hover {
-   color: #ffd700;
-   cursor: pointer;
-}
-
-.CloseModal button {
-    cursor: pointer;
-}
-
-.ModalContent {
-    display: flex;
 }
 
 @media screen and (max-width: 1600px) {

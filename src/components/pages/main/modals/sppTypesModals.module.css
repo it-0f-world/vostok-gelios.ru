@@ -1,0 +1,105 @@
+/* sppTypesModals.module.css */
+
+.ModalWrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+    height: 100%;
+    width: 100%; /* Ensure it takes the full width too */
+}
+
+.image {
+    display: flex;
+    flex: 0 1 auto;
+    position: relative; /* Required for absolute positioning of the slogan */
+    overflow: hidden;
+    z-index: 0;
+}
+
+.image img {
+    width: 100%;
+    display: block; /* Ensures there are no gaps underneath the image */
+    padding: 1rem;
+}
+
+.slogan {
+    position: absolute; /* Allow to position absolutely within the image */
+    top: 0; /* Top right corner */
+    right: 0; /* Align to the right */
+    z-index: 1; /* Ensure it's above the image */
+    padding: 10px; /* Optional padding for aesthetics */
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent background for readability */
+}
+
+.squares {
+    display: flex;
+    z-index: 1;
+    width: auto; /* Adjust if needed */
+}
+
+.orangeSquare {
+    background-color: #ff8c00;
+    width: 53px;
+    height: 53px;
+    margin-right: 1rem;
+}
+
+.blueTitle {
+    background-color: #1B1F3D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.ModalWrapper button {
+    border: none;
+    background-color: transparent;
+}
+
+.CloseModal {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: auto;
+    color: white;
+}
+
+.CloseModal:hover {
+    color: #ffd700;
+    cursor: pointer;
+}
+
+.ModalContent {
+    display: flex;
+    align-items: stretch;
+    flex-grow: 1; /* Allow this div to expand and fill the modal */
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    background-color: #1B1F3D;
+    color: white;
+    padding: 1rem;
+}
+
+.descriptionContent {
+    padding: 0 2rem 2rem;
+}
+
+.description h3 {
+    font-size: 2rem;
+    padding: 0 0 1rem;
+}
+
+.ModalP {
+    text-align: justify;
+}
+
+.list h3 {
+    padding: 1.6rem 0 .5rem;
+}
