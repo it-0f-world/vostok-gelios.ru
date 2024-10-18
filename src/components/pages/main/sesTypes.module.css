@@ -175,6 +175,10 @@
    cursor: pointer;
 }
 
+.CloseModal button {
+    cursor: pointer;
+}
+
 .ModalContent {
     display: flex;
 }

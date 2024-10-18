@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    background-color: #1b1f3d;
+    width: 300px; /* Set a fixed width for the additional component */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Optional: Add some shadow */
+    border-radius: 0 .5rem .5rem 0;
+    color: white;
+}
+
+.container h3 {
+    font-size: 1.4rem;
+}
+
+.row {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon {
+    font-size: 2.3rem;
+}
+
+.content {
+    align-self: center;
+}
+
+.rules {
+    margin-top: auto; /* Push this section to the bottom */
+    display: flex; /* Use flexbox for alignment */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.rules p {
+    font-family: "Roboto";
+    font-size: .8rem;
+}
