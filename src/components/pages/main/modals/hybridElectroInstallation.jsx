@@ -3,15 +3,15 @@ import React from 'react';
 import Modal from 'react-modal';
 import { ImCross } from 'react-icons/im';
 import style from './sppTypesModals.module.css';
-import image from '../img/webSpp.webp';
+import image from '../img/hybridSPP.webp';
 import './modal.css';
 
-const WebSPP = ({ isOpen, onRequestClose }) => {
+const hybridSPP = ({ isOpen, onRequestClose }) => {
     return (
         <Modal
             isOpen={isOpen}
             onRequestClose={onRequestClose}
-            contentLabel={"Сетевые солнечные электростанции"}
+            contentLabel={"Автономная гибридная электроустановка. Солнечная электростанция с резервным вводом генератора на ископаемом топливе"}
             style={{
                 overlay: {
                     backgroundColor: 'rgba(0, 0, 0, .7)',
@@ -32,7 +32,7 @@ const WebSPP = ({ isOpen, onRequestClose }) => {
                                 <div className={style.blueTitle}><h6>Типы СЭС</h6></div>
                                 
                             </div>
-                            <h4>СЕТЕВАЯ СЭС</h4>
+                            <h4>АВТОНОМНАЯ <br/>ГИБРИДНАЯ <br/>ЭЛЕКТРОУСТАНОВКА</h4>
                         </div>
                     </div>
                     <div className={style.description}>
@@ -42,22 +42,23 @@ const WebSPP = ({ isOpen, onRequestClose }) => {
                         <div className={style.descriptionContent}>
                             <h3>ПРИНЦИП РАБОТЫ</h3>
                             <p className={style.ModalP}>
-                                Вся выработанная ФЭМ электроэнергия поступает через инвертор в электрическую сеть объекта, значительно уменьшая потребление электроэнергии из сети.
+                                Энергия солнца используется для питания объекта днем, а также для зарядки АКБ. Вечером и ночью для электроснабжения используется энергия, накопленная АКБ. В случае, если для питания объекта не хватает энергии солнца и АКБ, то автоматически происходит запуск генератора.
                             </p>
                             <div className={style.list}>
                                 <h3>СОСТАВ УСТАНОВКИ</h3>
                                 <ul>
                                     <li>фотоэлектрические модули</li>
-                                    <li>сетевой инвертор</li>
+                                    <li>гибридный инвертор</li>
+                                    <li>система аккумуляторных батарей</li>
+                                    <li>дизельный или бензиновый генератор</li>
                                     <li>система мониторинга (опция)</li>
-                                    <li>устройство ограничения мощности (опция)</li>
                                 </ul>
                             </div>
                             <div className={style.list}>
                                 <h3>АКТУАЛЬНО ДЛЯ</h3>
                                 <ul>
-                                    <li>производственных предприятий</li>
-                                    <li>частных домовладений с высокой стоимостью электроэнергии</li>
+                                    <li>районов без централизованного электроснабжения</li>
+                                    <li>реконструкции дизельных электростанций</li>
                                 </ul>
                             </div>
                         </div>
@@ -68,4 +69,4 @@ const WebSPP = ({ isOpen, onRequestClose }) => {
     );
 };
 
-export default WebSPP;
+export default hybridSPP;

@@ -2,14 +2,20 @@ import style from "./sesTypes.module.css"
 import {useState} from 'react'
 import Modal from 'react-modal'
 import WebSppModal from "./modals/webSPP"
+import ReservePowerSPPModal from "./modals/reservePowerSPP"
+import HybridSPPModal from "./modals/hybridElectroInstallation"
 
 Modal.setAppElement('#root')
 
 export default function Types() {
     const [WebSPP, setWebSPP] = useState(false)
+    const [ReservePower, setReservePower] = useState(false)
+    const [HybridSPP, setHybridSPP] = useState(false)
     return (
         <div className={style.types}>
             <WebSppModal isOpen={WebSPP} onRequestClose={() => setWebSPP(false)} />
+            <ReservePowerSPPModal isOpen={ReservePower} onRequestClose={() => setReservePower(false)} />
+            <HybridSPPModal isOpen={HybridSPP} onRequestClose={() => setHybridSPP(false)} />
             <div className={style.typesLeft}>
               <div className={style.typesLeftL}>
                 <div className={style.squares}>
@@ -106,10 +112,10 @@ export default function Types() {
                         <button onClick={() => setWebSPP(true)} className={style.buttonTypesDesc}>ПОДРОБНЕЕ</button>
                     </div>
                     <div className={style.typresRightTn2}>
-                        <button className={style.buttonTypesDesc}>ПОДРОБНЕЕ</button>
+                        <button onClick={() => setReservePower(true)} className={style.buttonTypesDesc}>ПОДРОБНЕЕ</button>
                     </div>
                     <div className={style.typresRightTn3}>
-                        <button className={style.buttonTypesDesc}>ПОДРОБНЕЕ</button>
+                        <button onClick={() => setHybridSPP(true)} className={style.buttonTypesDesc}>ПОДРОБНЕЕ</button>
                     </div>
                 </div>
                 <div className={style.typesRightB} style={{ display: 'flex', alignItems: 'flex-start' }}>

@@ -69,9 +69,3 @@ ul {
 li {
   font-size: 1rem;
 }
-
-/*when PopUp opened disable main page scroll*/
-.ReactModal__Body--open,
-.ReactModal__Html--open {
-  overflow: hidden;
-}

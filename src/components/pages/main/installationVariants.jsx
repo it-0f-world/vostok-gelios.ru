@@ -1,8 +1,24 @@
+import {useState} from 'react'
+import Modal from 'react-modal'
 import style from "./installationVariants.module.css";
+import FlatRoofSppModal from "./modals/flatRoofSpp";
+import FrontSppModal from "./modals/frontSpp";
+import PitchedSppModal from "./modals/pitchedSpp";
+import EarthSppModal from "./modals/earthSpp";
+
+Modal.setAppElement('#root')
 
 export default function Types() {
+    const [flatRoofSpp, setflatRoofSpp] = useState(false)
+    const [frontSpp, setFrontSpp] = useState(false)
+    const [pitchedSpp, setPitchedSpp] = useState(false)
+    const [earthSpp, setEarthSpp] = useState(false)
     return (
         <div className={style.container}>
+            <FlatRoofSppModal isOpen={flatRoofSpp} onRequestClose={() => setflatRoofSpp(false)} />
+            <FrontSppModal isOpen={frontSpp} onRequestClose={() => setFrontSpp(false)} />
+            <PitchedSppModal isOpen={pitchedSpp} onRequestClose={() => setPitchedSpp(false)} />
+            <EarthSppModal isOpen={earthSpp} onRequestClose={() => setEarthSpp(false)} />
             <div className={style.top}>
                 <div style={{ display: 'flex' }}>
                     <div className={style.orangeSquare}></div>
@@ -25,7 +41,7 @@ export default function Types() {
                         </ul>
                     </div>
                     <div>
-                        <button className={style.buttonDesc}>УЗНАТЬ БОЛЬШЕ</button>
+                        <button onClick={() => setflatRoofSpp(true)} className={style.buttonDesc}>УЗНАТЬ БОЛЬШЕ</button>
                     </div>
                 </div>
                 <div className={style.b02}>
@@ -40,7 +56,7 @@ export default function Types() {
                         </ul>
                     </div>
                     <div>
-                        <button className={style.buttonDesc}>УЗНАТЬ БОЛЬШЕ</button>
+                        <button onClick={() => setFrontSpp(true)} className={style.buttonDesc}>УЗНАТЬ БОЛЬШЕ</button>
                     </div>
                 </div>
                 <div className={style.b03}>
@@ -53,7 +69,7 @@ export default function Types() {
                         </ul>
                     </div>
                     <div>
-                        <button className={style.buttonDesc}>УЗНАТЬ БОЛЬШЕ</button>
+                        <button onClick={() => setPitchedSpp(true)} className={style.buttonDesc}>УЗНАТЬ БОЛЬШЕ</button>
                     </div>
                 </div>
                 <div className={style.b04}>
@@ -68,7 +84,7 @@ export default function Types() {
                         </ul>
                     </div>
                     <div>
-                        <button className={style.buttonDesc}>УЗНАТЬ БОЛЬШЕ</button>
+                        <button onClick={() => setEarthSpp(true)} className={style.buttonDesc}>УЗНАТЬ БОЛЬШЕ</button>
                     </div>
                 </div>
             </div>

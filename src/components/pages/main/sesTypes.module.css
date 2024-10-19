@@ -201,4 +201,8 @@
     .typesRightT {
         display: flex;
     }
+    .typesRightB h2 {
+        padding: 1rem 0 0;
+        font-size: 1.6rem;
+    }
 }
