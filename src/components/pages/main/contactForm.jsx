@@ -77,13 +77,13 @@ export default function ContactForm() {
                                             required: { value: true, message: "Вам нужно ввести ваш номер телефона" },
                                             minLength: { value: 4, message: "Телефон должен быть длинее 4 символов" },
                                             maxLength: { value: 21, message: 'Слишком много цифр' },
-                                            pattern: { value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g, message: "Неверный формат" },
+                                            pattern: { value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s./0-9]*$/g, message: "Неверный формат" },
                                         })}
                                         placeholder="Телефон"
                                     />
                                     <span>{errors?.phone?.message}</span>
                                 </div>
-                                <div className={style.RowButtonChoose}>
+                                <div className={style.Row}>
                                         <label htmlFor="picture" className={style.customFileLabel}><LuImagePlus /> загрузить фото</label>
                                         <input
                                             type="file"
