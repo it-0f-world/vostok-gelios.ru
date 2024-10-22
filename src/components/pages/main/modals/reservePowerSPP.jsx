@@ -25,7 +25,7 @@ const reservePowerSPP = ({ isOpen, onRequestClose }) => {
             <div className={style.ModalWrapper}>
                 <div className={style.ModalContent}>
                     <div className={style.image}>
-                        <img src={image} alt="webSPP" />
+                        <img src={image} alt="схема работы солнечной электростанции с резервным электропитанием" />
                         <div className={style.slogan}>
                             <div className={style.squares}>
                                 <div className={style.orangeSquare}></div>

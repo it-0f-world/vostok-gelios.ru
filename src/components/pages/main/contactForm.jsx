@@ -84,7 +84,7 @@ export default function ContactForm() {
                                     <span>{errors?.phone?.message}</span>
                                 </div>
                                 <div className={style.Row}>
-                                        <label htmlFor="picture" className={style.customFileLabel}><LuImagePlus /> загрузить фото</label>
+                                        <label htmlFor="picture" className={style.customFileLabel}><LuImagePlus style={{ paddingRight: '.5rem' }} /> загрузить фото</label>
                                         <input
                                             type="file"
                                             id="picture"

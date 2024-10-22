@@ -25,7 +25,7 @@ const hybridSPP = ({ isOpen, onRequestClose }) => {
             <div className={style.ModalWrapper}>
                 <div className={style.ModalContent}>
                     <div className={style.image}>
-                        <img src={image} alt="webSPP" />
+                        <img src={image} alt="Схема работы. Автономная гибридная электроустановка. Солнечная электростанция с резервным вводом генератора на ископаемом топливе" />
                         <div className={style.slogan}>
                             <div className={style.squares}>
                                 <div className={style.orangeSquare}></div>

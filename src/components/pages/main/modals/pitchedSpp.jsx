@@ -25,7 +25,7 @@ const pitchedSpp = ({ isOpen, onRequestClose }) => {
             <div className={style.ModalWrapper}>
                 <div className={style.ModalContent}>
                     <div className={style.image}>
-                        <img src={image} alt="webSPP" />
+                        <img src={image} alt="Крышная солнечная электростанция на для фасадов зданий, автомобильных парковок" />
                         {/* Overlay */}
                         <div className={style.overlay}></div>
                     </div>

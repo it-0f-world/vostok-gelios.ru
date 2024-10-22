@@ -25,12 +25,11 @@ const WebSPP = ({ isOpen, onRequestClose }) => {
             <div className={style.ModalWrapper}>
                 <div className={style.ModalContent}>
                     <div className={style.image}>
-                        <img src={image} alt="webSPP" />
+                        <img src={image} alt="схема работы сетевой солнечной электростанции" />
                         <div className={style.slogan}>
                             <div className={style.squares}>
                                 <div className={style.orangeSquare}></div>
                                 <div className={style.blueTitle}><h6>Типы СЭС</h6></div>
-                                
                             </div>
                             <h4>СЕТЕВАЯ СЭС</h4>
                         </div>
