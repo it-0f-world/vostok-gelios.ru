@@ -23,7 +23,7 @@ export default function ContactFormAdditional() {
                     <p><strong>Почта: </strong> info@vostok-gelios.ru</p>
                 </div>
             </div>
-            <div className={style.rules} style={{ display: 'flex', alignItems: 'flex-start' }}>
+            <div className={style.rules}>
                 <div style={{ backgroundColor: '#fff', width: '8px', height: '100%', marginRight: '10px' }}></div>
                 <p style={{textAlign: 'justify'}}>*Отправляя сведения через форму обратной связи вы соглашаетесь с правилами обрабоки персональных данных. Обращение к Вам и телефонный номер обязательны для заполнения. Все данные, указанные на этой странице, не являются публичной офертой.</p>
             </div>
