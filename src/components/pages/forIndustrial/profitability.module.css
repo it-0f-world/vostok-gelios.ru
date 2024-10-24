@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    gap: 1rem;
+    padding: 8rem 12rem 6rem;
+}
+
+.why {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-image: 
+    linear-gradient(#1b1f3da7, #1b1f3da7),
+    url(../main/img/service.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.why h2 {
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #09131c;
+    padding: 2rem;
+}
+
+.section {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    gap: 1rem; /* Add gap between items */
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px; /* Allow items to grow and shrink, with a minimum width */
+    min-width: 250px; /* Optional: Set a minimum width for items */
+}
+
+.row {
+    display: flex;
+    gap: .4rem;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.icon {
+    font-size: 2.3rem;
+    background-color: #ff8c00;
+    padding: .5rem .5rem 0;
+    color: white;
+}
+
+.info p{
+    text-align: justify;
+    padding: .8rem 0 0;
+}
+
+@media only screen and (max-width: 1600px) {
+    .container {
+        padding: 3rem 2rem;
+    }
+}
