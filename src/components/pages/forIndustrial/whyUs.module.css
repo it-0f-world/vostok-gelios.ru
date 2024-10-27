@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.container h2 {
+    text-transform: uppercase;
+    color: #1B1F3D;
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem 0 1rem;
+}
+
+.row {
+    display: flex;
+    color: white;
+    text-shadow: 1px 1px #09131c;
+}
+
+.row h3 {
+    text-transform: uppercase;
+    padding: 7rem 0 .5rem;
+    font-size: 2.1rem;
+}
+
+.row p {
+    text-align: justify;
+}
+
+.col1, .col2, .col3 {
+    width: 33.3333%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    display: inline-flex;
+    width: fit-content; /* Ensures the width only wraps the content */
+    height: fit-content; /* Also make height fit the content */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-direction: column;
+    font-size: 3rem;
+    background-color: #ff8c00;
+    padding: 1rem;
+}
+
+.col1 {
+    background-image: 
+    linear-gradient(#1b1f3da7, #1b1f3da7),
+    url(./img/Design.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.col2 {
+    background-image: 
+    linear-gradient(#1b1f3da7, #1b1f3da7),
+    url(./img/procurement.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.col3 {
+    background-image: 
+    linear-gradient(#1b1f3da7, #1b1f3da7),
+    url(./img/assembling.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 1600px) {
+    .container {
+        padding: 0;
+    }
+}
