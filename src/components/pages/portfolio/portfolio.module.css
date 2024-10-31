@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 12rem;
+}
+
+.container h1 {
+    text-transform: uppercase;
+    font-size: 3.1rem;
+}
+
+.objects {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    gap: 1rem; /* Add gap between items */
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 560px; /* Allow items to grow and shrink, with a minimum width */
+    min-width: 480px; /* Optional: Set a minimum width for items */
+}
+
+@media only screen and (max-width: 1600px) {
+    .container {
+        padding: 6rem 2rem 3rem;
+    }
+}
