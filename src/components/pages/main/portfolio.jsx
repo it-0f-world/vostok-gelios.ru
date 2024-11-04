@@ -2,14 +2,15 @@ import 'react-multi-carousel/lib/styles.css';
 import style from "./portfolio.module.css";
 import './portfolio-carousel.css';
 import Carousel from 'react-multi-carousel';
-import Vladimir from "../../../assets/images/portfolio/vladimir/gallery1.webp";
-import Voronezh from "../../../assets/images/portfolio/voronezh_airport/gallery.webp";
-import Ivanovo from "../../../assets/images/portfolio/ivanovo/gallery.webp";
-import Lukoil from "../../../assets/images/portfolio/lukoil/gallery.webp";
-import Sber from "../../../assets/images/portfolio/sbercity/gallery.webp";
-import Hohland from "../../../assets/images/portfolio/hohland/gallery.webp";
-import Moscow from "../../../assets/images/portfolio/moscow_household/gallery.webp";
-import Rosinki from "../../../assets/images/portfolio/rosinki/gallery.webp";
+
+import Vladimir from "../portfolio/img/vladimir/gallery1.webp";
+import Voronezh from "../portfolio/img/voronezh_airport/gallery.webp";
+import Ivanovo from "../portfolio/img/ivanovo/gallery.webp";
+import Lukoil from "../portfolio/img/lukoil/gallery.webp";
+import Sber from "../portfolio/img/sbercity/gallery.webp";
+import Hohland from "../portfolio/img/hohland/gallery.webp";
+import Moscow from "../portfolio/img/moscow_household/gallery.webp";
+import Rosinki from "../portfolio/img/rosinki/gallery.webp";
 
 
 export default function Portfolio() {

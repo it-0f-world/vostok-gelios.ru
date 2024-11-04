@@ -9,6 +9,7 @@ import Portfolio from './components/pages/portfolio/portfolio';
 import Contacts from './components/pages/contacts/contacts';
 import Industrial from './components/pages/forIndustrial/forIndustrial';
 import HouseHold from './components/pages/forHouseHolds/forHouseHolds';
+import VoronezhPortfolio from './components/pages/portfolio/items/business/voronezh'
 
 class App extends React.Component {
   constructor(props) {
@@ -49,6 +50,7 @@ class App extends React.Component {
               <Route path="/industrial" element={<Industrial closeMenu={() => this.closeMenu()} />} />
               <Route path="/household" element={<HouseHold closeMenu={() => this.closeMenu()} />} />
               <Route path="/contacts" element={<Contacts closeMenu={() => this.closeMenu()} />} />
+              <Route path="/portfolio/voronezh-airport" element={<VoronezhPortfolio closeMenu={() => this.closeMenu()} />} />
             </Routes>
           </main>
           <footer className={style.footer}>

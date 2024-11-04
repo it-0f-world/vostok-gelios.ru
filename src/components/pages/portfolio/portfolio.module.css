@@ -10,6 +10,7 @@
     padding: 1rem;
     color: white;
     align-items: center;
+    margin: 0 0 1rem;
 }
 
 .slogan h1 {
@@ -30,7 +31,12 @@
     flex: 1;
     flex-wrap: wrap; /* Allow items to wrap onto the next line */
     gap: 1rem; /* Add gap betwe.wrapperen items */
-    padding: 1rem 0 0;
+    padding: 1rem 2px 0;
+    background-color: #1B1F3D;
+    z-index: 2;
+    border-right: 1px solid #ff8c00;
+    border-left: 1px solid #ff8c00;
+    border-bottom: 1px solid #ff8c00;
 }
 
 .item {

@@ -7,7 +7,6 @@ import WhyUs from '../forIndustrial/whyUs'
 import Protfolio from '../main/portfolio'
 import ContactForm from '../main/contactForm'
 
-
 export default function Articles() {
     return (
         <div>
