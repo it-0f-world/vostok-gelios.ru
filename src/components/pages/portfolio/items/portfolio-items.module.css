@@ -1,14 +1,19 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 4rem 12rem;
-    align-items: center;
-    background-color: aquamarine;
+    padding: 3rem 12rem;
+}
+
+.wrapper h1 {
+    padding: 0 0 0 6rem;
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    color: #1B1F3D;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.444);
 }
 
 @media only screen and (max-width: 1600px) {
     .wrapper {
-        padding: 4rem 2rem;
+        padding: 3rem 2rem;
     }
 }

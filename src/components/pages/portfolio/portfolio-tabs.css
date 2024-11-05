@@ -3,8 +3,6 @@
     display: flex;
     border-color: #ff8c00;
     margin: 0;
-    z-index: -1;
-    cursor: pointer;
 }
 
 .react-tabs__tab {
@@ -16,6 +14,10 @@
     cursor: pointer;
 }
 
+.react-tabs__tab h2:hover {
+    color: #ff8c00;
+}
+
 .react-tabs__tab h2 {
     color: #1B1F3D;
     font-size: 2.3rem;
@@ -25,6 +27,10 @@
     background-color: #1B1F3D;
     border-color: #ff8c00;
     overflow: hidden;
+}
+
+.react-tabs__tab--selected h2:hover {
+    color: white;
 }
 
 .react-tabs__tab--selected h2 {
