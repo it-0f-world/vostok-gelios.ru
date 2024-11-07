@@ -1,19 +1,53 @@
-.wrapper {
+.container {
     display: flex;
     flex-direction: column;
     padding: 3rem 12rem;
 }
-
 .wrapper h1 {
-    padding: 0 0 0 6rem;
+    padding: .5rem 0 0 6rem;
     text-transform: uppercase;
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     color: #1B1F3D;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.444);
 }
+.description {
+    padding: 1rem 0 0;
+}
+.tasks {
+    display: flex;
+    align-items: stretch;
+    gap: .5rem;
+}
+.tasks h2 {
+    background: #ff8c00;
+    padding: .25em .5em;
+    color: #1B1F3D;
+    text-transform: uppercase;
+}
+.tasks p {
+    background: #1B1F3D;
+    padding: .25em .5em;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.specification {
+    display: flex;
+    padding: 1rem 0 0;
+    gap: 2rem;
+}
+.info {
+    width: 40%;
+}
+.results {
+    padding: .5rem 0 0;
+}
+.solution {
+    width: 60%;
+}
 
 @media only screen and (max-width: 1600px) {
-    .wrapper {
-        padding: 3rem 2rem;
+    .container {
+        padding: 3rem 2rem 0;
     }
 }

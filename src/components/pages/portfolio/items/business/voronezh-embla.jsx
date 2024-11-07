@@ -5,7 +5,7 @@ import {
   usePrevNextButtons
 } from '../EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
-import './embla.css'
+import '../embla.css'
 
 import IMG_0506 from '../../img/voronezh_airport/IMG_0506.webp'
 import IMG_0507 from '../../img/voronezh_airport/IMG_0507.webp'

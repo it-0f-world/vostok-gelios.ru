@@ -124,3 +124,6 @@
 .embla__dot:hover {
   background-color: #ff8c00;
 }
+.embla__dot--selected:hover {
+  background-color: transparent;
+}
