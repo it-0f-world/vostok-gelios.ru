@@ -2,6 +2,7 @@ import 'react-multi-carousel/lib/styles.css';
 import style from "./portfolio.module.css";
 import './portfolio-carousel.css';
 import Carousel from 'react-multi-carousel';
+import { NavLink } from "react-router-dom";
 
 import Vladimir from "../portfolio/img/vladimir/gallery1.webp";
 import Voronezh from "../portfolio/img/voronezh_airport/gallery.webp";
@@ -14,7 +15,7 @@ import Rosinki from "../portfolio/img/rosinki/gallery.webp";
 
 
 export default function Portfolio() {
-      const WithStyles = ({ description, headline, image }) => (
+      const WithStyles = ({ description, headline, image, navigate }) => (
         <div className={style.imageContainer}>
           <img src={image} alt={headline} className={style.image} />
           <div className={style.description}>
@@ -22,7 +23,7 @@ export default function Portfolio() {
                 <h3>{headline}</h3>
                 <p>{description}</p>
             </div>
-            <button className={style.buttonDesc}>детализация</button>
+            <NavLink to={navigate} className={style.buttonDesc}>детализация</NavLink>
           </div>
         </div>
       );
@@ -59,7 +60,9 @@ export default function Portfolio() {
                     </div>
                     
                     <div className={style.buttonContainer}>
-                        <button className={style.button}>ПОДРОБНЕЕ О РЕАЛИЗОВАННЫХ ПРОЕКТАХ</button>
+                        <NavLink to="/portfolio">
+                            <button className={style.button}>ПОДРОБНЕЕ О РЕАЛИЗОВАННЫХ ПРОЕКТАХ</button>
+                        </NavLink>
                     </div>
                 </div>
                 <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '25%'}}></div>
@@ -103,6 +106,7 @@ export default function Portfolio() {
                     description="102,4 кВт. Расчётная выработка 102 МВт·ч/год"
                     headline="г. Воронеж, аэропорт"
                     image={Voronezh}
+                    navigate="/portfolio/voronezh-airport"
                 />
                 <WithStyles
                     description="155,52 кВт. Расчётная выработка 127,5 МВт·ч/год"

@@ -2,6 +2,7 @@ import style from '../portfolio-items.module.css'
 import Carousel from './voronezh-embla.jsx'
 import Portfolio from '../../../main/portfolio.jsx'
 import ContactForm from '../../../main/contactForm.jsx'
+import HireUs from '../../../forIndustrial/hireUs.jsx'
 
 const OPTIONS = {}
 
@@ -9,7 +10,7 @@ export default function Voronezh(props) {
     return (
         <div className={style.wrapper}>
             <div className={style.container}>
-                <h1><span style={{color: '#ff8c00'}}>Солнечная станция</span> для международного аэропорта Воронеж</h1>
+                <h1><span style={{color: '#ff8c00'}}>Солнечная станция</span><br /> для международного аэропорта Воронеж</h1>
                 <Carousel options={OPTIONS} />
                 <div className={style.description}>
                     <div className={style.tasks}>
@@ -41,6 +42,7 @@ export default function Voronezh(props) {
                     </div>
                 </div>
             </div>
+            <HireUs />
             <Portfolio />
             <div style={{height: '2rem'}}></div>
             <ContactForm />

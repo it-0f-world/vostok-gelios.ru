@@ -1,4 +1,5 @@
 import style from "./header.module.css";
+import { NavLink } from "react-router-dom";
 import Logo from "../../../assets/images/logo/Logo-white-pure.svg";
 import { LuFactory } from "react-icons/lu";
 import { BiBuildingHouse } from "react-icons/bi";
@@ -25,9 +26,13 @@ export default function Header() {
                     </div>
                 </div>
                 <div className={style.variants}>
-                    <div className={style.varBiz}><a><LuFactory className={style.buttonIcon} /> ДЛЯ БИЗНЕСА</a></div>
+                    <NavLink to="/industrial">
+                        <div className={style.varBiz}><a><LuFactory className={style.buttonIcon} /> ДЛЯ БИЗНЕСА</a></div>
+                    </NavLink>
                     <div className={style.divider}></div>
-                    <div className={style.varHouse}><a><BiBuildingHouse className={style.buttonIcon} /> ДЛЯ ЧАСТНОГО ДОМА</a></div>
+                    <NavLink to="/industrial">
+                        <div className={style.varHouse}><a><BiBuildingHouse className={style.buttonIcon} /> ДЛЯ ЧАСТНОГО ДОМА</a></div>
+                    </NavLink>
                 </div>
             </div>
             <h1>Солнечная энергия для Вашего бизнеса и дома. <br />Ваш путь к экономии и независимости.</h1>
