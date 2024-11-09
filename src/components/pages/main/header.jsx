@@ -10,24 +10,21 @@ export default function Header() {
     return (
         <header className={style.header}>
             <div className={style.сap}>
-                <div>
-                    <div className={style.logo}>
-                        <img src={Logo} className={style.logoImg} alt="logo"/>
-                        <h2>ВОСТОК ГЕЛИОС</h2>
+                <div className={style.logo}>
+                    <img src={Logo} className={style.logoImg} alt="logo"/>
+                    <h2>ВОСТОК ГЕЛИОС</h2>
+                </div>
+                <div className={style.сapContacts}>
+                    <div>
+                        <a className={style.сapContactsItem} href="mailto:info@vostok-gelios.ru"><FiMail className={style.сapContactsItemIcon} /> info@vostok-gelios.ru</a>
                     </div>
-                    <div className={style.сapContacts}>
-                        <div>
-                            <a className={style.сapContactsItem} href="mailto:info@vostok-gelios.ru"><FiMail className={style.сapContactsItemIcon} /> info@vostok-gelios.ru</a>
-                        </div>
-                        <div>
-                            <a className={style.сapContactsItem} href="callto:+7495000000"><FiPhoneCall className={style.сapContactsItemIcon} /> +7 (495) 000-00-00</a>
-                        </div>
-                        <div>
-                            <p className={style.сapContactsItem}><HiOutlineOfficeBuilding className={style.сapContactsItemIcon} /> Московская область, г. Балашиха</p>
-                        </div>
+                    <div>
+                        <a className={style.сapContactsItem} href="callto:+7495000000"><FiPhoneCall className={style.сapContactsItemIcon} /> +7 (495) 000-00-00</a>
+                    </div>
+                    <div>
+                        <p className={style.сapContactsItem}><HiOutlineOfficeBuilding className={style.сapContactsItemIcon} /> Московская область, г. Балашиха</p>
                     </div>
                 </div>
-                
                 <div className={style.variants}>
                     <NavLink to="/industrial" className={style.varBiz}><LuFactory className={style.buttonIcon} /> ДЛЯ БИЗНЕСА</NavLink>
                     <div className={style.divider}></div>
