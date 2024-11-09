@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-image: 
+    linear-gradient(#1b1f3d21, #1b1f3d8f), /* Overlay color */
+    url(../main/img/main-header-bg-4k.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 8rem 12rem 6rem;
+    color: white;
+}
+
+.head h1 {
+    text-shadow: 2px 2px #09131c;
+    text-transform: uppercase;
+    font-size: 3em;
+    padding: 4rem 0 0;
+}
+
+.rules {
+    padding: 2rem 0 0;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    height: 60px;
+}
+
+.rules p {
+    font-family: "Roboto";
+    padding: 0 1rem 0 0;
+    text-align: justify;
+}
+
+.line { 
+    background-color: #fff;
+    width: 8px;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.slogan {
+    display: flex;
+    gap: .25rem;
+    padding: 1rem 0 0;
+    text-transform: uppercase;
+}
+
+.buttonOrder {
+    padding: 1rem;
+    border: 2px solid #C0C0C0;
+    background-color: #1B1F3D;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 500;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.buttonOrder:hover {
+    background-color: white;
+    color: #1B1F3D;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #1B1F3D;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 1600px) {
+    .head {
+        padding: 6rem 2rem 3rem;
+    }
+}

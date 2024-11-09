@@ -15,6 +15,13 @@
     display: flex;
 }
 
+.squares {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: 160%;
+}
+
 .orangeSquare {
     background-color: #ff8c00;
     width: 53px;
@@ -60,10 +67,6 @@
     width: 64%;
     display: flex;
     flex-direction: column;
-    overflow: visible;
-}
-
-.typesLeftR {
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -141,4 +144,65 @@
     color: #0d3d91;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: 2px solid #ffd700;
+}
+
+.typesLeftContentDescription2 {
+    display: none;
+}
+
+@media screen and (max-width: 1600px) {
+    .types {
+        padding: 2rem 1rem;
+    }
+    .typesLeftContent h2 {
+        font-size: 2rem;
+
+    }
+    .typesLeft {
+        width: 30%;
+        background-image: url(./img/solar_panels_with_wind_turbine.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .typesRight {
+        width: 70%;
+    }
+    .typesLeftR {
+        background-image: none;
+        justify-content: flex-end;
+    }
+    .typesLeft {
+        padding: .5rem
+    }
+    .typesLeftContentDescription {
+        display: none;
+    }
+    .typesLeftContentDescription2 {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        text-align: right;
+        align-items: flex-end;
+        align-content: flex-end;
+    }
+    .typesLeftContentDescription2 p {
+        padding: 1em 0;
+        color: white;
+        text-shadow: 2px 2px 2px #1B1F3D;
+    }
+    .typesRightT h2 {
+        font-size: 1.2rem;
+    }
+    .typresRightT1 h2, .typresRightT2 h2, .typresRightT3 h2 {
+        padding: 0 0 .25rem;
+    }
+    .typesRightT {
+        display: flex;
+    }
+    .typesRightB h2 {
+        padding: 1rem 0 0;
+        font-size: 1.6rem;
+    }
 }

@@ -1,0 +1,87 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 12rem 6rem;
+}
+
+.container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0 0;
+}
+
+.why {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-image: 
+    linear-gradient(#1b1f3d3e, #1b1f3d3e),
+    url(./img/service.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.why h2 {
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #09131c;
+    padding: 2rem;
+}
+
+.section {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    gap: 1rem; /* Add gap between items */
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px; /* Allow items to grow and shrink, with a minimum width */
+    min-width: 250px; /* Optional: Set a minimum width for items */
+}
+
+.row {
+    display: flex;
+    gap: .4rem;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.icon {
+    font-size: 2.3rem;
+    background-color: #ff8c00;
+    padding: .5rem .5rem 0;
+    color: white;
+}
+
+.info p{
+    text-align: justify;
+    padding: .8rem 0 0;
+}
+.orangeSquare {
+    background-color: #ff8c00;
+    width: 53px;
+    height: 53px;
+    margin-right: 1rem;
+}
+
+.blueTitle {
+    background-color: #1B1F3D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 1600px) {
+    .wrapper {
+        padding: 2rem 2rem 3rem;
+    }
+}

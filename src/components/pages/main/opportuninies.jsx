@@ -1,13 +1,17 @@
 import style from "./opportuninies.module.css";
-import { BsFileEarmarkBarGraph } from "react-icons/bs";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faSolarPanel, faPlugCircleBolt, faTree } from '@fortawesome/free-solid-svg-icons';
 
 export default function Opportuninies() {
     return (
         <div className={style.container}>
             <div className={style.c1}>
                 <div className={style.c1top}>
-                    <h2>ЧТО ВЫ ПОЛУЧИТЕ, УСТАНОВИВ СЭС?</h2>
                     <div>
+                        <h2>ЧТО ВЫ ПОЛУЧИТЕ, УСТАНОВИВ СЭС?</h2>
+                        <p className={style.c1topDescription}>*Выгодную инвестицию и независимость от роста тарифов на электроэнергию в дальнейшем</p>
+                    </div>
+                    <div className={style.c1topPeriod}>
                         <p>30 ЛЕТ</p>
                         <h3>Срок службы СЭС</h3>
                     </div>
@@ -16,18 +20,22 @@ export default function Opportuninies() {
             </div>
             <div className={style.c2}>
                 <div className={style.c2top}>
-                    <h3>СЭС окупается:</h3>
-                    <p>В южных регионах от <span style={{color: '#ff8c00'}}>4-6 лет</span></p>
-                    <p>В средней полосе от <span style={{color: '#ff8c00'}}>8-9 лет</span></p>
-                    <p>В северных регионах от <span style={{color: '#ff8c00'}}>10-11 лет</span></p>
+                    <h3>Окупаемость СЭС:</h3>
+                    <p>&bull; В зависимости от региона <span style={{color: '#ff8c00'}}>от 4 лет.</span></p>
+                    <p>&bull; Выгоду от установки СЭС и независимость от роста тарифов вы получаете <span style={{color: '#ff8c00'}}>с первого дня.</span></p>
                 </div>
                 <div className={style.c2bottom}></div>
             </div>
             <div className={style.c3}>
                 <div className={style.c3content}>
-                    <div className={style.c3top}><BsFileEarmarkBarGraph /></div>
-                    <h3>Окупаемость инвестиций</h3>
-                    <p>По истечению срока <br/>окупаемости <b>увеличиваете <br/>свою прибыль</b></p>
+                    <div>
+                        <div className={style.c3Icon} ><FontAwesomeIcon icon={faSun} /><FontAwesomeIcon icon={faSolarPanel} /><FontAwesomeIcon icon={faPlugCircleBolt} /></div>
+                        <h3>Повысите качество напряжения для своих нужд при минимальном обслуживании.</h3>
+                    </div>
+                    <div>
+                        <div className={style.c3Icon} style={{float: 'right', color: 'green' }}><FontAwesomeIcon icon={faTree} /></div>
+                        <h3>Статус инновационной экологичной компании или прогрессивного хозяина.</h3>
+                    </div>
                 </div>
             </div>
         </div>
