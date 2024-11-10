@@ -52,6 +52,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 0 0 1rem;
+    flex: 1;
 }
 
 .сapContactsItem  {
