@@ -1,5 +1,6 @@
 .wrapper {
     display: flex;
+    justify-content: center;
     background-image: url(./img/grass_green_1920x1080.webp);
     background-position: center;
     background-repeat: no-repeat;
@@ -15,6 +16,7 @@
     border-radius: 8px 0 0 .5rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     margin: 1rem 0;
+    padding: 1rem 2.3rem 0 1rem;
 }
 
 .container h2 {

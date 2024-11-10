@@ -10,7 +10,7 @@ export default function Partners() {
     return (
         <div className={style.container}>
             <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '25%', margin: '0 0 0 -6rem'}}></div>
-            <h2>Мы сотрудничаем <span style={{ color: '#ff8c00' }}>с ведущими компаниями</span> отрасли:</h2>
+            <h2>Сотрудничаем <span style={{ color: '#ff8c00' }}>с ведущими компаниями</span> отрасли:</h2>
             <div className={style.partners}>
                 <div className={style.row}>
                     <div className={style.col}>

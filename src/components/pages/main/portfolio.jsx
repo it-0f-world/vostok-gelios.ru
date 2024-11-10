@@ -58,7 +58,6 @@ export default function Portfolio() {
                             <p>Мы нарабатываем и реализуем опыт для удовлетворения индивидуальных потребностей каждого клиента в альтернативной энергетике.</p>
                         </div>
                     </div>
-                    
                     <div className={style.buttonContainer}>
                         <NavLink to="/portfolio">
                             <button className={style.button}>ПОДРОБНЕЕ О РЕАЛИЗОВАННЫХ ПРОЕКТАХ</button>
