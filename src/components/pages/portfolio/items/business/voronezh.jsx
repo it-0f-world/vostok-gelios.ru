@@ -14,7 +14,7 @@ export default function Voronezh(props) {
                 <Carousel options={OPTIONS} />
                 <div className={style.description}>
                     <div className={style.tasks}>
-                        <h2>Задача:</h2>
+                        <h6>Задача:</h6>
                         <p>Снизить энергопотребление аэровокзального комплекса</p>
                     </div>
                     <div className={style.specification}>
