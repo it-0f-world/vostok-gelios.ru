@@ -9,7 +9,12 @@ import Portfolio from './components/pages/portfolio/portfolio';
 import Contacts from './components/pages/contacts/contacts';
 import Industrial from './components/pages/forIndustrial/forIndustrial';
 import HouseHold from './components/pages/forHouseHolds/forHouseHolds';
-import VoronezhPortfolio from './components/pages/portfolio/items/business/voronezh'
+import VoronezhPortfolio from './components/pages/portfolio/items/business/voronezh-airport'
+import IvanovoPortfolio from './components/pages/portfolio/items/business/ivanovo-mac-fabric'
+import MoscowPortfolio from './components/pages/portfolio/items/business/moscow-lukoil-office'
+import SberPortfolio from './components/pages/portfolio/items/business/moscow-sbercity'
+import MoscowHohland from './components/pages/portfolio/items/business/moscow-hohland'
+import Vladimir23kVt from './components/pages/portfolio/items/household/vladimir-23kVt'
 
 class App extends React.Component {
   constructor(props) {
@@ -51,6 +56,11 @@ class App extends React.Component {
               <Route path="/household" element={<HouseHold closeMenu={() => this.closeMenu()} />} />
               <Route path="/contacts" element={<Contacts closeMenu={() => this.closeMenu()} />} />
               <Route path="/portfolio/voronezh-airport" element={<VoronezhPortfolio closeMenu={() => this.closeMenu()} />} />
+              <Route path="/portfolio/ivanovo-mac-fabric" element={<IvanovoPortfolio closeMenu={() => this.closeMenu()} />} />
+              <Route path="/portfolio/moscow-lukoil-office" element={<MoscowPortfolio closeMenu={() => this.closeMenu()} />} />
+              <Route path="/portfolio/moscow-sbercity" element={<SberPortfolio closeMenu={() => this.closeMenu()} />} />
+              <Route path="/portfolio/moscow-hohland" element={<MoscowHohland closeMenu={() => this.closeMenu()} />} />
+              <Route path="/portfolio/vladimir-23kVt" element={<Vladimir23kVt closeMenu={() => this.closeMenu()} />} />
             </Routes>
           </main>
           <footer className={style.footer}>

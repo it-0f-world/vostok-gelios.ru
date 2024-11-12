@@ -41,7 +41,7 @@ export default function About() {
                                     <div className={style.overlay}></div>
                                 </div>
                             </NavLink>
-                            <div className={style.item}>
+                            <NavLink to="/portfolio/ivanovo-mac-fabric" className={style.item}>
                                 <div className={style.imageContainer}>
                                     <img src={Ivanovo} alt="солнечная электростанция в Иваново для кондитерской фабрики" />
                                     <div className={style.info}>
@@ -50,8 +50,8 @@ export default function About() {
                                     </div>
                                     <div className={style.overlay}></div>
                                 </div>
-                            </div>
-                            <div className={style.item}>
+                            </NavLink>
+                            <NavLink to="/portfolio/moscow-lukoil-office" className={style.item}>
                                 <div className={style.imageContainer}>
                                     <img src={Lukoil} alt="солнечная электростанция для Лукойл в Москве" />
                                     <div className={style.info}>
@@ -60,8 +60,8 @@ export default function About() {
                                     </div>
                                     <div className={style.overlay}></div>
                                 </div>
-                            </div>
-                            <div className={style.item}>
+                            </NavLink>
+                            <NavLink to="/portfolio/moscow-sbercity" className={style.item}>
                                 <div className={style.imageContainer}>
                                     <img src={Sber} alt="солнечная электростанция для ЖК Сберсити в Москве" />
                                     <div className={style.info}>
@@ -70,8 +70,8 @@ export default function About() {
                                     </div>
                                     <div className={style.overlay}></div>
                                 </div>
-                            </div>
-                            <div className={style.item}>
+                            </NavLink>
+                            <NavLink to="/portfolio/moscow-hohland" className={style.item}>
                                 <div className={style.imageContainer}>
                                     <img src={Hohland} alt="солнечная электростанция для Хохланд в Москве" />
                                     <div className={style.info}>
@@ -80,12 +80,12 @@ export default function About() {
                                     </div>
                                     <div className={style.overlay}></div>
                                 </div>
-                            </div>
+                            </NavLink>
                         </div>
                     </TabPanel>
                     <TabPanel>
                         <div className={style.objects}>
-                            <div className={style.item}>
+                            <NavLink to="/portfolio/vladimir-23kVt" className={style.item}>
                                 <div className={style.imageContainer}>
                                     <img src={Vladimir} alt="солнечная электростанция во Владимире для частного дома" />
                                     <div className={style.info} >
@@ -94,7 +94,7 @@ export default function About() {
                                     </div>
                                     <div className={style.overlay}></div>
                                 </div>
-                            </div>
+                            </NavLink>
                             <div className={style.item}>
                                 <div className={style.imageContainer}>
                                     <img src={Moscow} alt="солнечная электростанция в Красногорске, частный дом" />

@@ -1,12 +1,12 @@
 import style from '../portfolio-items.module.css'
-import Carousel from './ivanovo-embla.jsx'
+import Carousel from './embla-carousel/ivanovo-mac-fabric-embla.jsx'
 import Portfolio from '../../../main/portfolio.jsx'
 import ContactForm from '../../../main/contactForm.jsx'
 import HireUs from '../../../forIndustrial/hireUs.jsx'
 
 const OPTIONS = {}
 
-export default function Voronezh(props) {
+export default function IvanovoMacFabric(props) {
     return (
         <div className={style.wrapper}>
             <div className={style.container}>
@@ -15,7 +15,7 @@ export default function Voronezh(props) {
                 <div className={style.description}>
                     <div className={style.tasks}>
                         <h6>Задача:</h6>
-                        <p>Снизить энергопотребление аэровокзального комплекса</p>
+                        <p>Снизить энергопотребление фабрики, компенсировать недостаток электроэнергии и мощности из сети в моменты пикового потребления фабрики.</p>
                     </div>
                     <div className={style.specification}>
                         <div сlassName={style.info}>
@@ -23,11 +23,6 @@ export default function Voronezh(props) {
                             <p><strong>Конечный заказчик: </strong>ООО «МАК‑Иваново».</p>
                             <p><strong>Дата: </strong>ноябрь-декабрь 2023 г.</p>
                             <p><strong>Срок выполнения: </strong>30 рабочих дней.</p>
-                            <h3 className={style.results}>Задачи проекта:</h3>
-                            <ul>
-                                <li>Снизить энергопотребление фабрики.</li>
-                                <li>Компенсировать недостаток электроэнергии и мощности из сети в моменты пикового потребления фабрики.</li>
-                            </ul>
                             <h3 className={style.results}>Результаты работ:</h3>
                             <ul>
                                 <li>Расчетная выработка СЭС составляет 127,5 МВт·ч в год.</li>

@@ -1,12 +1,12 @@
 import style from '../portfolio-items.module.css'
-import Carousel from './voronezh-embla.jsx'
+import Carousel from './embla-carousel/voronezh-airport-embla.jsx'
 import Portfolio from '../../../main/portfolio.jsx'
 import ContactForm from '../../../main/contactForm.jsx'
 import HireUs from '../../../forIndustrial/hireUs.jsx'
 
 const OPTIONS = {}
 
-export default function Voronezh(props) {
+export default function VoronezhAirport(props) {
     return (
         <div className={style.wrapper}>
             <div className={style.container}>
