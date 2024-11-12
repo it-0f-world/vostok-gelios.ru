@@ -10,7 +10,7 @@ export default function Vladimir23kVt(props) {
     return (
         <div className={style.wrapper}>
             <div className={style.container}>
-                <h1><span style={{color: '#ff8c00'}}>Солнечная станция</span><br /> для частного дома в г. Владимир»</h1>
+                <h1><span style={{color: '#ff8c00'}}>Солнечная станция</span><br /> для частного дома в г. Владимир</h1>
                 <Carousel options={OPTIONS} />
                 <div className={style.description}>
                     <div className={style.tasks}>

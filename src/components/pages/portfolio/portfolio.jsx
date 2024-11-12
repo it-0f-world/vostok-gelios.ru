@@ -105,16 +105,16 @@ export default function About() {
                                     <div className={style.overlay}></div>
                                 </div>
                             </NavLink>
-                            <div className={style.item}>
+                            <NavLink to="/portfolio/moscow-region13kVt" className={style.item}>
                                 <div className={style.imageContainer}>
                                     <img src={Rosinki} alt="солнечная электростанция для частного дома в г.Москва" />
                                     <div className={style.info}>
-                                        <h3 className={style.hightlight}>г. Москва, частный дом</h3>
+                                        <h3 className={style.hightlight}>Московская область, частный дом</h3>
                                         <p className={style.hightlight}>13,4 кВт. Расчётная выработка 11,4 МВт·ч/год</p>
                                     </div>
                                     <div className={style.overlay}></div>
                                 </div>
-                            </div>
+                            </NavLink>
                         </div>
                     </TabPanel>
                 </Tabs>
