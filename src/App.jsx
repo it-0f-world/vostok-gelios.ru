@@ -15,6 +15,7 @@ import MoscowPortfolio from './components/pages/portfolio/items/business/moscow-
 import SberPortfolio from './components/pages/portfolio/items/business/moscow-sbercity'
 import MoscowHohland from './components/pages/portfolio/items/business/moscow-hohland'
 import Vladimir23kVt from './components/pages/portfolio/items/household/vladimir-23kVt'
+import Krasnogorsk26kVt from './components/pages/portfolio/items/household/krasnogorsk-26kVt';
 
 class App extends React.Component {
   constructor(props) {
@@ -61,6 +62,7 @@ class App extends React.Component {
               <Route path="/portfolio/moscow-sbercity" element={<SberPortfolio closeMenu={() => this.closeMenu()} />} />
               <Route path="/portfolio/moscow-hohland" element={<MoscowHohland closeMenu={() => this.closeMenu()} />} />
               <Route path="/portfolio/vladimir-23kVt" element={<Vladimir23kVt closeMenu={() => this.closeMenu()} />} />
+              <Route path='/portfolio/krasnogorsk-26kVt' element={<Krasnogorsk26kVt closeMenu={() => this.closeMenu()} />} />
             </Routes>
           </main>
           <footer className={style.footer}>

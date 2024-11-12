@@ -95,7 +95,7 @@ export default function About() {
                                     <div className={style.overlay}></div>
                                 </div>
                             </NavLink>
-                            <div className={style.item}>
+                            <NavLink to='/portfolio/krasnogorsk-26kVt' className={style.item}>
                                 <div className={style.imageContainer}>
                                     <img src={Moscow} alt="солнечная электростанция в Красногорске, частный дом" />
                                     <div className={style.info}>
@@ -104,7 +104,7 @@ export default function About() {
                                     </div>
                                     <div className={style.overlay}></div>
                                 </div>
-                            </div>
+                            </NavLink>
                             <div className={style.item}>
                                 <div className={style.imageContainer}>
                                     <img src={Rosinki} alt="солнечная электростанция для частного дома в г.Москва" />
