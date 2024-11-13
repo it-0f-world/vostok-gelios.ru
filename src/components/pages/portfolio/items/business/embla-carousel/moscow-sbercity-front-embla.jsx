@@ -5,18 +5,24 @@ import {
   usePrevNextButtons
 } from '../../EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
-import '../../embla.css'
+import '../../embla-sbercity.css'
 
-import IMG_1 from '../../../img/lukoil/IMG_1.webp'
-import IMG_2 from '../../../img/lukoil/IMG_2.webp'
-import IMG_3 from '../../../img/lukoil/IMG_3.webp'
-import IMG_4 from '../../../img/lukoil/IMG_4.webp'
-import IMG_5 from '../../../img/lukoil/IMG_5.webp'
-import IMG_6 from '../../../img/lukoil/IMG_6.webp'
-import IMG_7 from '../../../img/lukoil/IMG_7.webp'
-import IMG_8 from '../../../img/lukoil/IMG_8.webp'
-import IMG_9 from '../../../img/lukoil/IMG_9.webp'
-import IMG_10 from '../../../img/lukoil/IMG_10.webp'
+import IMG_1 from '../../../img/sbercity/front/IMG_1.webp'
+import IMG_2 from '../../../img/sbercity/front/IMG_2.webp'
+import IMG_3 from '../../../img/sbercity/front/IMG_3.webp'
+import IMG_4 from '../../../img/sbercity/front/IMG_4.webp'
+import IMG_5 from '../../../img/sbercity/front/IMG_5.webp'
+import IMG_6 from '../../../img/sbercity/front/IMG_6.webp'
+import IMG_7 from '../../../img/sbercity/front/IMG_7.webp'
+import IMG_8 from '../../../img/sbercity/front/IMG_8.webp'
+import IMG_9 from '../../../img/sbercity/front/IMG_9.webp'
+import IMG_10 from '../../../img/sbercity/front/IMG_10.webp'
+import IMG_11 from '../../../img/sbercity/front/IMG_11.webp'
+import IMG_12 from '../../../img/sbercity/front/IMG_12.webp'
+import IMG_13 from '../../../img/sbercity/front/IMG_13.webp'
+import IMG_14 from '../../../img/sbercity/front/IMG_14.webp'
+import IMG_15 from '../../../img/sbercity/front/IMG_14.webp'
+import IMG_16 from '../../../img/sbercity/front/IMG_14.webp'
 
 export default function Carousel(props) {
     const { options } = props
@@ -104,9 +110,50 @@ export default function Carousel(props) {
                             </div>
                         </div>
                     </div>
+                    <div className="embla__slide">
+                        <div className="embla__slide">
+                            <div className="embla__slide__number">
+                                <img src={IMG_11} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="embla__slide">
+                        <div className="embla__slide">
+                            <div className="embla__slide__number">
+                                <img src={IMG_12} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="embla__slide">
+                        <div className="embla__slide">
+                            <div className="embla__slide__number">
+                                <img src={IMG_13} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="embla__slide">
+                        <div className="embla__slide">
+                            <div className="embla__slide__number">
+                                <img src={IMG_14} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="embla__slide">
+                        <div className="embla__slide">
+                            <div className="embla__slide__number">
+                                <img src={IMG_15} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="embla__slide">
+                        <div className="embla__slide">
+                            <div className="embla__slide__number">
+                                <img src={IMG_16} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <div className="embla__controls">
                 <div className="embla__buttons">
                     <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />

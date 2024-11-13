@@ -1,5 +1,6 @@
-import style from '../portfolio-items.module.css'
-import Carousel from './embla-carousel/moscow-sbercity-embla.jsx'
+import style from '../portfolio-sbercity.module.css'
+import CarouselRoof from './embla-carousel/moscow-sbercity-roof-embla.jsx'
+import CarouselFront from './embla-carousel/moscow-sbercity-front-embla.jsx'
 import Portfolio from '../../../main/portfolio.jsx'
 import ContactForm from '../../../main/contactForm.jsx'
 import HireUs from '../../../forIndustrial/hireUs.jsx'
@@ -11,7 +12,6 @@ export default function Sbercity(props) {
         <div className={style.wrapper}>
             <div className={style.container}>
                 <h1><span style={{color: '#ff8c00'}}>Солнечная станция</span><br /> для штаба строительства ЖК «Сберсити»</h1>
-                <Carousel options={OPTIONS} />
                 <div className={style.description}>
                     <div className={style.tasks}>
                         <h6>Задача:</h6>
@@ -39,6 +39,10 @@ export default function Sbercity(props) {
                             </ul>
                         </div>
                     </div>
+                </div>
+                <div className={style.carousel}>
+                    <CarouselRoof options={OPTIONS} />
+                    <CarouselFront options={OPTIONS} />
                 </div>
             </div>
             <HireUs />

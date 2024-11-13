@@ -5,22 +5,22 @@ import {
   usePrevNextButtons
 } from '../../EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
-import '../../embla.css'
+import '../../embla-sbercity.css'
 
-import IMG_1 from '../../../img/ivanovo/1.jpg'
-import IMG_2 from '../../../img/ivanovo/2.jpg'
-import IMG_3 from '../../../img/ivanovo/3.jpg'
-import IMG_4 from '../../../img/ivanovo/4.jpg'
-import IMG_5 from '../../../img/ivanovo/5.jpg'
-import IMG_6 from '../../../img/ivanovo/6.jpg'
-import IMG_7 from '../../../img/ivanovo/7.jpg'
-import IMG_8 from '../../../img/ivanovo/8.jpg'
-import IMG_9 from '../../../img/ivanovo/9.jpg'
-import IMG_10 from '../../../img/ivanovo/10.jpg'
-import IMG_11 from '../../../img/ivanovo/11.jpg'
-import IMG_12 from '../../../img/ivanovo/12.jpg'
-import IMG_13 from '../../../img/ivanovo/13.jpg'
-
+import IMG_1 from '../../../img/sbercity/roof/IMG_1.webp'
+import IMG_2 from '../../../img/sbercity/roof/IMG_2.webp'
+import IMG_3 from '../../../img/sbercity/roof/IMG_3.webp'
+import IMG_4 from '../../../img/sbercity/roof/IMG_4.webp'
+import IMG_5 from '../../../img/sbercity/roof/IMG_5.webp'
+import IMG_6 from '../../../img/sbercity/roof/IMG_6.webp'
+import IMG_7 from '../../../img/sbercity/roof/IMG_7.webp'
+import IMG_8 from '../../../img/sbercity/roof/IMG_8.webp'
+import IMG_9 from '../../../img/sbercity/roof/IMG_9.webp'
+import IMG_10 from '../../../img/sbercity/roof/IMG_10.webp'
+import IMG_11 from '../../../img/sbercity/roof/IMG_11.webp'
+import IMG_12 from '../../../img/sbercity/roof/IMG_12.webp'
+import IMG_13 from '../../../img/sbercity/roof/IMG_13.webp'
+import IMG_14 from '../../../img/sbercity/roof/IMG_14.webp'
 
 export default function Carousel(props) {
     const { options } = props
@@ -42,90 +42,97 @@ export default function Carousel(props) {
                 <div className="embla__container">
                     <div className="embla__slide">
                         <div className="embla__slide__number">
-                            <img src={IMG_1} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                            <img src={IMG_1} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_2} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_2} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_3} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_3} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_4} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_4} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_5} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_5} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_6} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_6} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_7} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_7} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_8} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_8} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_9} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_9} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_10} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_10} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_11} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_11} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_12} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_12} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
                     <div className="embla__slide">
                         <div className="embla__slide">
                             <div className="embla__slide__number">
-                                <img src={IMG_13} alt="Монтаж солнечных панелей на плоской крыше. Город Иваново, кондитерская фабрика. Солнечная электростанция для бизнеса." />
+                                <img src={IMG_13} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="embla__slide">
+                        <div className="embla__slide">
+                            <div className="embla__slide__number">
+                                <img src={IMG_14} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
                             </div>
                         </div>
                     </div>
