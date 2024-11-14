@@ -1,16 +1,16 @@
 import style from './portfolio.module.css'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { NavLink } from "react-router-dom";
-import 'react-tabs/style/react-tabs.css';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import { NavLink } from "react-router-dom"
+import 'react-tabs/style/react-tabs.css'
 import './portfolio-tabs.css'
 
-import Vladimir from "./img/vladimir/gallery1.webp";
+import Vladimir from "./img/vladimir/gallery1.webp"
 import Voronezh from "./img/voronezh_airport/gallery.webp";
 import Ivanovo from "./img/ivanovo/gallery.webp";
 import Lukoil from "./img/lukoil/gallery.webp";
 import Sber from "./img/sbercity/gallery.webp";
 import Hohland from "./img/hohland/gallery.webp";
-import Moscow from "./img/moscow_household/gallery.webp";
+import Krasnogorsk from "./img/krasnogorsk26kVt/gallery.webp";
 import Rosinki from "./img/rosinki/gallery.webp";
 
 export default function About() {
@@ -97,7 +97,7 @@ export default function About() {
                             </NavLink>
                             <NavLink to='/portfolio/krasnogorsk-26kVt' className={style.item}>
                                 <div className={style.imageContainer}>
-                                    <img src={Moscow} alt="солнечная электростанция в Красногорске, частный дом" />
+                                    <img src={Krasnogorsk} alt="солнечная электростанция в Красногорске, частный дом" />
                                     <div className={style.info}>
                                         <h3 className={style.hightlight}>г. Красногорск, частный дом</h3>
                                         <p className={style.hightlight}>25,9 кВт. Расчётная выработка 18,1 МВт·ч/год</p>

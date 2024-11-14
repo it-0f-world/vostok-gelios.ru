@@ -1,11 +1,11 @@
 .embla {
-  max-width: 50%;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
   --slide-height: 86vh;
   --slide-spacing: 1rem;
   --slide-size: 100%;
   --text-body: #1B1F3D;
-  padding: 1rem 0 0;
+  padding: 0 0 1rem;
 }
 .embla__viewport {
   overflow: hidden;

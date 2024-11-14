@@ -10,7 +10,7 @@ import Ivanovo from "../portfolio/img/ivanovo/gallery.webp";
 import Lukoil from "../portfolio/img/lukoil/gallery.webp";
 import Sber from "../portfolio/img/sbercity/gallery.webp";
 import Hohland from "../portfolio/img/hohland/gallery.webp";
-import Moscow from "../portfolio/img/moscow_household/gallery.webp";
+import Krasnogorsk from "../portfolio/img/krasnogorsk26kVt/gallery.webp";
 import Rosinki from "../portfolio/img/rosinki/gallery.webp";
 
 
@@ -130,7 +130,7 @@ export default function Portfolio() {
                 <WithStyles
                     description="25,9 кВт. Расчётная выработка 18,1 МВт·ч/год"
                     headline="г. Красногорск, частный дом"
-                    image={Moscow}
+                    image={Krasnogorsk}
                 />
                 <WithStyles
                     description="13,4 кВт. Расчётная выработка 11,4 МВт·ч/год"

@@ -41,7 +41,9 @@ export default function Sbercity(props) {
                     </div>
                 </div>
                 <div className={style.carousel}>
+                    <h2>КРЫША:</h2>
                     <CarouselRoof options={OPTIONS} />
+                    <h2>ФАСАД:</h2>
                     <CarouselFront options={OPTIONS} />
                 </div>
             </div>
