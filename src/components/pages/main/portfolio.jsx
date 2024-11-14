@@ -100,6 +100,7 @@ export default function Portfolio() {
                     description="23 кВт. Расчётная выработка 19,5 МВт·ч/год"
                     headline="г. Владимир, частный дом"
                     image={Vladimir}
+                    navigate="/portfolio/vladimir-23kVt"
                 />
                 <WithStyles
                     description="102,4 кВт. Расчётная выработка 102 МВт·ч/год"
@@ -111,31 +112,37 @@ export default function Portfolio() {
                     description="155,52 кВт. Расчётная выработка 127,5 МВт·ч/год"
                     headline="г. Иваново, кондитерская фабрика"
                     image={Ivanovo}
+                    navigate="/portfolio/ivanovo-mac-fabric"
                 />
                 <WithStyles
                     description="59,3 кВт. Расчётная выработка 47 МВт·ч/год"
                     headline="г. Москва, офис Лукоил"
                     image={Lukoil}
+                    navigate="/portfolio/moscow-lukoil-office"
                 />
                 <WithStyles
                     description="115,2 кВт. Фасадные и крышные СЭС"
                     headline="г. Москва, ЖК Сберсити"
                     image={Sber}
+                    navigate="/portfolio/moscow-sbercity"
                 />
                 <WithStyles
                     description="117,5 кВт. Двухсторонние фотоэлектрические модули"
                     headline="г. Москва, производство Хохланд"
                     image={Hohland}
+                    navigate="/portfolio/moscow-hohland"
                 />
                 <WithStyles
                     description="25,9 кВт. Расчётная выработка 18,1 МВт·ч/год"
                     headline="г. Красногорск, частный дом"
                     image={Krasnogorsk}
+                    navigate="/portfolio/krasnogorsk-26kVt"
                 />
                 <WithStyles
                     description="13,4 кВт. Расчётная выработка 11,4 МВт·ч/год"
                     headline="г. Москва, частный дом"
                     image={Rosinki}
+                    navigate="/portfolio/moscow-region13kVt"
                 />
             </Carousel>
         </div>
