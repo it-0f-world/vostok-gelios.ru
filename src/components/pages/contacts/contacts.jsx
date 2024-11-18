@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import style from './contacts.module.css';
 import ContactForm from "../main/contactForm";
+import Top from './top';
 
 export default function Contacts() {
     const mapRef = useRef(null);
@@ -34,6 +35,7 @@ export default function Contacts() {
 
     return (
         <div>
+            <Top />
             <ContactForm />
             <div className={style.map} ref={mapRef}></div>
             <div style={{ backgroundColor: '#1B1F3D', height: '29px'}}><p> </p></div>
