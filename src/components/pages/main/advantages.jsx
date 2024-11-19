@@ -1,6 +1,7 @@
 import style from './advantages.module.css';
+import { HiAcademicCap } from "react-icons/hi2";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBrain, faAtom, faBarcode, faLeaf, faRankingStar } from '@fortawesome/free-solid-svg-icons';
+import { faAtom, faBarcode, faLeaf, faRankingStar } from '@fortawesome/free-solid-svg-icons';
 import { faMoneyBill1 } from '@fortawesome/free-regular-svg-icons';
 
 export default function Advantages() {
@@ -14,7 +15,7 @@ export default function Advantages() {
                 <div className={style.col}>
                     <div className={style.colContent}>
                         <div className={style.header}>
-                            <div className={style.icon}><FontAwesomeIcon icon={faBrain} /></div>
+                            <div className={style.icon}><HiAcademicCap /></div>
                             <h4>Экспертное обслуживание и индивидуальный подход</h4>
                         </div>
                         <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '33%', margin: '.5rem 0'}}></div>

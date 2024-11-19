@@ -15,11 +15,24 @@
     padding: 1rem;
     gap: 2rem 1rem 0;
 }
-.logoSlogan {
-    
-}
 .logotype {
     height: 260px;
+}
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+.icon {
+    height: 100%;
+    color: #133449;
+    display: flex;
+    flex-basis: 1;
+}
+.iconRow {
+    display: flex;
+}
+.iconRow p {
+    padding: .5rem;
 }
 @media only screen and (max-width: 1600px) {
     .container {
