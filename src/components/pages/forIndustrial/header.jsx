@@ -1,5 +1,6 @@
 import style from './header.module.css'
 import { AiOutlineThunderbolt } from "react-icons/ai";
+import { NavLink } from "react-router-dom"
 
 export default function Header() {
     return (
@@ -9,7 +10,7 @@ export default function Header() {
                 <div className={style.rules}>
                     <div className={style.line}></div>
                     <p>Cолнечные станции устанавливаются на крышах предприятий, производственных линий и логистических складов, чтобы эффективно компенсировать эксплуатационные затраты на электроэнергию, снижая тем самым расходы и повышая экономическую устойчивость бизнеса. Использование солнечной энергии позволяет не только сократить счета за электроэнергию, но и внести вклад в защиту окружающей среды.</p>
-                    <button className={style.buttonOrder}>< AiOutlineThunderbolt style={{ fontSize: '1.5em', marginBottom: '-.2em', paddingRight: '.5rem'}} /> уменьшить затраты на электроэнергию</button>
+                    <NavLink to="/contacts" className={style.buttonOrder}>< AiOutlineThunderbolt style={{ fontSize: '1.5em', marginBottom: '-.2em', paddingRight: '.5rem'}} /> уменьшить затраты на электроэнергию</NavLink>
                 </div>
             </div>
         </div>

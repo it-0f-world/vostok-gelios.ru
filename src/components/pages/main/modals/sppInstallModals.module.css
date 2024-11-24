@@ -16,7 +16,7 @@
 
 .image {
     display: flex;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     position: relative; /* Required for absolute positioning of the slogan */
     overflow: hidden;
     z-index: 0;

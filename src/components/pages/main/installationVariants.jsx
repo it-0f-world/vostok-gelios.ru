@@ -30,7 +30,6 @@ export default function Types() {
             <div className={style.bottom}>
                 <div className={style.b01}>
                     <div>
-                        <p>01</p>
                         <h2>Крышная СЭС <br/>для плоской кровли</h2>
                         <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '20%'}}></div>
                         <ul>
@@ -46,7 +45,6 @@ export default function Types() {
                 </div>
                 <div className={style.b02}>
                     <div>
-                        <p>02</p>
                         <h2>Фасадная СЭС</h2>
                         <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '20%'}}></div>
                         <ul>
@@ -61,7 +59,6 @@ export default function Types() {
                 </div>
                 <div className={style.b03}>
                     <div>
-                        <p>03</p>
                         <h2>Крышная СЭС <br/>для скатной кровли</h2>
                         <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '20%'}}></div>
                         <ul>
@@ -74,7 +71,6 @@ export default function Types() {
                 </div>
                 <div className={style.b04}>
                     <div>
-                        <p>04</p>
                         <h2><span style={{ color: '#ffd700' }}>С</span>олнечная <span style={{ color: '#ffd700' }}>Э</span>лектро <br/><span style={{ color: '#ffd700' }}>С</span>танция на земле</h2>
                         <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '20%'}}></div>
                         <ul>

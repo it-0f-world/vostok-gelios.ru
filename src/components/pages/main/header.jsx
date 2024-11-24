@@ -28,7 +28,7 @@ export default function Header() {
                 <div className={style.variants}>
                     <NavLink to="/industrial" className={style.varBiz}><LuFactory className={style.buttonIcon} /> ДЛЯ БИЗНЕСА</NavLink>
                     <div className={style.divider}></div>
-                    <NavLink to="/industrial"  className={style.varHouse}><BiBuildingHouse className={style.buttonIcon} /> ДЛЯ ЧАСТНОГО ДОМА</NavLink>
+                    <NavLink to="/household"  className={style.varHouse}><BiBuildingHouse className={style.buttonIcon} /> ДЛЯ ЧАСТНОГО ДОМА</NavLink>
                 </div>
             </div>
             <h1>Солнечная энергия для Вашего бизнеса и дома. <br />Ваш путь к экономии и независимости.</h1>
