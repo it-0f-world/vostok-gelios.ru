@@ -14,7 +14,7 @@ export default function ContactFormAdditional() {
             <div className={style.row}>
                 <div className={style.icon}><FiPhone /></div>
                 <div className={style.content}>
-                    <p><strong>Телефон: </strong> +7 (495) 123-45-67</p>
+                    <p><strong>Телефон: </strong> +7 925 346 7956</p>
                 </div>
             </div>
             <div className={style.row}>

@@ -3,11 +3,12 @@
     padding: 1rem 12rem;
     background-color: #1B1F3D;
     align-items: center;
+    justify-content: space-between;
 }
 
 .container h2 {
     color: white;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 .button {

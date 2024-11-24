@@ -24,7 +24,7 @@ const BurgerMenu = ({ closeMenu, isOpen, ...props }) => {
           </div>
           <div className='bm-address'>
             <a href="mailto:info@vostok-gelios.ru"><FiMail style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> info@vostok-gelios.ru</a>
-            <p style={{padding: '.5em 0'}}><FiPhoneCall style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> +7 (495) 000-00-00</p>
+            <p style={{padding: '.5em 0'}}><FiPhoneCall style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> +7 925 346 7956</p>
           </div>
         </Menu>
     );

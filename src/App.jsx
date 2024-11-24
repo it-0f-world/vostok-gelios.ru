@@ -3,6 +3,7 @@ import BurgerMenu from './components/burgerMenu/BurgerMenu';
 import style from './App.module.css';
 import { Route, Routes } from "react-router-dom";
 import React from 'react';
+import ScrollToTop from './assets/ScrollToTop';
 
 import Main from './components/pages/main/main'
 import Portfolio from './components/pages/portfolio/portfolio'
@@ -51,6 +52,7 @@ class App extends React.Component {
         />
         <div id="outer-container" className={style.app}>
           <main className={style.main} id="page-wrap">
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Main closeMenu={() => this.closeMenu()} />} />
               <Route path="/portfolio" element={<Portfolio closeMenu={() => this.closeMenu()} />} />
