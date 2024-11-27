@@ -4,14 +4,17 @@ import { CgPlayListRemove } from "react-icons/cg";
 import { TbFilterDollar } from "react-icons/tb";
 import { GiProfit } from "react-icons/gi";
 import { PiSolarPanel } from "react-icons/pi";
-
+import ImageSchemeSPP from './img/sheme-for-home.webp'
 
 export default function Profitability() {
     return (
         <div className={style.wrapper}>
             <div style={{ display: 'flex' }}>
-                    <div className={style.orangeSquare}></div>
-                    <div className={style.blueTitle}><h6>Почему это выгодно</h6></div>
+                <div className={style.orangeSquare}></div>
+                <div className={style.blueTitle}><h6>Почему это выгодно</h6></div>
+                <div className={style.titleDesc}>
+                    <h2>Как работает солнечная электростанция</h2>
+                </div>
             </div>
             <div className={style.container}>
                 <div className={style.why}>
@@ -72,6 +75,41 @@ export default function Profitability() {
                             <p>Можно начать с небольшой мощности станции, которую в дальнейшем очень просто увеличивать.</p>
                         </div>
                     </div>
+                </div>
+                <div className={style.scheme}>
+                    <div className={style.poster}>
+                        <img src={ImageSchemeSPP} alt="схема работы солнечной электростанции в частном доме" />
+                    </div>
+                    <ul className={style.description}>
+                        <li className={style.descRow}>
+                            <div className={style.value}><p>1</p></div>
+                            <div className={style.text}>
+                                <h3>Солнечные панели</h3>
+                                <p>Поглощают солнечный свет и преобразуют его в постоянный электрический ток.</p>
+                            </div>
+                        </li>
+                        <li className={style.descRow}>
+                            <div className={style.value}><p>2</p></div>
+                            <div className={style.text}>
+                                <h3>Инвертор</h3>
+                                <p>Преобразует постоянный ток в переменный, отвечает за рабочий режим станции и синхронизирует сгенерированную энергию с внешней электросетью.</p>
+                            </div>
+                        </li>
+                        <li className={style.descRow}>
+                            <div className={style.value}><p>3</p></div>
+                            <div className={style.text}>
+                                <h3>Счетчик</h3>
+                                <p>Не считает потребление электроэнергии из сети во время использования собственной энергии от солнечных панелей </p>
+                            </div>
+                        </li>
+                        <li className={style.descRow}>
+                            <div className={style.value}><p>4</p></div>
+                            <div className={style.text}>
+                                <h3>Электросеть</h3>
+                                <p>Не считает потребление электроэнергии из сети во время использования собственной энергии от солнечных панелей </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

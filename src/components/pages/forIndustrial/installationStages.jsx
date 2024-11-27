@@ -3,6 +3,7 @@ import dron from './img/dron.svg'
 import counter from './img/analysis.svg'
 import bus from './img/logistic.svg'
 import solarPanel from './img/instalation.svg'
+import { LuArrowRightSquare } from "react-icons/lu";
 
 export default function installationStages () {
     return (
@@ -18,6 +19,9 @@ export default function installationStages () {
                     <p className={style.highlight}>1 день</p>
                 </li>
                 <li className={style.stage}>
+                    <div className={style.arrow}><LuArrowRightSquare /></div>
+                </li>
+                <li className={style.stage}>
                     <div className={style.icon}>
                         <img src={counter} alt="счётчик электроэнергии с лупой иконка" />
                     </div>
@@ -26,12 +30,18 @@ export default function installationStages () {
                     <p className={style.highlight}>10 дней</p>
                 </li>
                 <li className={style.stage}>
+                    <div className={style.arrow}><LuArrowRightSquare /></div>
+                </li>
+                <li className={style.stage}>
                     <div className={style.icon}>
                         <img src={bus} alt="электрический микроавтобус иконка" />
                     </div>
                     <h3>Закупка и логистика</h3>
                     <p>Доставляем оборудование для солнечной электростанции</p>
                     <p className={style.highlight}>2 недели</p>
+                </li>
+                <li className={style.stage}>
+                    <div className={style.arrow}><LuArrowRightSquare /></div>
                 </li>
                 <li className={style.stage}>
                     <div className={style.icon}>

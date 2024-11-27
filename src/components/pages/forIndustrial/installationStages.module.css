@@ -3,7 +3,6 @@
     flex-direction: column;
     padding: 1rem 12rem;
 }
-
 .container h2 {
     text-transform: uppercase;
     font-size: 3rem;
@@ -11,36 +10,32 @@
     padding: 0 0 1rem;
     color: #1B1F3D;
 }
-
 .stages {
     display: flex;
     padding: 1rem 0 0;
 }
-
 .stage {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .stage h3 {
     padding: .5rem 0 0;
 }
-
 .stage p {
     text-align: center;
 }
-
 .icon {
     background-color: #ff8c00;
     padding: 1rem;
+    height: 100px;
+    display: flex;
+    align-content: center;
 }
-
 .highlight {
     position: relative;
     z-index: 1;
 }
-
 .highlight::before {
     background-color: #ff8c00;
       content: "";
@@ -52,7 +47,13 @@
       z-index: -1;
       transform: rotate(-2deg);
 }
-
+.arrow {
+    font-size: 4rem;
+    color:#1B1F3D;
+    display: flex;
+    flex-grow: 1;
+    padding: 2rem 0 0;
+}
 @media only screen and (max-width: 1600px) {
     .container {
         padding: 2rem;

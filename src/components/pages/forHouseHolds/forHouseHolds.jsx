@@ -12,7 +12,6 @@ export default function Articles() {
         <div>
             <Header />
             <Profitability />
-            <HowItWorks />
             <InstallationStages />
             <HireUs />
             <WhyUs />

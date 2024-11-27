@@ -16,6 +16,7 @@ export default function Profitability() {
             <div className={style.container}>
                 <div className={style.why}>
                 </div>
+                
                 <div className={style.section}>
                     <div className={style.item}>
                         <div className={style.row}>
