@@ -14,7 +14,7 @@
     width: 30%;
     background-image: 
     linear-gradient(#1b1f3d3e, #1b1f3d3e),
-    url(./img/service.webp);
+    url(../forIndustrial/img/service.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,12 +31,16 @@
     flex: 1;
     flex-wrap: wrap; /* Allow items to wrap onto the next line */
     gap: 1rem; /* Add gap between items */
+    align-content: flex-start;
 }
 .item {
     display: flex;
     flex-direction: column;
     flex: 1 1 300px; /* Allow items to grow and shrink, with a minimum width */
     min-width: 250px; /* Optional: Set a minimum width for items */
+    border: 1px solid #1B1F3D;
+    border-radius: 4px;
+    padding: 1rem 1rem .5rem;
 }
 .row {
     display: flex;
@@ -60,6 +64,7 @@
     height: 53px;
     margin-right: 1rem;
 }
+
 .blueTitle {
     background-color: #1B1F3D;
     display: flex;
@@ -71,7 +76,58 @@
     text-transform: uppercase;
     font-size: 1.6rem;
 }
-
+.scheme {
+    display: flex;
+    gap: .8rem;
+}
+.poster {
+    display: flex;
+    flex-direction: column;
+    max-width: 66%;
+    max-height: 400px;
+    flex-grow: 1;
+    width: 720px;
+}
+.poster img {
+    max-height: 400px;
+    border-radius: 6px;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 460px;
+    padding: .25rem 0;
+}
+.descRow {
+    display: flex;
+    align-items: center;
+}
+.value {
+    font-size: 2.3rem;
+    padding: 1rem;
+    background-color: #ff8c00;
+}
+.value p {
+    font-family: 'Rubik';
+    color: white;
+    font-weight: 700;
+}
+.text {
+    padding: 0 0 0 1rem;
+}
+.titleDesc {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+.titleDesc h2 {
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    text-align: center;
+    color: #1B1F3D;
+    padding: 0 0 0 1rem;
+}
 @media only screen and (max-width: 1600px) {
     .wrapper {
         padding: 2rem 2rem 3rem;

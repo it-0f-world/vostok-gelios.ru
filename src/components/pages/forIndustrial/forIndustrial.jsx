@@ -13,7 +13,6 @@ export default function Articles() {
         <div className={style.container} >
             <Header />
             <Profitability />
-            <HowItWorks />
             <InstallationStages />
             <HireUs />
             <WhyUs />
