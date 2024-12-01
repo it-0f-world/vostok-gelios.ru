@@ -15,14 +15,16 @@ export default function Header() {
                     <h2>ВОСТОК ГЕЛИОС</h2>
                 </div>
                 <div className={style.сapContacts}>
-                    <div>
-                        <a className={style.сapContactsItem} href="mailto:info@vostok-gelios.ru"><FiMail className={style.сapContactsItemIcon} /> info@vostok-gelios.ru</a>
+                    <div className={style.сapContactsItem}>
+                        <a href="mailto:info@vostok-gelios.ru"><FiMail className={style.сapContactsItemIcon} /> info@vostok-gelios.ru</a>
                     </div>
-                    <div>
-                        <a className={style.сapContactsItem} href="callto:+7495000000"><FiPhoneCall className={style.сapContactsItemIcon} /> +7 (495) 000-00-00</a>
+                    <div className={style.сapContactsItem}>
+                        <a href="callto:+7495000000"><FiPhoneCall className={style.сapContactsItemIcon} /> +7 925 346 7956</a>
                     </div>
-                    <div>
-                        <p className={style.сapContactsItem}><HiOutlineOfficeBuilding className={style.сapContactsItemIcon} /> Московская область, г. Балашиха</p>
+                    <div className={style.сapContactsItem}>
+                        <NavLink to="/contacts">
+                            <HiOutlineOfficeBuilding className={style.сapContactsItemIcon} /> Московская область, г. Балашиха
+                        </NavLink>
                     </div>
                 </div>
                 <div className={style.variants}>

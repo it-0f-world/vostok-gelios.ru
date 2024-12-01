@@ -3,7 +3,6 @@
     flex-direction: column;
     padding: 2rem 12rem;
 }
-
 .slogan {
     display: flex;
     background-color: #1B1F3D;
@@ -12,12 +11,10 @@
     align-items: center;
     margin: 0 0 1rem;
 }
-
 .slogan h1 {
     text-transform: uppercase;
     font-size: 3.1rem;
 }
-
 .yellowCube {
     aspect-ratio: 1; /* Ensures the width and height are equal */
     background-color: #ff8c00; /* Yellow color */
@@ -25,7 +22,6 @@
     display: inline-block; /* Allows it to sit next to text */
     margin-right: 1rem; /* Space between the cube and the text */
 }
-
 .objects {
     display: flex;
     flex: 1;
@@ -38,7 +34,6 @@
     border-left: 1px solid #ff8c00;
     border-bottom: 1px solid #ff8c00;
 }
-
 .item {
     position: relative;
     display: flex;
@@ -48,21 +43,17 @@
     cursor: pointer;
     transition: transform .3s; /* Animation */
 }
-
 .item:hover {
     transform: scale(.98); 
 }
-
 .imageContainer {
     position: relative;
     overflow: hidden;
 }
-
 .imageContainer img {
     width: 100%;
     height: auto;
 }
-
 .info {
     position: absolute;
     top: 0;
@@ -78,17 +69,14 @@
     z-index: 2;
     padding: 1rem;
 }
-
 .info h3 {
     padding: .5rem 0;
     text-transform: uppercase;
     font-size: 1.6rem;
 }
-
 .info p {
     padding: 0 0 .5rem;
 }
-
 .hightlight {
     display: inline;
     padding: .25em 0;
@@ -96,7 +84,6 @@
     color: #ffffff;
     box-shadow: .5em 0 0 #1B1F3D, -.5em 0 0 #1B1F3D;
 }
-
 .overlay {
     position: absolute;
     top: 0;
@@ -112,17 +99,14 @@
     opacity: .1;
     transition: opacity 0.3s ease;
 }
-
 .item:hover .overlay {
     filter: brightness(120%) saturate(120%);
     opacity: .0; /* Show overlay on hover */
 }
-
 .footer {
     background-color: #1B1F3D;
     height: 29px;
 }
-
 @media only screen and (max-width: 1600px) {
     .container {
         padding: 2rem;

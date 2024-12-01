@@ -41,7 +41,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{backgroundColor: '#e4e4e4'}}>
         <BurgerMenu 
           pageWrapId={"page-wrap"} 
           outerContainerId={"outer-container"}

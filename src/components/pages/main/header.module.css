@@ -10,13 +10,13 @@
     background-size: cover;
     padding: 8rem 12rem 6rem;
 }
-
 .сap {
     display: flex;
     gap: 3rem;
     justify-content: space-between;
+    flex: 1;
+    flex-wrap: wrap;
 }
-
 .variants {
     display: flex;
     border: 2px solid white;
@@ -25,7 +25,6 @@
     align-items: center;
     background-color: #1b1f3dd0;
 }
-
 .varBiz, .varHouse {
     display: flex;
     font-size: 1.6rem;
@@ -34,19 +33,15 @@
     padding: 0 2rem 0;
     color: white;
 }
-
 .varBiz:hover, .varHouse:hover {
     color:#ff8c00;
     cursor: pointer;
 }
-
 .divider {
     height: 80%;
     width: 4px;
     background-color: #ff8c00;
 }
-
-
 .сapContacts {
     display: flex;
     flex-direction: column;
@@ -54,38 +49,31 @@
     padding: 0 0 1rem;
     flex: 1;
 }
-
-.сapContactsItem  {
+.сapContactsItem a  {
     color: white;
     font-size: 1.2rem;
 }
-
-.сapContactsItem:hover {
+.сapContactsItem a:hover {
     color: #ff8c00;
 }
-
 .сapContactsItemIcon {
     font-size: 1.5em;
     margin-bottom: -.25em;
 }
-
 .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 250px;
 }
-
 .logoImg {
     max-height: 6rem;
 }
-
 .logo h2 {
     color: white;
     font-weight: 500;
     font-size: 2rem;
 }
-
 .header h1 {
     text-shadow: 2px 2px #09131c;
     color: white;
@@ -93,7 +81,6 @@
     font-size: 3em;
     padding: 4rem 0 0;
 }
-
 .headerDescription {
     text-shadow: 2px 2px #09131c;
     color: white;
@@ -101,13 +88,11 @@
     line-height: 1.2;
     text-align: justify;
 }
-
 .buttonContainer {
     display: flex;
     gap: 1rem;
     padding: 2rem 0;
 }
-
 .buttonOrder {
     padding: 1rem 2rem;
     border: 2px solid #C0C0C0;
@@ -119,14 +104,12 @@
     text-transform: uppercase;
     font-weight: 600;
 }
-
 .buttonOrder:hover {
     background-color: white;
     color: #1B1F3D;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: 2px solid #1B1F3D;
 }
-
 .buttonContacts {
     padding: 1rem 2rem;
     border: 2px solid #1B1F3D;
@@ -138,20 +121,22 @@
     text-transform: uppercase;
     font-weight: 600;
 }
-
 .buttonContacts:hover {
     background-color: #1B1F3D;
     color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: 2px solid white;
 }
-
 .buttonIcon {
     font-size: 3.6rem;
     margin: 0 0 -.4rem;
     padding: 0 .5rem 0 0;
 }
-
+@media only screen and (max-width: 1900px) {
+    .header {
+        padding: 8rem 6rem 4rem;
+    }
+}
 @media only screen and (max-width: 1600px) {
     .header {
         padding: 6rem 2rem 2rem;
@@ -174,13 +159,126 @@
         font-size: 2.3rem;
     }
 }
-
-@media only screen and (max-width: 800px) {
-    .header p {
+@media only screen and (max-width: 1300px) {
+    .varBiz, .varHouse {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .logoImg {
+        max-height: 5rem;
+    }
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    .varBiz, .varHouse {
+        padding: 0 1rem 0;
+    }
+    .headerDescription {
+        font-size: 1.2rem;
+    }
+    .сapContactsItem a {
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .logoImg {
+        max-height: 4rem;
+    }
+    .buttonOrder, .buttonContacts {
+        font-size: 12px;
+    }
+    .varBiz, .varHouse, .сapContactsItem a {
+        font-size: 1rem;
+    }
+    .logo h2 {
         font-size: 1.4rem;
     }
 }
-
+@media only screen and (max-width: 1000px) {
+    .cap {
+        flex-direction: column;
+    }
+    .сapContacts {
+        flex: 1 1 300px; /* Allow items to grow and shrink with a base width */
+        min-width: 200px; /* Minimum width for items */
+    }
+    .variants {
+        min-height: 3.6rem;
+    }
+    .varBiz, .varHouse, .сapContactsItem a {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .headerDescription {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .сapContactsItem a {
+        font-size: 1rem;
+    }
+    .buttonOrder, .buttonContacts {
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width: 660px) {
+    .сap {
+        gap: .5rem;
+    }
+    .variants {
+        margin: 1rem 0 0;
+    }
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    .headerDescription {
+        font-size: 1rem;
+    }
+    .сapContacts {
+        flex: 1 1 240px; /* Allow items to grow and shrink with a base width */
+        min-width: 200px; /* Minimum width for items */
+    }
+}
+@media only screen and (max-width: 620px) {
+    .buttonOrder, .buttonContacts {
+        padding: .5rem;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .header {
+        padding: 6rem 1rem 2rem;
+    }
+}
+@media only screen and (max-width: 540px) {
+    .header {
+        padding: 3rem 1rem 2rem;
+    }
+    .сapContacts {
+        flex: 1 1 320px; /* Allow items to grow and shrink with a base width */
+        min-width: 260px; /* Minimum width for items */
+    }
+    .сap {
+        justify-content: center;
+    }
+    .variants {
+        margin: 0;
+    }
+    .logoImg {
+        max-height: none;
+    }
+    .logo h2 {
+        font-size: 2rem;
+    }
+    .varBiz, .varHouse {
+        font-size: 1rem;
+    }
+    .variants {
+        flex-grow: 1;
+        justify-content: center;
+    }
+}
 @media only screen and (max-width: 440px) {
     
 }

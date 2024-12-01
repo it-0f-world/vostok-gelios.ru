@@ -6,30 +6,25 @@
   left: 36px;
   top: 36px;
 }
-
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #1B1F3D;
   border-radius: .25rem;
   border: 1px solid white;
 }
-
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
   background: #FF8C00;
 }
-
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
   height: 24px;
   width: 24px;
 }
-
 /* Color/shape of close button cross */
 .bm-cross {
   background: #ffffff;
 }
-
 /*
   Sidebar wrapper styles
   Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
@@ -39,7 +34,6 @@
   height: 100%;
   width: 21rem !important;
 }
-
 /* General sidebar styles */
 .bm-menu {
   position: relative;
@@ -50,19 +44,16 @@
   font-size: 1.15em;
   top: 0;
 }
-
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: #373a47;
 }
-
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
   height: auto !important;
 }
-
 /* Individual item */
 .bm-item {
   display: inline-block;
@@ -75,36 +66,29 @@
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
-
 .bm-item a {
   display: block;
   padding: .32em 0;
   color: white;
   text-decoration: none !important;
 }
-
 .bm-item a:hover {
   color: #ffd700;
 }
-
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
-
 .bm-item-active {
   color: #ffd700 !important;
 }
-
 .bm-logo {
   display: flex;
   width: 100%;
 }
-
 .bm-icon {
   margin-bottom: .5rem;
 }
-
 .bm-address {
   position: absolute;
   /* Position the address container */
@@ -113,33 +97,39 @@
   width: calc(100% - 3.2em);
   /* Ensure it fits within the padding */
 }
-
 .bm-address p {
   font-family: "Montserrat";
   font-size: 1rem;
   text-align: justify;
 }
-
 .bm-address a {
   font-family: "Montserrat";
   font-size: 1rem;
   text-align: justify;
 }
-
+@media (min-width: 2300px) {
+  .bm-burger-button {
+    width: 6rem;
+    height: 4.5rem;
+  }
+}
 @media (max-width: 1200px) {
   .bm-menu {
     width: 19rem !important;
   }
-
   .bm-menu-wrap {
     width: 19rem !important;
   }
-
   .bm-menu {
     padding: 1.5em .5em 0;
   }
-
   .bm-item {
     font-size: 1.5rem !important;
+  }
+}
+@media (max-width: 660px) {
+  .bm-burger-button {
+    width: 3.6rem;
+    height: 2.3rem;
   }
 }
