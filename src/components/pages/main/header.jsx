@@ -19,7 +19,7 @@ export default function Header() {
                         <a href="mailto:info@vostok-gelios.ru"><FiMail className={style.сapContactsItemIcon} /> info@vostok-gelios.ru</a>
                     </div>
                     <div className={style.сapContactsItem}>
-                        <a href="callto:+7495000000"><FiPhoneCall className={style.сapContactsItemIcon} /> +7 925 346 7956</a>
+                        <a href="callto:+79253467956"><FiPhoneCall className={style.сapContactsItemIcon} /> +7 925 346 7956</a>
                     </div>
                     <div className={style.сapContactsItem}>
                         <NavLink to="/contacts">

@@ -4,16 +4,15 @@ import {BiMap} from 'react-icons/bi';
 import { GrMemory, GrServers, GrSelection, GrCatalog } from "react-icons/gr";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
 import './burgerMenu.css';
-import LogoWhite from '../../assets/images/logo/Logo-white-pure.svg';
+import LogoWhite from '../../assets/images/logo/Logo-white-text-to-vector.svg';
 
 const BurgerMenu = ({ closeMenu, isOpen, ...props }) => {
     return (
         <Menu  isOpen={isOpen} {...props}>
           <div className='bm-logo'>
-            <NavLink to="/" onClick={closeMenu}>
-              <img src={LogoWhite} alt="Logo" style={{ width: '16rem' }} />
+            <NavLink to="/" onClick={closeMenu} className='bm-logo-image'>
+              <img src={LogoWhite} alt="Logo" />
             </NavLink>
-              <h4 style={{ textTransform: 'uppercase', fontWeight: 'normal', fontSize: '1.7rem' }}>Восток Гелиос</h4>
           </div>
           <div>
             <NavLink to="/" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><GrMemory style={{ fontSize: '2.1rem', marginBottom: '-.4rem' }}/> Солнечные электростанции</NavLink>
@@ -24,7 +23,7 @@ const BurgerMenu = ({ closeMenu, isOpen, ...props }) => {
           </div>
           <div className='bm-address'>
             <a href="mailto:info@vostok-gelios.ru"><FiMail style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> info@vostok-gelios.ru</a>
-            <p style={{padding: '.5em 0'}}><FiPhoneCall style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> +7 925 346 7956</p>
+            <a href="callto:+79253467956"><FiPhoneCall style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> +7 925 346 7956</a>
           </div>
         </Menu>
     );

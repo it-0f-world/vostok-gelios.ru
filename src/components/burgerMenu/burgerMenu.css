@@ -86,6 +86,9 @@
   display: flex;
   width: 100%;
 }
+.bm-logo-image {
+  width: 16rem;
+}
 .bm-icon {
   margin-bottom: .5rem;
 }
@@ -97,15 +100,9 @@
   width: calc(100% - 3.2em);
   /* Ensure it fits within the padding */
 }
-.bm-address p {
-  font-family: "Montserrat";
-  font-size: 1rem;
-  text-align: justify;
-}
 .bm-address a {
   font-family: "Montserrat";
   font-size: 1rem;
-  text-align: justify;
 }
 @media (min-width: 2300px) {
   .bm-burger-button {
@@ -114,10 +111,7 @@
   }
 }
 @media (max-width: 1200px) {
-  .bm-menu {
-    width: 19rem !important;
-  }
-  .bm-menu-wrap {
+  .bm-menu, .bm-menu-wrap {
     width: 19rem !important;
   }
   .bm-menu {
@@ -129,7 +123,28 @@
 }
 @media (max-width: 660px) {
   .bm-burger-button {
+    left: 24px;
+    top: 24px;
     width: 3.6rem;
     height: 2.3rem;
+  }
+  .bm-menu, .bm-menu-wrap {
+    width: 16rem !important;
+  }
+  .bm-item {
+    font-size: 1.3rem !important;
+  }
+  .bm-logo-image img {
+    width: 14rem !important;
+  }
+  .bm-menu {
+    padding: 1.5em 0 0;
+  }
+  .bm-item {
+    margin: 0;
+  }
+  .bm-address {
+    font-size: .8rem;
+    width: calc(100% - 2em);
   }
 }

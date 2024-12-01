@@ -24,7 +24,13 @@ export default function Opportuninies() {
                     <p>&bull; В зависимости от региона <span style={{color: '#ff8c00'}}>от 4 лет.</span></p>
                     <p>&bull; Выгоду от установки СЭС и независимость от роста тарифов вы получаете <span style={{color: '#ff8c00'}}>с первого дня.</span></p>
                 </div>
-                <div className={style.c2bottom}></div>
+                <div className={style.c2bottom}>
+                    <div className={style.c2topMobile}>
+                        <h3>Окупаемость СЭС:</h3>
+                        <p>&bull; В зависимости от региона <span style={{color: '#ff8c00'}}>от 4 лет.</span></p>
+                        <p>&bull; Выгоду от установки СЭС и независимость от роста тарифов вы получаете <span style={{color: '#ff8c00'}}>с первого дня.</span></p>
+                    </div>
+                </div>
             </div>
             <div className={style.c3}>
                 <div className={style.c3content}>
