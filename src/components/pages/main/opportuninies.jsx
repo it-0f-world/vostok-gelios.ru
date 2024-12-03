@@ -7,7 +7,7 @@ export default function Opportuninies() {
         <div className={style.container}>
             <div className={style.c1}>
                 <div className={style.c1top}>
-                    <div>
+                    <div className={style.c1topText}>
                         <h2>ЧТО ВЫ ПОЛУЧИТЕ, УСТАНОВИВ СЭС?</h2>
                         <p className={style.c1topDescription}>*Выгодную инвестицию и независимость от роста тарифов на электроэнергию в дальнейшем</p>
                     </div>
