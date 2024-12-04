@@ -3,41 +3,34 @@
     flex-direction: column;
     padding: 1rem 0 0;
 }
-
 .top {
     padding: 0 6rem;
     margin: 0 0 -4px;
     z-index: 1;
 }
-
 .topContent {
     display: flex;
 }
-
 .topContentL, .topContentR {
     width: 50%;
 }
-
 .topContentR {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 2rem;
 }
-
 .topContentR p {
     text-align: justify;
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
 }
-
 .orangeSquare {
     background-color: #ff8c00;
     width: 53px;
     height: 53px;
     margin-right: 1rem;
 }
-
 .blueTitle {
     background-color: #1B1F3D;
     display: flex;
@@ -49,24 +42,20 @@
     text-transform: uppercase;
     font-size: 1.6rem;
 }
-
 .top h2 {
     color: #1B1F3D;
     font-size: 2.1rem;
     padding: 2rem 0;
     text-shadow: 1px 1px #e4e4e4;
 }
-
 .bottom {
     display: flex;
 }
-
 .bottom h2 {
     color: #1B1F3D;
     font-size: 2rem;
     padding: 0 0 1rem 1em;
 }
-
 .squareForIcon {
     display: inline-flex;
     width: fit-content; /* Ensures the width only wraps the content */
@@ -78,15 +67,29 @@
     align-items: center;
     justify-content: center;
 }
-
 .b01, .b02, .b03, .b04 {
     display: flex;
-    width: 25%;
+    flex: 1;
     padding: 2rem 2rem 0;
     background-color: #F5F5DC;
 }
-
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1960px) {
+    .b01, .b02, .b03, .b04 {
+        padding: 1.6rem 1rem .25rem;
+    }
+    .bottom h2 {
+        font-size: 1.6rem;
+    }
+    .squareForIcon {
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .top {
+        padding: 0 2rem;
+    }
+}
+@media screen and (max-width: 1520px) {
     .top {
         padding: 0 2rem;
     }
@@ -96,5 +99,19 @@
     .squareForIcon{
         font-size: 2.3rem;
         padding: 1rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .top {
+        padding: 0 0 0 .5rem;
+    }
+    .topContentL h2 {
+        font-size: 1.6rem;
+    }
+    .topContentR {
+        padding: 0.5rem;
+    }
+    .topContentR p {
+        font-size: 1rem;
     }
 }

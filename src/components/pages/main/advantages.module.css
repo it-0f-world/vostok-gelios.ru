@@ -95,6 +95,9 @@
     .container {
         padding: 1rem 0;
     }
+    .container h3 {
+        padding: 0 0 0 1rem;
+    }
 }
 @media only screen and (max-width: 1000px) {
     .container {
