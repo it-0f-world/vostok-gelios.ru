@@ -19,10 +19,10 @@ export default function Portfolio() {
         <div className={style.imageContainer}>
           <img src={image} alt={headline} className={style.image} />
           <div className={style.description}>
-            <div>
+            <NavLink to={navigate}>
                 <h3>{headline}</h3>
                 <p>{description}</p>
-            </div>
+            </NavLink>
             <NavLink to={navigate} className={style.buttonDesc}>детализация</NavLink>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function Portfolio() {
                 additionalTransfrom={0}
                 arrows
                 autoPlay
-                autoPlaySpeed={2400}
+                autoPlaySpeed={2700}
                 centerMode={false}
                 className=""
                 containerClass="container-with-dots"

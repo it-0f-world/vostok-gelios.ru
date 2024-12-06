@@ -98,6 +98,9 @@
     .container h3 {
         padding: 0 0 0 1rem;
     }
+    .orangeSquare {
+        margin-left: .5rem;
+    }
 }
 @media only screen and (max-width: 1000px) {
     .container {
