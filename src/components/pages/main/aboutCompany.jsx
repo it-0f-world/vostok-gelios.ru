@@ -55,6 +55,24 @@ export default function AboutCompany() {
                     </div>
                 </div>
             </div>
+            <div className={style.bottomMobile}>
+                <div className={style.b03Mobile}>
+                    <div className={style.squareForIcon}>
+                            < FaScrewdriverWrench />
+                        </div>
+                        <div>
+                            <h2>Монтажные и пусконаладочные работы</h2>
+                        </div>
+                    </div>
+                    <div className={style.b04Mobile}>
+                        <div className={style.squareForIcon}>
+                            < FaGear />
+                        </div>
+                        <div>
+                            <h2>Сервисное обслуживание</h2>
+                        </div>
+                    </div>
+                </div>
         </div>
     )
 }

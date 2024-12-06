@@ -73,6 +73,9 @@
     padding: 2rem 2rem 0;
     background-color: #F5F5DC;
 }
+.bottomMobile {
+    display: none;
+}
 @media screen and (max-width: 1960px) {
     .b01, .b02, .b03, .b04 {
         padding: 1.6rem 1rem .25rem;
@@ -108,10 +111,91 @@
     .topContentL h2 {
         font-size: 1.6rem;
     }
-    .topContentR {
+    .topContentR, .topContentL {
         padding: 0.5rem;
     }
     .topContentR p {
         font-size: 1rem;
+    }
+    .b03, .b04 {
+        display: none;
+    }
+    .bottomMobile {
+        display: flex;
+    }
+    .bottomMobile h2 {
+        color: #1B1F3D;
+        font-size: 1.2rem;
+        padding: 0 0 1rem 1em;
+    }
+    .b03Mobile, .b04Mobile {
+        display: flex;
+        padding: .6rem 1rem 0.5rem;
+    }
+    .bottom, .bottomMobile {
+        display: flex;
+        justify-content: space-around;
+        background-color: #F5F5DC;
+    }
+    .b01, .b02, .b03Mobile, .b04Mobile {
+        flex: 1;
+        padding-left: 2rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .b01, .b02, .b03Mobile, .b04Mobile {
+        padding-left: 1rem;
+    }
+    .b03Mobile, .b04Mobile {
+        padding-bottom: 0;
+    }
+}
+@media screen and (max-width: 660px) {
+    .top h2 {
+        font-size: 1.6rem;
+        padding: 1rem 0;
+    }
+}
+@media screen and (max-width: 620px) {
+    .bottomMobile {
+        display: none;
+    }
+    .b03, .b04 {
+        display: flex;
+    }
+    .topContent {
+        flex-direction: column;
+        padding-bottom: .75rem;
+    }
+    .bottom {
+        flex-direction: column;
+        padding-left: 1rem;
+    }
+    .topContentL, .topContentR {
+        width: auto;
+        padding: 0 .75rem;
+    }
+    .top h2 {
+        padding: .5rem 0 0;
+    }
+    .b01, .b02, .b03, .b04 {
+        flex: 0;
+        align-items: center;
+        padding: .6rem 1rem .25rem;
+    }
+    .squareForIcon {
+        font-size: 1.6rem;
+        padding: .6rem;
+    }
+    .bottom h2 {
+        padding: 0 0 0 .5rem;
+    }
+}
+@media screen and (max-width: 540px) {
+    .bottom {
+        padding-left: .25rem;
+    }
+    .top h2 {
+        font-size: 1.2rem;
     }
 }
