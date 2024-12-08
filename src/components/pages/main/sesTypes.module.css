@@ -1,34 +1,30 @@
-.types {
+.container {
     display: flex;
     justify-content: space-between;
     padding: 4rem 6rem;
     gap: 1rem;
 }
-
 .typesLeft {
     width: 40%;
     display: flex;
 }
-
-.typesRight {
+.right {
     width: 60%;
     display: flex;
+    flex-direction: column;
 }
-
 .squares {
     display: flex;
     position: relative;
     z-index: 1;
     width: 160%;
 }
-
 .orangeSquare {
     background-color: #ff8c00;
     width: 53px;
     height: 53px;
     margin-right: 1rem;
 }
-
 .blueTitle {
     background-color: #1B1F3D;
     display: flex;
@@ -40,7 +36,6 @@
     text-transform: uppercase;
     font-size: 1.6rem;
 }
-
 .typesLeftContent h2 {
     position: relative;
     z-index: 1;
@@ -50,19 +45,16 @@
     width: 260%;
     text-shadow: 1px 1px #e4e4e4;
 }
-
 .typesLeftContent p {
     text-align: right;
     padding: 1rem .5em 4rem 0;
 }
-
 .typesLeftL {
     width: 36%;
     display: flex;
     flex-direction: column;
     overflow: visible;
 }
-
 .typesLeftR {
     width: 64%;
     display: flex;
@@ -75,55 +67,39 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.typesRight {
-    flex-direction: column;
-}
-
 .typesRightT {
     display: flex;
     justify-content: space-between;
 }
-
-.typresRightT1, .typresRightT2, .typresRightT3 {
+.rightTitle {
     display: flex;
     flex-direction: column;
     width: 32%;
     justify-content: space-between;
 }
-
-.typresRightT1 h2, .typresRightT2 h2, .typresRightT3 h2 {
+.rightTitle h2 {
     padding: 0 0 1rem;
 }
-
 .typesRightTn {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0 0;
 }
-
-.typresRightTn1, .typresRightTn2, .typresRightTn3 {
+.buttonDesc {
     display: flex;
     flex-direction: column;
     width: 32%;
     justify-content: space-between;
 }
-
-.typesRightB h2 {
+.slogan h2 {
     padding: 1.6rem 0 0;
     font-size: 2rem;
 }
-
-.typesRightTn1 {
+.buttonsContainer {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0 2rem;
 }
-
-.typesRightB p {
-    font-family: "Roboto";
-}
-
 .buttonTypesDesc {
     display: inline-block;
     width: auto;
@@ -138,20 +114,42 @@
     text-transform: uppercase;
     font-weight: 600;
 }
-
 .buttonTypesDesc:hover {
     background-color: white;
     color: #0d3d91;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: 2px solid #ffd700;
 }
-
+.typesLeftContentDescription {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: flex-end;
+    align-content: flex-end;
+}
 .typesLeftContentDescription2 {
     display: none;
 }
-
+.bottomVerticalLine {
+    background-color: #ff8c00;
+    width: 8px;
+    height: 100%;
+    margin-right: 10px;
+}
+.squaresMobile {
+    display: none;
+}
+.mobileULs {
+    display: none;
+}
+.rightTitleMobile {
+    display: none;
+}
+.buttonDescMobile {
+    display: none;
+}
 @media screen and (max-width: 1600px) {
-    .types {
+    .container {
         padding: 2rem 1rem;
     }
     .typesLeftContent h2 {
@@ -165,8 +163,7 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-    
-    .typesRight {
+    .right {
         width: 70%;
     }
     .typesLeftR {
@@ -192,17 +189,103 @@
         color: white;
         text-shadow: 2px 2px 2px #1B1F3D;
     }
-    .typesRightT h2 {
+    .rightTitle h2 {
         font-size: 1.2rem;
     }
     .typresRightT1 h2, .typresRightT2 h2, .typresRightT3 h2 {
         padding: 0 0 .25rem;
     }
-    .typesRightT {
+    .rightTitle {
         display: flex;
     }
-    .typesRightB h2 {
+    .slogan h2 {
         padding: 1rem 0 0;
         font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        padding: 2rem .5rem;
+    }
+    .typesLeft {
+        display: none;
+    }
+    .right {
+        width: auto;
+    }
+    .squaresMobile {
+        display: flex;
+    }
+    .slogan h2, .rightTitle {
+        padding: .25rem 0 0;
+    }
+    .buttonsContainer {
+        padding: .5rem 0 .75rem;
+    }
+    .bottomVerticalLine {
+        height: auto; /* Change this to auto for flexibility */
+        align-self: stretch; /* This will make it stretch to the height of the parent */
+    }
+}
+@media screen and (max-width: 800px) {
+    .rightTitle {
+        justify-content: flex-end;
+    }
+    .slogan {
+        display: none;
+    }
+    .secondRowULs {
+        display: none;
+    }
+    .ulCols {
+        justify-content: flex-start;
+    }
+    .mobileULs {
+        display: flex;
+        flex-direction: column;
+    }
+    .sloganBottom p {
+        font-size: .8rem;
+    }
+    .ulCols ul {
+        padding-inline-start: 1.2rem;
+    }
+}
+@media screen and (max-width: 660px) {
+    .typesRightTn {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding-top: 0;
+    }
+    .ulCols {
+        display: flex;
+        flex: 1 1 200px;
+        min-width: 240px;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+    .typesRightT {
+        display: none;
+    }
+    .rightTitleMobile {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: .5rem;
+    }
+    .rightTitleMobile h2 {
+        padding: .75rem 0 .5rem;
+    }
+    .buttonsContainer {
+        display: none;
+    }
+    .buttonDescMobile {
+        display: flex;
+        padding: .5rem 0;
+    }
+}
+@media screen and (max-width: 540px) {
+    .rightTitleMobile h2 {
+        padding: .25rem 0 .5rem;
     }
 }

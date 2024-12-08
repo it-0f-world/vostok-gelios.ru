@@ -22,15 +22,16 @@ export default function Types() {
             <div className={style.top}>
                 <div style={{ display: 'flex' }}>
                     <div className={style.orangeSquare}></div>
-                    <div className={style.blueTitle}><h6>Варианты размещения СЭС</h6></div>
+                    <div className={style.blueTitle}><h6 className={style.titleDesctop}>Варианты размещения СЭС</h6><h6 className={style.titleMobile}>Размещение СЭС</h6></div>
                 </div>
                 <h2>СПОСОБЫ УСТАНОВКИ <span style={{ color: '#ff8c00' }}>СЭС</span></h2>
                 <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '25%'}}></div>
             </div>
             <div className={style.bottom}>
                 <div className={style.b01}>
-                    <div>
-                        <h2>Крышная СЭС <br/>для плоской кровли</h2>
+                    <div className={style.info}>
+                        <h2 className={style.h2desc}>Крышная СЭС <br/>для плоской кровли</h2>
+                        <h2 className={style.h2mobile}>Крышная СЭС для плоской кровли</h2>
                         <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '20%'}}></div>
                         <ul>
                             <li>на 20% больше модулей на единицу площади</li>
@@ -44,8 +45,9 @@ export default function Types() {
                     </div>
                 </div>
                 <div className={style.b02}>
-                    <div>
-                        <h2>Фасадная СЭС</h2>
+                    <div className={style.info}>
+                        <h2 className={style.h2desc}>Фасадная СЭС</h2>
+                        <h2 className={style.h2mobile}>Фасадная СЭС</h2>
                         <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '20%'}}></div>
                         <ul>
                             <li>современный и лаконичный дизайн</li>
@@ -58,8 +60,9 @@ export default function Types() {
                     </div>
                 </div>
                 <div className={style.b03}>
-                    <div>
-                        <h2>Крышная СЭС <br/>для скатной кровли</h2>
+                    <div className={style.info}>
+                        <h2 className={style.h2desc}>Крышная СЭС <br/>для скатной кровли</h2>
+                        <h2 className={style.h2mobile}>Крышная СЭС для скатной кровли</h2>
                         <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '20%'}}></div>
                         <ul>
                             <li>возможна установка на все виды кровли</li>
@@ -70,8 +73,9 @@ export default function Types() {
                     </div>
                 </div>
                 <div className={style.b04}>
-                    <div>
-                        <h2><span style={{ color: '#ffd700' }}>С</span>олнечная <span style={{ color: '#ffd700' }}>Э</span>лектро <br/><span style={{ color: '#ffd700' }}>С</span>танция на земле</h2>
+                    <div className={style.info}>
+                        <h2 className={style.h2desc}><span style={{ color: '#ffd700' }}>С</span>олнечная <span style={{ color: '#ffd700' }}>Э</span>лектро <br/><span style={{ color: '#ffd700' }}>С</span>танция на земле</h2>
+                        <h2 className={style.h2mobile}>Солнечная Электро Станция на земле</h2>
                         <div style={{ backgroundColor: '#ff8c00', height: '4px', width: '20%'}}></div>
                         <ul>
                             <li>простота конструкции</li>

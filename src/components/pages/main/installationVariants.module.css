@@ -114,7 +114,12 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.h2mobile {
+    display: none;
+}
+.titleMobile {
+    display: none;
+}
 @media only screen and (max-width: 1600px) {
     .top {
         padding: 0 2rem;
@@ -125,5 +130,78 @@
     }
     .bottom h2 {
         font-size: 1.6rem;
+    }
+}
+@media only screen and (max-width: 1366px) {
+    .bottom {
+        min-height: 27rem;
+    }
+    .b01, .b02, .b03, .b04 {
+        padding: 1rem 1rem 2.3rem;
+    }
+    .info h2 {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .top {
+        padding: 0 .5rem;
+    }
+    .top h2 {
+        display: none;
+    }
+    .blueTitle {
+        margin-bottom: 1rem;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .bottom ul {
+        padding: .5rem 0 0 .6rem;
+    }
+    .buttonDesc {
+        font-size: 13px;
+    }
+    .info h2 {
+        padding: 0 0 .5rem;
+    }
+}
+@media only screen and (max-width: 880px) {
+    .bottom {
+        flex-wrap: wrap;
+    }
+    .b01, .b02, .b03, .b04 {
+        width: auto;
+        flex: 1 1 300px;
+        min-width: 220px;
+    }
+    .info {
+        padding: 0 0 .5rem;
+    }
+}
+@media only screen and (max-width: 664px) {
+    .bottom {
+        flex-direction: column;
+    }
+    .b02, .b03, .b04 {
+        margin-top: 2px;
+    }
+    .b01, .b02, .b03, .b04 {
+        padding: 1rem 1rem 1.6rem;
+        flex: 0 1 auto;
+    }
+    .h2desc {
+        display: none;
+    }
+    .h2mobile {
+        display: flex;
+    }
+    .bottom {
+        min-height: auto;
+    }
+    .titleDesctop {
+        display: none;
+    }
+    .titleMobile {
+        display: flex;
     }
 }
