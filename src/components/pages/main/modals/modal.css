@@ -1,3 +1,8 @@
 .ReactModal__Content {
     padding: 0 !important;
 }
+@media screen and (max-width: 1366px) {
+    .ReactModal__Content {
+        inset: 10px !important;
+    }
+}

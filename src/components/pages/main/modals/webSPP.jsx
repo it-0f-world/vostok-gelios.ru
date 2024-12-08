@@ -30,6 +30,9 @@ const WebSPP = ({ isOpen, onRequestClose }) => {
                             <div className={style.squares}>
                                 <div className={style.orangeSquare}></div>
                                 <div className={style.blueTitle}><h6>Типы СЭС</h6></div>
+                                <button onClick={onRequestClose} className={style.CloseModalMobile}>
+                                    <ImCross />
+                                </button>
                             </div>
                             <h4>СЕТЕВАЯ СЭС</h4>
                         </div>
@@ -39,10 +42,12 @@ const WebSPP = ({ isOpen, onRequestClose }) => {
                             <ImCross />
                         </button>
                         <div className={style.descriptionContent}>
-                            <h3>ПРИНЦИП РАБОТЫ</h3>
-                            <p className={style.ModalP}>
-                                Вся выработанная ФЭМ электроэнергия поступает через инвертор в электрическую сеть объекта, значительно уменьшая потребление электроэнергии из сети.
-                            </p>
+                            <div className={style.principe}>
+                                <h3>ПРИНЦИП РАБОТЫ</h3>
+                                <p className={style.ModalP}>
+                                    Вся выработанная ФЭМ электроэнергия поступает через инвертор в электрическую сеть объекта, значительно уменьшая потребление электроэнергии из сети.
+                                </p>
+                            </div>
                             <div className={style.list}>
                                 <h3>СОСТАВ УСТАНОВКИ</h3>
                                 <ul>

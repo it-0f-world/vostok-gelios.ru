@@ -1,5 +1,3 @@
-/* sppTypesModals.module.css */
-
 .ModalWrapper {
     display: flex;
     flex-direction: column;
@@ -7,14 +5,12 @@
     width: 100%; /* Ensure it takes the full width too */
     overflow: hidden;
 }
-
 .ModalContent {
     display: flex;
     align-items: stretch;
     flex-grow: 1; /* Allow this div to expand and fill the modal */
     justify-content: flex-end;
 }
-
 .image {
     display: flex;
     flex: 1;
@@ -23,7 +19,6 @@
     width: 100%; /* Ensure it takes the full width */
     height: 100%; /* Ensure it takes the full height */
 }
-
 .image img {
     display: block;
     object-fit: contain; /* or 'cover' depending on your requirement */
@@ -35,7 +30,6 @@
     margin: 0 auto;
     aspect-ratio: 1.6/1;
 }
-
 .slogan {
     display: flex;
     flex-direction: column;
@@ -44,27 +38,22 @@
     right: 0; /* Align to the right */
     z-index: 1; /* Ensure it's above the image */
     padding: 10px; /* Optional padding for aesthetics */
-    background: rgba(255, 255, 255, 0.7); /* Semi-transparent background for readability */
 }
-
 .slogan h4 {
     padding: .5rem 0 0;
     font-size: 1.2rem;
 }
-
 .squares {
     display: flex;
     z-index: 1;
     width: auto; /* Adjust if needed */
 }
-
 .orangeSquare {
     background-color: #ff8c00;
     width: 53px;
     height: 53px;
     margin-right: 1rem;
 }
-
 .blueTitle {
     background-color: #1B1F3D;
     display: flex;
@@ -77,24 +66,20 @@
     text-transform: uppercase;
     font-size: 1.6rem;
 }
-
 .ModalWrapper button {
     border: none;
     background-color: transparent;
 }
-
 .CloseModal {
     font-size: 1.2rem;
     font-weight: 600;
     margin-left: auto;
     color: white;
 }
-
 .CloseModal:hover {
     color: #ffd700;
     cursor: pointer;
 }
-
 .description {
     display: flex;
     flex-direction: column;
@@ -103,20 +88,129 @@
     padding: 1rem;
     max-width: 38%;
 }
-
 .descriptionContent {
     padding: 0 2rem;
 }
-
 .description h3 {
     font-size: 2rem;
     padding: 0 0 1rem;
 }
-
 .ModalP {
     text-align: justify;
 }
-
 .list h3 {
     padding: 1.6rem 0 .5rem;
+}
+.CloseModalMobile {
+    display: none;
+}
+@media screen and (max-width: 1366px) {
+    .description h3 {
+        font-size: 1.4rem;
+    }
+    .descriptionContent {
+        padding: 0 1rem;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .description {
+        padding: .5rem;
+    }
+    .description h3 {
+        font-size: 1.2rem;
+    }
+    .list h3 {
+        padding: .5rem 0 .25rem;
+    }
+    .blueTitle {
+        padding: .5rem;
+    }
+    .blueTitle h6 {
+        font-size: 1rem;
+    }
+    .orangeSquare {
+        width: 36px;
+        height: 36px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .descriptionContent, .description h3, .descriptionContent p {
+        padding: 0 0 .33rem;
+    }
+}
+@media screen and (max-width: 880px) {
+    .description {
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .ModalWrapper {
+        height: 100%;
+        overflow: scroll;
+    }
+    .ModalContent {
+        flex-direction: column;
+        flex: 1;
+    }
+    .image img {
+        max-height: 60vh;
+    }
+    .CloseModal {
+        display: none;
+    }
+    .description {
+        flex-direction: row;
+        max-width: 100%;
+        flex: 1;
+    }
+    .descriptionContent {
+        display: flex;
+        flex: 1;
+        gap: .75rem;
+        height: 100%;
+    }
+    .principe, .list {
+        max-width: 33%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .CloseModalMobile {
+        display: block;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-left: auto;
+        color: #1B1F3D;
+        margin-left: .33rem;
+    }
+    .CloseModalMobile:hover {
+        color: #ffd700;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 660px) {
+    .descriptionContent {
+        flex-wrap: wrap;
+    }
+    .principe, .list {
+        flex: 1 1 50%;
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 580px) {
+    .slogan h4 {
+        font-size: .8rem;
+    }
+    .orangeSquare {
+        width: 27px;
+        height: 27px;
+    }
+    .blueTitle h6 {
+        font-size: .6rem;
+    }
+}
+@media screen and (max-width: 440px) {
+    .slogan h4 {
+        text-align: right;
+    }
 }
