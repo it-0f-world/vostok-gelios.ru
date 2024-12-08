@@ -103,10 +103,6 @@
     filter: brightness(120%) saturate(120%);
     opacity: .0; /* Show overlay on hover */
 }
-.footer {
-    background-color: #1B1F3D;
-    height: 29px;
-}
 @media only screen and (max-width: 1600px) {
     .container {
         padding: 2rem;

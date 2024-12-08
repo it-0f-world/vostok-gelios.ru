@@ -9,31 +9,62 @@
     border-radius: 0 .5rem .5rem 0;
     color: white;
 }
-
 .container h3 {
     font-size: 1.4rem;
 }
-
 .row {
     display: flex;
     gap: 1rem;
 }
-
 .icon {
     font-size: 2.3rem;
 }
-
 .content {
     align-self: center;
 }
-
 .rules {
     margin-top: auto; /* Push this section to the bottom */
     display: flex; /* Use flexbox for alignment */
     align-items: flex-start; /* Align items to the start */
 }
-
 .rules p {
     font-family: "Roboto";
     font-size: .8rem;
+}
+.line {
+    background-color: #fff;
+    width: 8px;
+    margin-right: 10px;
+    height: auto; /* Change this to auto for flexibility */
+    align-self: stretch; /* This will make it stretch to the height of the parent */
+}
+@media only screen and (max-width: 1200px) {
+    .container h3 {
+        font-size: 1.2rem;
+    }
+    .icon {
+        font-size: 1.6rem;
+    }
+}
+@media only screen and (max-width: 1160px) {
+    .container {
+        padding: 1.6rem;
+        width: auto;
+        border-radius: 0 0 .5rem .5rem;
+        margin: 0 1rem;
+    }
+}
+@media only screen and (max-width: 560px) {
+    .container {
+        gap: .5rem;
+    }
+}  
+@media only screen and (max-width: 520px) {
+    .container {
+        padding: 1rem;
+        gap: .15rem;
+    }
+    .container p {
+        font-size: .8rem;
+    }
 }

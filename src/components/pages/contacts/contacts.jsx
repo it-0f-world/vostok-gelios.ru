@@ -38,7 +38,6 @@ export default function Contacts() {
             <Top />
             <ContactForm />
             <div className={style.map} ref={mapRef}></div>
-            <div style={{ backgroundColor: '#1B1F3D', height: '29px'}}><p> </p></div>
         </div>
     );
 }

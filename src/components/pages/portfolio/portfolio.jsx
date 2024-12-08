@@ -119,7 +119,6 @@ export default function About() {
                     </TabPanel>
                 </Tabs>
             </div>
-            <div className={style.footer}></div>
         </div>
     )
 }
