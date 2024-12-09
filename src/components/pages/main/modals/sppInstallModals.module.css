@@ -1,5 +1,3 @@
-/* sppTypesModals.module.css */
-
 .ModalWrapper {
     display: flex;
     flex-direction: column;
@@ -7,13 +5,11 @@
     width: 100%; /* Ensure it takes the full width too */
     overflow: hidden;
 }
-
 .ModalContent {
     display: flex;
     align-items: stretch;
     flex-grow: 1; /* Allow this div to expand and fill the modal */
 }
-
 .image {
     display: flex;
     flex: 1 1 auto;
@@ -22,13 +18,11 @@
     z-index: 0;
     max-width: 33%;
 }
-
 .image img {
     width: 100%;
     display: block; /* Ensures there are no gaps underneath the image */
     
 }
-
 .overlay {
     position: absolute;
     top: 0;
@@ -38,7 +32,6 @@
     background-color: #1b1f3d2f;
     z-index: 1;
 }
-
 .slogan {
     display: flex;
     flex-direction: column;
@@ -47,31 +40,26 @@
     background: rgba(255, 255, 255, 0.7); /* Semi-transparent background for readability */
     max-width: 33%;
 }
-
 .slogan h4 {
     padding: 1.6rem 0 .5rem;
     font-size: 1.2rem;
 }
-
 .slogan p {
     text-align: justify;
     font-size: 1.2rem;
     padding: 0 1rem;
 }
-
 .squares {
     display: flex;
     z-index: 1;
     width: auto; /* Adjust if needed */
 }
-
 .orangeSquare {
     background-color: #ff8c00;
     width: 53px;
     height: 53px;
     margin-right: 1rem;
 }
-
 .blueTitle {
     background-color: #1B1F3D;
     display: flex;
@@ -84,24 +72,20 @@
     text-transform: uppercase;
     font-size: 1.6rem;
 }
-
 .ModalWrapper button {
     border: none;
     background-color: transparent;
 }
-
 .CloseModal {
     font-size: 1.2rem;
     font-weight: 600;
     margin-left: auto;
     color: white;
 }
-
 .CloseModal:hover {
     color: #ffd700;
     cursor: pointer;
 }
-
 .description {
     display: flex;
     flex-grow: 1;
@@ -111,30 +95,102 @@
     padding: 1rem;
     max-width: 33%;
 }
-
 .descriptionContent {
     padding: 0 2rem;
 }
-
 .description h3 {
     font-size: 2rem;
     padding: 0 0 1rem;
 }
-
 .ModalP {
     text-align: justify;
 }
-
 .list h3 {
     padding: 1.6rem 0 .5rem;
+}
+.CloseModalMobile {
+    display: none;
+}
+@media screen and (max-width: 1280px) {
+    .image {
+        display: none;
+    }
+    .description, .slogan {
+        max-width: 50%;
+    }
 }
 @media screen and (max-width: 1200px) {
     .description h3 {
         font-size: 1.4rem;
     }
 }
+@media screen and (max-width: 1100px) {
+    .slogan p {
+        font-size: 1rem;
+    }
+    .ModalWrapper {
+        overflow: scroll;
+    }
+}
 @media screen and (max-width: 1000px) {
     .description h3 {
         font-size: 1rem;
+    }
+    .slogan p {
+        padding: 0;
+    }
+}
+@media screen and (max-width: 980px) {
+    .descriptionContent {
+        padding: 0 1rem;
+    }
+}
+@media screen and (max-width: 920px) {
+    .blueTitle h6 {
+        font-size: 1.2rem;
+    }
+    .orangeSquare {
+        width: 42px;
+        height: 42px;
+    }
+    .blueTitle {
+        padding: .5rem;
+    }
+    .slogan h4 {
+        padding: 1.2rem 0 .25rem;
+    }
+}
+@media screen and (max-width: 880px) {
+    .descriptionContent {
+        padding: 0 .5rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .blueTitle h6 {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 760px) {
+    .ModalContent {
+        flex-direction: column;
+    }
+    .description, .slogan {
+        max-width: 100%;
+    }
+    .CloseModal {
+        display: none;
+    }
+    .CloseModalMobile {
+        display: flex;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-left: auto;
+        color: #1B1F3D;
+        margin-left: .33rem;
+        align-self: center;
+    }
+    .CloseModalMobile:hover {
+        color: #ffd700;
+        cursor: pointer;
     }
 }

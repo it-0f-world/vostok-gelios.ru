@@ -132,6 +132,9 @@
         width: 36px;
         height: 36px;
     }
+    .ModalWrapper {
+        overflow: scroll;
+    }
 }
 @media screen and (max-width: 1000px) {
     .descriptionContent, .description h3, .descriptionContent p {
@@ -146,7 +149,6 @@
 @media screen and (max-width: 800px) {
     .ModalWrapper {
         height: 100%;
-        overflow: scroll;
     }
     .ModalContent {
         flex-direction: column;

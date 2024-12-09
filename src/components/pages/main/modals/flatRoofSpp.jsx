@@ -33,6 +33,9 @@ const flatRoofSpp = ({ isOpen, onRequestClose }) => {
                             <div className={style.squares}>
                                 <div className={style.orangeSquare}></div>
                                 <div className={style.blueTitle}><h6>Варианты размещения</h6></div>
+                                <button onClick={onRequestClose} className={style.CloseModalMobile}>
+                                    <ImCross />
+                                </button>
                             </div>
                             <h4>КРЫШНАЯ СЭС ДЛЯ ПЛОСКОЙ КРОВЛИ</h4>
                             <p>

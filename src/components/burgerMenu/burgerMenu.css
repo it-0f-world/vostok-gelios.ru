@@ -121,13 +121,15 @@
     font-size: 1.5rem !important;
   }
 }
-@media (max-width: 660px) {
+@media screen and (max-width: 1000px) {
   .bm-burger-button {
     left: 24px;
     top: 24px;
     width: 3.6rem;
     height: 2.3rem;
   }
+}
+@media (max-width: 660px) {
   .bm-menu, .bm-menu-wrap {
     width: 16rem !important;
   }
