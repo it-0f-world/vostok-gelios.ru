@@ -12,9 +12,6 @@ export default function Profitability() {
             <div style={{ display: 'flex' }}>
                 <div className={style.orangeSquare}></div>
                 <div className={style.blueTitle}><h6>Почему это выгодно</h6></div>
-                <div className={style.titleDesc}>
-                    <h2>Как работает солнечная электростанция</h2>
-                </div>
             </div>
             <div className={style.container}>
                 <div className={style.why}>
@@ -75,6 +72,9 @@ export default function Profitability() {
                             <p>Можно начать с небольшой мощности станции, которую в дальнейшем очень просто увеличивать.</p>
                         </div>
                     </div>
+                </div>
+                <div className={style.titleDesc}>
+                        <h2>Как работает солнечная электростанция</h2>
                 </div>
                 <div className={style.scheme}>
                     <div className={style.poster}>

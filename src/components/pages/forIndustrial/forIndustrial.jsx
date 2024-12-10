@@ -1,7 +1,6 @@
 import style from './forIndustrial.module.css'
 import Header from './header'
 import Profitability from './profitability'
-import HowItWorks from './howItWorks'
 import InstallationStages from './installationStages'
 import HireUs from './hireUs'
 import WhyUs from './whyUs'
