@@ -74,7 +74,7 @@ export default function Profitability() {
                     </div>
                 </div>
                 <div className={style.titleDesc}>
-                        <h2>Как работает солнечная электростанция</h2>
+                    <h2>Как работает солнечная электростанция</h2>
                 </div>
                 <div className={style.scheme}>
                     <div className={style.poster}>

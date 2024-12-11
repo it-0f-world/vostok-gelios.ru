@@ -14,13 +14,14 @@
     display: flex;
     padding: 1rem 0 0;
 }
-.stage {
+.stage, .stageArrow {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .stage h3 {
     padding: .5rem 0 0;
+    text-align: center;
 }
 .stage p {
     text-align: center;
@@ -54,8 +55,42 @@
     flex-grow: 1;
     padding: 2rem 0 0;
 }
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1800px) {
     .container {
         padding: 2rem;
+    }
+}
+@media only screen and (max-width: 1600px) {
+    .container h2 {
+        font-size: 2.1rem;
+    }
+}
+@media only screen and (max-width: 1366px) {
+    .container {
+        padding: .5rem;
+    }
+    .icon {
+        height: 60px;
+    }
+    .arrow {
+        font-size: 2.3rem;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .stageArrow {
+        display: none;
+    }
+}
+@media only screen and (max-width: 880px) {
+    .stages {
+        flex-wrap: wrap;
+    }
+    .stage {
+        flex: 1 1 230px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .container h2 {
+        font-size: 1.6rem;
     }
 }

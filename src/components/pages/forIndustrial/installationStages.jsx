@@ -18,7 +18,7 @@ export default function installationStages () {
                     <p>Анализируем особенности объекта для установки солнечной электростанции</p>
                     <p className={style.highlight}>1 день</p>
                 </li>
-                <li className={style.stage}>
+                <li className={style.stageArrow}>
                     <div className={style.arrow}><LuArrowRightSquare /></div>
                 </li>
                 <li className={style.stage}>
@@ -29,7 +29,7 @@ export default function installationStages () {
                     <p>Готовим индивидуальное решение и документацию для станции</p>
                     <p className={style.highlight}>10 дней</p>
                 </li>
-                <li className={style.stage}>
+                <li className={style.stageArrow}>
                     <div className={style.arrow}><LuArrowRightSquare /></div>
                 </li>
                 <li className={style.stage}>
@@ -40,7 +40,7 @@ export default function installationStages () {
                     <p>Доставляем оборудование для солнечной электростанции</p>
                     <p className={style.highlight}>2 недели</p>
                 </li>
-                <li className={style.stage}>
+                <li className={style.stageArrow}>
                     <div className={style.arrow}><LuArrowRightSquare /></div>
                 </li>
                 <li className={style.stage}>
