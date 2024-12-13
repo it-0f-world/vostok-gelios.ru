@@ -120,12 +120,12 @@
 .titleDesc {
     display: flex;
     flex-grow: 1;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .titleDesc h2 {
     text-transform: uppercase;
     font-size: 2.1rem;
-    text-align: center;
+    text-align: right;
     color: #1B1F3D;
     padding: 0 0 0 1rem;
 }
@@ -137,6 +137,11 @@
 @media only screen and (max-width: 1600px) {
     .wrapper {
         padding: 1rem;
+    }
+}
+@media only screen and (max-width: 1366px) {
+    .titleDesc {
+        display: none;
     }
 }
 @media only screen and (max-width: 1200px) {
