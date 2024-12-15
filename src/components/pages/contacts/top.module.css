@@ -110,6 +110,7 @@
     flex-grow: 1;
     justify-content: center;
     background-color: white;
+    height: 80px;
 }
 .variants a {
     color: #133449;
@@ -142,8 +143,181 @@
     padding: 0 .5rem 0 0;
     font-weight: 300;
 }
-@media only screen and (max-width: 1600px) {
+.description {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: .77rem;
+}
+.buttonsIcons {
+    font-size: 1.5em;
+    margin-bottom: -.2em;
+    padding-right: .5rem;
+}
+@media only screen and (max-width: 2240px) {
+    .container {
+        padding: 2rem 8rem;
+    }
+}
+@media only screen and (max-width: 2120px) {
+    .container {
+        padding: 2rem 4rem;
+    }
+}
+@media only screen and (max-width: 1974px) {
     .container {
         padding: 2rem;
+    }
+}
+@media only screen and (max-width: 1920px) {
+    .container {
+        padding: 2rem 1rem 0;
+    }
+    .logotype {
+        height: 180px;
+    }
+    .logoSlogan h2 {
+        font-size: 3.2rem;
+    }
+    .logoSlogan p {
+        font-size: 1.2rem;
+    }
+    .description {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1600px) {
+    .variants {
+        display: none;
+    }
+    .title {
+        font-size: 3.2rem;
+    }
+    .logoContainer {
+        padding: 1rem 0;
+    }
+    .logotype {
+        height: 137px;
+    }
+    .logoSlogan h2 {
+        font-size: 2.8rem;
+    }
+    .logoSlogan p {
+        font-size: 1rem;
+    }
+    .buttonContainer {
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 1340px) {
+    .logoContainer {
+        flex-direction: column;
+        gap: .66rem;
+    }
+    .logotype {
+        height: 166px;
+    }
+    .logoSlogan h2 {
+        font-size: 3.2rem;
+    }
+    .logoSlogan p {
+        font-size: 1.16rem;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .icons {
+        flex-wrap: wrap;
+    }
+    .iconRow {
+        flex: 1 1 300px;
+    }
+}
+@media only screen and (max-width: 820px) {
+    .buttonOrder, .buttonContacts {
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .logoContainer {
+        padding: 0;
+    }
+    .buttonContainer {
+        flex-direction: column;
+        gap: .5rem;
+    }
+    .title {
+        font-size: 2.3rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .title {
+        text-align: right;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .logotype {
+        height: 110px;
+    }
+    .logoSlogan h2 {
+        font-size: 2.3rem;
+    }
+    .logoSlogan p {
+        font-size: .8rem;
+    }
+}
+@media only screen and (max-width: 540px) {
+    .container {
+        padding-top: 4rem;
+    }
+    .title {
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .buttonOrder, .buttonContacts {
+        padding: .66rem;
+    }
+    .title {
+        font-size: 1.44rem;
+        text-align: right;
+        padding-bottom: .5rem;
+    }
+    .container {
+        padding-top: 1.6rem;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .buttonsIcons {
+        font-size: 1.2em;
+    }
+    .buttonOrder, .buttonContacts {
+        padding: .44rem;
+        font-size: .8rem;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .container {
+        padding-top: 3.2rem;
+    }
+    .title {
+        display: none;
+    }
+    .logotype {
+        height: 86px;
+    }
+    .logoSlogan h2 {
+        font-size: 1.8rem;
+    }
+    .logoSlogan p {
+        font-size: .6rem;
+    }
+    .icons {
+        gap: 0;
+    }
+    .icon {
+        font-size: 2.7rem;
+    }
+    .iconRow p {
+        padding: .23rem;
+        font-size: .7rem;
     }
 }

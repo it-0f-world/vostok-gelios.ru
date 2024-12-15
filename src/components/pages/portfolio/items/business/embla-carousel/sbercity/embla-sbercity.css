@@ -13,7 +13,6 @@
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
-  margin-left: calc(var(--slide-spacing) * -1);
 }
 .embla__slide {
   transform: translate3d(0, 0, 0);
@@ -126,4 +125,10 @@
 }
 .embla__dot--selected:hover {
   background-color: transparent;
+}
+@media only screen and (max-width: 1000px) {
+  .embla__dot {
+    width: 1rem;
+    height: 1rem;
+  }
 }

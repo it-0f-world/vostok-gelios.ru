@@ -1,26 +1,28 @@
-import { DotButton, useDotButton } from '../../EmblaCarouselDotButton'
+import { DotButton, useDotButton } from '../../../EmblaCarouselDotButton'
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons
-} from '../../EmblaCarouselArrowButtons'
+} from '../../../EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
-import '../../embla-sbercity.css'
+import '../../../embla.css'
 
-import IMG_1 from '../../../img/sbercity/roof/IMG_1.webp'
-import IMG_2 from '../../../img/sbercity/roof/IMG_2.webp'
-import IMG_3 from '../../../img/sbercity/roof/IMG_3.webp'
-import IMG_4 from '../../../img/sbercity/roof/IMG_4.webp'
-import IMG_5 from '../../../img/sbercity/roof/IMG_5.webp'
-import IMG_6 from '../../../img/sbercity/roof/IMG_6.webp'
-import IMG_7 from '../../../img/sbercity/roof/IMG_7.webp'
-import IMG_8 from '../../../img/sbercity/roof/IMG_8.webp'
-import IMG_9 from '../../../img/sbercity/roof/IMG_9.webp'
-import IMG_10 from '../../../img/sbercity/roof/IMG_10.webp'
-import IMG_11 from '../../../img/sbercity/roof/IMG_11.webp'
-import IMG_12 from '../../../img/sbercity/roof/IMG_12.webp'
-import IMG_13 from '../../../img/sbercity/roof/IMG_13.webp'
-import IMG_14 from '../../../img/sbercity/roof/IMG_14.webp'
+import IMG_1 from '../../../../img/sbercity/front/IMG_1.webp'
+import IMG_2 from '../../../../img/sbercity/front/IMG_2.webp'
+import IMG_3 from '../../../../img/sbercity/front/IMG_3.webp'
+import IMG_4 from '../../../../img/sbercity/front/IMG_4.webp'
+import IMG_5 from '../../../../img/sbercity/front/IMG_5.webp'
+import IMG_6 from '../../../../img/sbercity/front/IMG_6.webp'
+import IMG_7 from '../../../../img/sbercity/front/IMG_7.webp'
+import IMG_8 from '../../../../img/sbercity/front/IMG_8.webp'
+import IMG_9 from '../../../../img/sbercity/front/IMG_9.webp'
+import IMG_10 from '../../../../img/sbercity/front/IMG_10.webp'
+import IMG_11 from '../../../../img/sbercity/front/IMG_11.webp'
+import IMG_12 from '../../../../img/sbercity/front/IMG_12.webp'
+import IMG_13 from '../../../../img/sbercity/front/IMG_13.webp'
+import IMG_14 from '../../../../img/sbercity/front/IMG_14.webp'
+import IMG_15 from '../../../../img/sbercity/front/IMG_14.webp'
+import IMG_16 from '../../../../img/sbercity/front/IMG_14.webp'
 
 export default function Carousel(props) {
     const { options } = props
@@ -136,9 +138,22 @@ export default function Carousel(props) {
                             </div>
                         </div>
                     </div>
+                    <div className="embla__slide">
+                        <div className="embla__slide">
+                            <div className="embla__slide__number">
+                                <img src={IMG_15} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="embla__slide">
+                        <div className="embla__slide">
+                            <div className="embla__slide__number">
+                                <img src={IMG_16} alt="Монтаж солнечных панелей на плоской крыше. Город Воронеж, Аэропорт. Солнечная электростанция для бизнеса." />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <div className="embla__controls">
                 <div className="embla__buttons">
                     <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
