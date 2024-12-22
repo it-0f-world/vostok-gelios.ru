@@ -246,6 +246,7 @@
     }
     .title {
         font-size: 2.3rem;
+        padding-bottom: .5rem;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -277,9 +278,7 @@
         padding: .66rem;
     }
     .title {
-        font-size: 1.44rem;
-        text-align: right;
-        padding-bottom: .5rem;
+        display: none;
     }
     .container {
         padding-top: 1.6rem;
@@ -297,9 +296,6 @@
 @media only screen and (max-width: 380px) {
     .container {
         padding-top: 3.2rem;
-    }
-    .title {
-        display: none;
     }
     .logotype {
         height: 86px;

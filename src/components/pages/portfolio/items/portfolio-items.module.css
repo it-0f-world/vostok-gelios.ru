@@ -38,7 +38,7 @@
 }
 .specification {
     display: flex;
-    padding: 2rem 0 0;
+    padding: 1.6rem 0 .5rem;
     gap: 2rem;
 }
 .specification p, li {
@@ -68,5 +68,38 @@
 @media only screen and (max-width: 1000px) {
     .wrapper h1 {
         font-size: 1.2rem;
+    }
+    .tasks p, .tasks h6 {
+        font-size: 1rem;
+        padding: .5rem;
+    }
+}
+@media only screen and (max-width: 880px) {
+    .specification {
+        padding: 1rem 0 0.5rem;
+        gap: 1rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .specification {
+        flex-direction: column;
+    }
+    .info, .solution {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 680px) {
+    .container {
+        padding: .5rem .5rem 0 .5rem;
+    }
+    .tasks p, .tasks h6 {
+        font-size: .8rem;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .wrapper h1 {
+        padding: 3rem .5rem 0;
+        text-align: center;
+        font-size: 1rem;
     }
 }

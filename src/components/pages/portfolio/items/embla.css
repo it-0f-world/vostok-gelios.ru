@@ -135,7 +135,23 @@
     height: 1.2rem;
   }
   .embla__dot:after {
-    width: 1.1rem;
-    height: 1.1rem;
+    width: .98rem;
+    height: .98rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .embla {
+    --slide-height: 64vh;
+    --slide-spacing: 0rem;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .embla {
+    --slide-height: 480px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .embla {
+    --slide-height: 420px;
   }
 }

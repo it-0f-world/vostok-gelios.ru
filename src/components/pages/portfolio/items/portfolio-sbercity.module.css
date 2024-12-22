@@ -58,9 +58,49 @@
 .solution {
     width: 60%;
 }
-
 @media only screen and (max-width: 1600px) {
     .container {
-        padding: 1rem 2rem 2rem;
+        padding: 1rem 1rem .5rem 1rem;
+    }
+    .wrapper h1 {
+        font-size: 1.6rem;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .wrapper h1 {
+        font-size: 1.2rem;
+    }
+    .tasks p, .tasks h6 {
+        font-size: 1rem;
+        padding: .5rem;
+    }
+}
+@media only screen and (max-width: 880px) {
+    .specification {
+        padding: 1rem 0 0.5rem;
+        gap: 1rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .specification {
+        flex-direction: column;
+    }
+    .info, .solution {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 680px) {
+    .container {
+        padding: .5rem;
+    }
+    .tasks p, .tasks h6 {
+        font-size: .8rem;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .wrapper h1 {
+        padding: 3rem .5rem 0;
+        text-align: center;
+        font-size: 1rem;
     }
 }
