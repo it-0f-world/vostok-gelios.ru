@@ -1,0 +1,7 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    padding: 2rem 16%;
+    background-color: green;
+}

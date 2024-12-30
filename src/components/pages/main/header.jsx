@@ -36,7 +36,7 @@ export default function Header() {
             <h1>Солнечная энергия для Вашего бизнеса и дома. <br />Ваш путь к экономии и независимости.</h1>
             <div className={style.buttonContainer}>
                 <button className={style.buttonOrder}>< FiPhoneForwarded style={{ fontSize: '1.5em', marginBottom: '-.2em', paddingRight: '.5rem'}} /> ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</button>
-                <button className={style.buttonContacts}>< FiList style={{ fontSize: '1.5em', marginBottom: '-.2em', paddingRight: '.5rem'}} /> ЗАПОЛНИТЬ ОПРОСНЫЙ ЛИСТ</button>
+                <NavLink to='/questionnaire' className={style.buttonContacts}>< FiList style={{ fontSize: '1.5em', marginBottom: '-.2em', paddingRight: '.5rem'}} /> ЗАПОЛНИТЬ ОПРОСНЫЙ ЛИСТ</NavLink>
             </div>
             <p className={style.headerDescription}>Эффективные решения по установке солнечных станций для бизнеса и частных домов. Выбирайте свое будущее с солнечной энергией.</p>
         </header>
