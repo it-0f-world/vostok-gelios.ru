@@ -8,11 +8,12 @@
 .container {
     display: flex;
     flex-direction: column;
+    align-content: center;
     background-color: #f9f9f9;
     border-radius: .5rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     margin: 1rem 0;
-    padding: 1rem 2.3rem 0 1rem;
+    padding: 1rem 2rem 1rem;
     min-width: 400px;
 }
 .container h1 {
@@ -26,27 +27,25 @@
 .Row {
     margin-bottom: 10px;
     display: flex;
-    flex-direction: column;
     flex: 1; /* This will make all .Row elements take equal space */
+}
+.Col {
+    display: flex;
+    flex-direction: column;
 }
 .combineRow {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: .5rem;
     width: 100%; /* Ensure full width */
 }
 .combineRowWithColumns {
     display: flex;
-    gap: 2rem;
+    gap: .5rem;
     width: 100%; /* Ensure full width */
     justify-content: center;
-    padding-top: .8rem;
 }
-.combineColumn {
-    display: flex-column;
-    gap: 2rem;
-}
-.combineRow h2, .combineColumn h2 {
+.combineRow h2 {
     font-size: 1.2rem;
     color: #1b1f3d;
 }
@@ -55,7 +54,7 @@
 }
 .Row span {
     font-size: .8rem;
-    padding: 0 0 0 .5rem;
+    padding: 0 0 0 .16rem;
     color: #ff8c00;
 }
 /* Input and textarea styles */

@@ -43,7 +43,6 @@ export default function Questionnaire() {
                 <div className={style.contactForm}>
                     <form onSubmit={handleSubmit(onSubmitForm)}>
                         <div className={style.combineRow}>
-                            <h2>Контактная информация:</h2>
                             <div className={style.Row}>
                                 <input
                                     type="text"
@@ -92,105 +91,176 @@ export default function Questionnaire() {
                             </div>
                         </div>
                         <div className={style.combineRowWithColumns}>
-                            <div className={style.combineColumn}>
-                                <h2>Выберите тип объекта:</h2>
-                                <div className={style.Row}>
-                                    <select
-                                        name="object"
-                                        {...register("object", {
-                                            required: { value: true, message: "Вам нужно выбрать тип объекта" },
-                                        })}
-                                    >
-                                        <option value="" disabled selected>
-                                            Выберите тип объекта
-                                        </option>
-                                        <option value="Жилой дом (частный)">Жилой дом (частный)</option>
-                                        <option value="Многоквартирный дом">Многоквартирный дом</option>
-                                        <option value="Коммерческое здание">Коммерческое здание</option>
-                                        <option value="Промышленный объект">Промышленный объект</option>
-                                        <option value="Другое">Другое (укажите тип объекта)</option>
-                                    </select>
-                                    <span>{errors?.object?.message}</span>
-                                </div>
-
-                                {watch("object") === "Другое" && (
-                                    <div className={style.Row}>
-                                        <input
-                                            type="text"
-                                            name="otherObject"
-                                            {...register("otherObject", {
-                                                required: {
-                                                    value: true,
-                                                    message: "Пожалуйста, укажите тип объекта",
-                                                },
-                                            })}
-                                            placeholder="Укажите тип объекта"
-                                        />
-                                        <span>{errors?.otherObject?.message}</span>
-                                    </div>
-                                )}
+                            <div className={style.Row}>
+                                <select
+                                    name="object"
+                                    {...register("object", {
+                                        required: { value: true, message: "Вам нужно выбрать тип объекта" },
+                                    })}
+                                >
+                                    <option value="" disabled selected>
+                                        Выберите тип объекта
+                                    </option>
+                                    <option value="Жилой дом (частный)">Жилой дом (частный)</option>
+                                    <option value="Многоквартирный дом">Многоквартирный дом</option>
+                                    <option value="Коммерческое здание">Коммерческое здание</option>
+                                    <option value="Промышленный объект">Промышленный объект</option>
+                                    <option value="Другое">Другое (укажите тип объекта)</option>
+                                </select>
+                                <span>{errors?.object?.message}</span>
                             </div>
-                            <div className={style.combineColumn}>
-                                <h2>Цели и задачи проекта:</h2>
+                            {watch("object") === "Другое" && (
                                 <div className={style.Row}>
-                                    <select
-                                        name="objectPurpose"
-                                        {...register("objectPurpose", {
-                                            required: { value: true, message: "Вам нужно выбрать цели и задачи проекта" },
+                                    <input
+                                        type="text"
+                                        name="otherObject"
+                                        {...register("otherObject", {
+                                            required: {
+                                                value: true,
+                                                message: "Пожалуйста, укажите тип объекта",
+                                            },
                                         })}
-                                    >
-                                        <option value="" disabled selected>
-                                            Выберите цели и задачи проекта
-                                        </option>
-                                        <option value="Снижение затрат на электроэнергию">Снижение затрат на электроэнергию</option>
-                                        <option value="Полная энергетическая автономия">Полная энергетическая автономия</option>
-                                        <option value="Резервный источник питания">Резервный источник питания</option>
-                                        <option value="Экологичное решение для бизнеса">Экологичное решение для бизнеса</option>
-                                        <option value="Другое (опишите, уникальные цели)">Другое (опишите, уникальные цели)</option>
-                                    </select>
-                                    <span>{errors?.object?.message}</span>
+                                        placeholder="Укажите тип объекта"
+                                    />
+                                    <span>{errors?.otherObject?.message}</span>
                                 </div>
-
-                                {watch("objectPurpose") === "Другое (опишите, уникальные цели)" && (
-                                    <div className={style.Row}>
-                                        <input
-                                            type="text"
-                                            name="otherObjectPurpose"
-                                            {...register("otherObjectPurpose", {
-                                                required: {
-                                                    value: true,
-                                                    message: "Пожалуйста, укажите цель проекта",
-                                                },
-                                            })}
-                                            placeholder="Укажите цель проекта"
-                                        />
-                                        <span>{errors?.otherObject?.message}</span>
-                                    </div>
-                                )}
+                            )}
+                            <div className={style.Row}>
+                                <select
+                                    name="objectPurpose"
+                                    {...register("objectPurpose", {
+                                        required: { value: true, message: "Вам нужно выбрать цели и задачи проекта" },
+                                    })}
+                                >
+                                    <option value="" disabled selected>
+                                        Выберите цели и задачи проекта
+                                    </option>
+                                    <option value="Снижение затрат на электроэнергию">Снижение затрат на электроэнергию</option>
+                                    <option value="Полная энергетическая автономия">Полная энергетическая автономия</option>
+                                    <option value="Резервный источник питания">Резервный источник питания</option>
+                                    <option value="Экологичное решение для бизнеса">Экологичное решение для бизнеса</option>
+                                    <option value="Другое (опишите, уникальные цели)">Другое (опишите, уникальные цели)</option>
+                                </select>
+                                <span>{errors?.object?.message}</span>
                             </div>
-                            <div className={style.combineColumn}>
-                                <h2>Тип установки, который вам интересен:</h2>
+                            {watch("objectPurpose") === "Другое (опишите, уникальные цели)" && (
                                 <div className={style.Row}>
-                                    <select
-                                        name="installationType"
-                                        {...register("installationType", {
-                                            required: { value: true, message: "Вам нужно выбрать цели и задачи проекта" },
+                                    <input
+                                        type="text"
+                                        name="otherObjectPurpose"
+                                        {...register("otherObjectPurpose", {
+                                            required: {
+                                                value: true,
+                                                message: "Пожалуйста, укажите цель проекта",
+                                            },
                                         })}
-                                    >
-                                        <option value="" disabled selected>
-                                            Выберите интересный вам тип установки
-                                        </option>
-                                        <option value="Стационарные панели (на крыше)">Стационарные панели (на крыше)</option>
-                                        <option value="Наземная установка">Наземная установка</option>
-                                        <option value="Панели на фасаде здания">Панели на фасаде здания</option>
-                                        <option value="Гибридные системы (солнечная и другая энергия)">Гибридные системы (солнечная и другая энергия)</option>
-                                        <option value="Нужна консультация для выбора оптимального варианта">Нужна консультация для выбора оптимального варианта</option>
-                                    </select>
-                                    <span>{errors?.object?.message}</span>
+                                        placeholder="Укажите цель проекта"
+                                    />
+                                    <span>{errors?.otherObject?.message}</span>
                                 </div>
+                            )}
+                            <div className={style.Row}>
+                                <select
+                                    name="installationType"
+                                    {...register("installationType", {
+                                        required: { value: true, message: "Вам нужно выбрать цели и задачи проекта" },
+                                    })}
+                                >
+                                    <option value="" disabled selected>
+                                        Выберите интересный вам тип установки
+                                    </option>
+                                    <option value="Стационарные панели (на крыше)">Стационарные панели (на крыше)</option>
+                                    <option value="Наземная установка">Наземная установка</option>
+                                    <option value="Панели на фасаде здания">Панели на фасаде здания</option>
+                                    <option value="Гибридные системы (солнечная и другая энергия)">Гибридные системы (солнечная и другая энергия)</option>
+                                    <option value="Нужна консультация для выбора оптимального варианта">Нужна консультация для выбора оптимального варианта</option>
+                                </select>
+                                <span>{errors?.object?.message}</span>
                             </div>
                         </div>
-                        <div className={style.Row}>
+                        <div className={style.combineRow}>
+                            <div className={style.Row}>
+                                <select
+                                    name="installationPower"
+                                    {...register("installationPower", {
+                                        required: { value: true, message: "Вам нужно выбрать ориентировочную мощность установки" },
+                                    })}
+                                >
+                                    <option value="" disabled selected>
+                                        Представляете ли вы, какой мощности установка вам нужна?
+                                    </option>
+                                    <option value="Да, у меня есть примерное представление">Да, у меня есть примерное представление (укажите мощность, если известно)</option>
+                                    <option value="Рассчитываю на помощь специалистов">Нет, рассчитываю на помощь специалистов</option>
+                                </select>
+                                <span>{errors?.object?.message}</span>
+                            </div>
+                            {watch("installationPower") === "Да, у меня есть примерное представление" && (
+                                <div className={style.Row}>
+                                    <input
+                                        type="text"
+                                        name="installationPowerWatt"
+                                        {...register("installationPowerWatt", {
+                                            required: {
+                                                value: true,
+                                                message: "Пожалуйста, укажите мощность установки в кВт",
+                                            },
+                                        })}
+                                        placeholder="Укажите мощность установки в кВт"
+                                    />
+                                    <span>{errors?.otherObject?.message}</span>
+                                </div>
+                            )}
+                            <div className={style.Row}>
+                                <label htmlFor="picture" className={style.customFileLabel}><LuImagePlus style={{ paddingRight: '.5rem' }} /> загрузить фото</label>
+                                <input
+                                    type="file"
+                                    id="picture"
+                                    name="picture"
+                                    {...register("picture", { required: false })}
+                                    className={style.hiddenFileInput}
+                                />
+                            </div>
+                        </div>
+                        <div className={style.combineRow}>
+                            <div className={style.Row}>
+                                <select
+                                    name="installationType"
+                                    {...register("installationType", {
+                                        required: { value: false, message: "Вам нужно обозначить сроки реализации проекта" },
+                                    })}
+                                >
+                                    <option value="" disabled selected>
+                                        Какой срок реализации проекта 
+                                    </option>
+                                    <option value="Как можно скорее">Как можно скорее</option>
+                                    <option value="В течение 1-3 месяцев">В течение 1-3 месяцев</option>
+                                    <option value="В течение полугода">В течение полугода</option>
+                                    <option value="Нет жестких сроков, главное – качество">Нет жестких сроков, главное – качество</option>
+                                </select>
+                                <span>{errors?.object?.message}</span>
+                            </div>
+                            <div className={style.Row}>
+                                <select
+                                    name="installationType"
+                                    {...register("installationType", {
+                                        required: { value: false, message: "Вам нужно обозначить бюджет проекта" },
+                                    })}
+                                >
+                                    <option value="" disabled selected>
+                                        Ваш бюджет на проект 
+                                    </option>
+                                    <option value="До 500 тыс. рублей">До 500 тыс. рублей</option>
+                                    <option value="500 тыс. – 1 млн рублей">500 тыс. – 1 млн рублей</option>
+                                    <option value="1 млн – 2 млн рублей">1 млн – 2 млн рублей</option>
+                                    <option value="Более 2 млн рублей">Более 2 млн рублей</option>
+                                    <option value="Бюджет пока не определен">Бюджет пока не определен, рассчитываю на рекомендации специалистов</option>
+                                </select>
+                                <span>{errors?.object?.message}</span>
+                            </div>
+                        </div>
+                        <div className={style.Col}>
+                            <p>Есть ли у вас вопросы или комментарии?</p>
+                            <div className={style.Row}>
                             <textarea
                                 type="text"
                                 name="message"
@@ -203,15 +273,6 @@ export default function Questionnaire() {
                                 placeholder="Сообщение"></textarea>
                             <span>{errors?.message?.message}</span>
                         </div>
-                        <div className={style.Row}>
-                            <label htmlFor="picture" className={style.customFileLabel}><LuImagePlus style={{ paddingRight: '.5rem' }} /> загрузить фото</label>
-                            <input
-                                type="file"
-                                id="picture"
-                                name="picture"
-                                {...register("picture", { required: false })}
-                                className={style.hiddenFileInput}
-                            />
                         </div>
                         <div className={style.RowButtonSend}>
                             <button className={style.primary}>Отправить Заявку</button>
