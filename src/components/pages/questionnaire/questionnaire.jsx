@@ -257,6 +257,25 @@ export default function Questionnaire() {
                                 </select>
                                 <span>{errors?.object?.message}</span>
                             </div>
+                            <div className={style.Row}>
+                                <select
+                                    name="installationType"
+                                    {...register("installationType", {
+                                        required: { value: false, message: "Укажите нужна ли вам поддержка в обслуживании" },
+                                    })}
+                                >
+                                    <option value="" disabled selected>
+                                        Нужна ли вам поддержка в обслуживании  
+                                    </option>
+                                    <option value="Да, важно получить долгосрочную поддержку и сервис">Да, важно получить долгосрочную поддержку и сервис</option>
+                                    <option value="Нет, достаточно базовой гарантии">Нет, достаточно базовой гарантии</option>
+                                    <option value="Еще не решил(а)">Еще не решил(а)</option>
+                                </select>
+                                <span>{errors?.object?.message}</span>
+                            </div>
+                        </div>
+                        <div className={style.Row}>
+                            <p>Нужна ли вам поддержка в обслуживании после установки?</p>
                         </div>
                         <div className={style.Col}>
                             <p>Есть ли у вас вопросы или комментарии?</p>
