@@ -1,0 +1,59 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 2.3rem 0 0;
+}
+.container {
+    display: flex;
+    border: 1px solid #1B1F3D;
+    border-radius: .25rem;
+    align-items: center;
+    overflow: hidden;
+    margin: .3rem 0 0;
+}
+.pages {
+    display: flex;
+    flex: 1;
+    font-size: 1.4rem;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: #1B1F3D;
+    transition: transform 0.3s ease;
+}
+.pages:hover {
+    transform: scale(1.023);
+    color: #ff8c00;
+    background-color: white;
+}
+.pages:hover .icon {
+    color: #ff8c00; /* Change buttonIcon styles when varItem is hovered */
+}
+.divider {
+    height: 80%;
+    width: 2px;
+    background-color: #0b3d91;
+    z-index: 2;
+}
+.icon {
+    font-size: 1.6rem;
+    padding: 0 .5rem 0 0;
+}
+.rules {
+    margin-top: auto; /* Push this section to the bottom */
+    display: inline-flex; /* Use flexbox for alignment */
+    align-items: flex-start; /* Align items to the start */
+    max-width: 1400px;
+}
+.rules p {
+    font-family: "Roboto";
+    font-size: .8rem;
+}
+.line {
+    background-color: #1B1F3D;
+    width: 2px;
+    margin-right: 10px;
+    height: auto; /* Change this to auto for flexibility */
+    align-self: stretch; /* This will make it stretch to the height of the parent */
+}

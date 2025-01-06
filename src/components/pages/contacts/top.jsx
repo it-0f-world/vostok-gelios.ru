@@ -39,7 +39,7 @@ const Top = () => {
                     </div>
                     <div className={style.buttonContainer}>
                         <button className={style.buttonOrder}><FiPhoneForwarded className={style.buttonsIcons} /> ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</button>
-                        <button className={style.buttonContacts}><FiList className={style.buttonsIcons} /> ЗАПОЛНИТЬ ОПРОСНЫЙ ЛИСТ</button>
+                        <NavLink to='/questionnaire' className={style.buttonContacts}><FiList className={style.buttonsIcons} /> ЗАПОЛНИТЬ ОПРОСНЫЙ ЛИСТ</NavLink>
                     </div>
                     <div className={style.description}>
                         <div style={{ backgroundColor: '#ffd700', width: '10px', height: '100%', marginRight: '10px' }}></div>

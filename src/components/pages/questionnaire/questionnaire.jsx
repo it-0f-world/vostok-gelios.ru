@@ -1,12 +1,16 @@
+import React, { useState } from 'react';
 import style from './questionnaire.module.css';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { LuImagePlus } from "react-icons/lu";
 
+import WebSiteSections from './webSiteSections'
+
 export default function Questionnaire() {
     const { register, handleSubmit, reset, formState: { errors }, watch } = useForm();
     const navigate = useNavigate();
+    const [support, setSupport] = useState(false); // Track switch button state (false = "No", true = "Yes")
 
     async function onSubmitForm(data) {
         const formData = new FormData();
@@ -16,6 +20,7 @@ export default function Questionnaire() {
         formData.append('email', data.email);
         formData.append('phone', data.phone);
         formData.append('message', data.message);
+        formData.append('support', support ? 'Да' : 'Нет'); // Add support value
 
         // Append the selected file (if any)
         if (data.picture && data.picture.length > 0) {
@@ -93,6 +98,57 @@ export default function Questionnaire() {
                         <div className={style.combineRowWithColumns}>
                             <div className={style.Row}>
                                 <select
+                                    name="installationPower"
+                                    {...register("installationPower", {
+                                        required: { value: true, message: "Вам нужно выбрать ориентировочную мощность установки" },
+                                    })}
+                                >
+                                    <option value="" disabled selected>
+                                        Представляете ли вы, какой мощности установка вам нужна?
+                                    </option>
+                                    <option value="Да, у меня есть примерное представление">Да, у меня есть примерное представление (укажите мощность, если известно)</option>
+                                    <option value="Рассчитываю на помощь специалистов">Нет, рассчитываю на помощь специалистов</option>
+                                </select>
+                                <span>{errors?.object?.message}</span>
+                            </div>
+                            {watch("installationPower") === "Да, у меня есть примерное представление" && (
+                                <div className={style.Row}>
+                                    <input
+                                        type="text"
+                                        name="installationPowerWatt"
+                                        {...register("installationPowerWatt", {
+                                            required: {
+                                                value: true,
+                                                message: "Пожалуйста, укажите мощность установки в кВт",
+                                            },
+                                        })}
+                                        placeholder="Укажите мощность установки в кВт"
+                                    />
+                                    <span>{errors?.otherObject?.message}</span>
+                                </div>
+                            )}
+                            <div className={style.Row}>
+                                <select
+                                    name="installationType"
+                                    {...register("installationType", {
+                                        required: { value: true, message: "Вам нужно выбрать цели и задачи проекта" },
+                                    })}
+                                >
+                                    <option value="" disabled selected>
+                                        Выберите интересный вам тип установки
+                                    </option>
+                                    <option value="Стационарные панели (на крыше)">Стационарные панели (на крыше)</option>
+                                    <option value="Наземная установка">Наземная установка</option>
+                                    <option value="Панели на фасаде здания">Панели на фасаде здания</option>
+                                    <option value="Гибридные системы (солнечная и другая энергия)">Гибридные системы (солнечная и другая энергия)</option>
+                                    <option value="Нужна консультация для выбора оптимального варианта">Нужна консультация для выбора оптимального варианта</option>
+                                </select>
+                                <span>{errors?.object?.message}</span>
+                            </div>
+                        </div>
+                        <div className={style.combineRow}>
+                            <div className={style.Row}>
+                                <select
                                     name="object"
                                     {...register("object", {
                                         required: { value: true, message: "Вам нужно выбрать тип объекта" },
@@ -159,67 +215,6 @@ export default function Questionnaire() {
                                     <span>{errors?.otherObject?.message}</span>
                                 </div>
                             )}
-                            <div className={style.Row}>
-                                <select
-                                    name="installationType"
-                                    {...register("installationType", {
-                                        required: { value: true, message: "Вам нужно выбрать цели и задачи проекта" },
-                                    })}
-                                >
-                                    <option value="" disabled selected>
-                                        Выберите интересный вам тип установки
-                                    </option>
-                                    <option value="Стационарные панели (на крыше)">Стационарные панели (на крыше)</option>
-                                    <option value="Наземная установка">Наземная установка</option>
-                                    <option value="Панели на фасаде здания">Панели на фасаде здания</option>
-                                    <option value="Гибридные системы (солнечная и другая энергия)">Гибридные системы (солнечная и другая энергия)</option>
-                                    <option value="Нужна консультация для выбора оптимального варианта">Нужна консультация для выбора оптимального варианта</option>
-                                </select>
-                                <span>{errors?.object?.message}</span>
-                            </div>
-                        </div>
-                        <div className={style.combineRow}>
-                            <div className={style.Row}>
-                                <select
-                                    name="installationPower"
-                                    {...register("installationPower", {
-                                        required: { value: true, message: "Вам нужно выбрать ориентировочную мощность установки" },
-                                    })}
-                                >
-                                    <option value="" disabled selected>
-                                        Представляете ли вы, какой мощности установка вам нужна?
-                                    </option>
-                                    <option value="Да, у меня есть примерное представление">Да, у меня есть примерное представление (укажите мощность, если известно)</option>
-                                    <option value="Рассчитываю на помощь специалистов">Нет, рассчитываю на помощь специалистов</option>
-                                </select>
-                                <span>{errors?.object?.message}</span>
-                            </div>
-                            {watch("installationPower") === "Да, у меня есть примерное представление" && (
-                                <div className={style.Row}>
-                                    <input
-                                        type="text"
-                                        name="installationPowerWatt"
-                                        {...register("installationPowerWatt", {
-                                            required: {
-                                                value: true,
-                                                message: "Пожалуйста, укажите мощность установки в кВт",
-                                            },
-                                        })}
-                                        placeholder="Укажите мощность установки в кВт"
-                                    />
-                                    <span>{errors?.otherObject?.message}</span>
-                                </div>
-                            )}
-                            <div className={style.Row}>
-                                <label htmlFor="picture" className={style.customFileLabel}><LuImagePlus style={{ paddingRight: '.5rem' }} /> загрузить фото</label>
-                                <input
-                                    type="file"
-                                    id="picture"
-                                    name="picture"
-                                    {...register("picture", { required: false })}
-                                    className={style.hiddenFileInput}
-                                />
-                            </div>
                         </div>
                         <div className={style.combineRow}>
                             <div className={style.Row}>
@@ -230,7 +225,7 @@ export default function Questionnaire() {
                                     })}
                                 >
                                     <option value="" disabled selected>
-                                        Какой срок реализации проекта 
+                                        Какой срок реализации проекта
                                     </option>
                                     <option value="Как можно скорее">Как можно скорее</option>
                                     <option value="В течение 1-3 месяцев">В течение 1-3 месяцев</option>
@@ -247,7 +242,7 @@ export default function Questionnaire() {
                                     })}
                                 >
                                     <option value="" disabled selected>
-                                        Ваш бюджет на проект 
+                                        Ваш бюджет на проект
                                     </option>
                                     <option value="До 500 тыс. рублей">До 500 тыс. рублей</option>
                                     <option value="500 тыс. – 1 млн рублей">500 тыс. – 1 млн рублей</option>
@@ -265,7 +260,7 @@ export default function Questionnaire() {
                                     })}
                                 >
                                     <option value="" disabled selected>
-                                        Нужна ли вам поддержка в обслуживании  
+                                        Нужна ли вам поддержка в обслуживании
                                     </option>
                                     <option value="Да, важно получить долгосрочную поддержку и сервис">Да, важно получить долгосрочную поддержку и сервис</option>
                                     <option value="Нет, достаточно базовой гарантии">Нет, достаточно базовой гарантии</option>
@@ -274,30 +269,51 @@ export default function Questionnaire() {
                                 <span>{errors?.object?.message}</span>
                             </div>
                         </div>
-                        <div className={style.Row}>
-                            <p>Нужна ли вам поддержка в обслуживании после установки?</p>
+                        <div className={style.combineRow}>
+                            <div className={style.Row}>
+                                <p>Хотите ли вы предварительную консультацию от нашего специалиста?</p>
+                                <label className={style.switch}>
+                                    <input
+                                        type="checkbox"
+                                        checked={support}
+                                        onChange={() => setSupport(prev => !prev)}
+                                    />
+                                    <span className={style.slider}></span>
+                                </label>
+                            </div>
+                            <div className={style.Row}>
+                                <label htmlFor="picture" className={style.customFileLabel}><LuImagePlus style={{ paddingRight: '.5rem' }} /> загрузить фото</label>
+                                <input
+                                    type="file"
+                                    id="picture"
+                                    name="picture"
+                                    {...register("picture", { required: false })}
+                                    className={style.hiddenFileInput}
+                                />
+                            </div>
                         </div>
                         <div className={style.Col}>
                             <p>Есть ли у вас вопросы или комментарии?</p>
                             <div className={style.Row}>
-                            <textarea
-                                type="text"
-                                name="message"
-                                rows="5"
-                                {...register("message", {
-                                    required: { value: false, message: "Вам нужно ввести здесь ваше сообщение" },
-                                    maxLength: { value: 1618, message: "Сообщение не может быть больше 1618 символов" },
-                                    minLength: { value: 4, message: "Сообщение должно быть длиннее 4 символов" }
-                                })}
-                                placeholder="Сообщение"></textarea>
-                            <span>{errors?.message?.message}</span>
-                        </div>
+                                <textarea
+                                    type="text"
+                                    name="message"
+                                    rows="5"
+                                    {...register("message", {
+                                        required: { value: false, message: "Вам нужно ввести здесь ваше сообщение" },
+                                        maxLength: { value: 1618, message: "Сообщение не может быть больше 1618 символов" },
+                                        minLength: { value: 4, message: "Сообщение должно быть длиннее 4 символов" }
+                                    })}
+                                    placeholder="Сообщение"></textarea>
+                                <span>{errors?.message?.message}</span>
+                            </div>
                         </div>
                         <div className={style.RowButtonSend}>
                             <button className={style.primary}>Отправить Заявку</button>
                         </div>
                     </form>
                 </div>
+                <WebSiteSections />
             </div>
         </div>
     );
