@@ -1,15 +1,19 @@
 import style from './contactForm.module.css';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { LuImagePlus } from "react-icons/lu";
 import ContactFormAdditional from './contactFormAdditional';
 
 export default function ContactForm() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const navigate = useNavigate();
+    const [isSending, setIsSending] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
 
     async function onSubmitForm(data) {
+        setIsSending(true); // Set sending state
+        setIsSuccess(false); // Reset success state
+
         const formData = new FormData();
 
         // Append all text data
@@ -18,17 +22,12 @@ export default function ContactForm() {
         formData.append('phone', data.phone);
         formData.append('message', data.message);
 
-        // Manually handle file inputs
+        // Handle file inputs
         const pictureInput = document.querySelector('input[name="picture"]');
         if (pictureInput && pictureInput.files.length > 0) {
             for (let i = 0; i < pictureInput.files.length; i++) {
                 formData.append('picture', pictureInput.files[i]);
             }
-        }
-
-        // Log FormData to check its contents
-        for (let pair of formData.entries()) {
-            console.log(pair[0] + ": " + pair[1]);
         }
 
         try {
@@ -39,16 +38,19 @@ export default function ContactForm() {
             });
 
             if (response.status === 200) {
-                reset();
-                navigate('/');
+                reset(); // Reset form after successful submission
+                setIsSuccess(true); // Show success message
+                setTimeout(() => setIsSuccess(false), 6000); // Hide success message after 6 seconds
             }
         } catch (err) {
             console.error(err);
             if (err.response && err.response.status === 400) {
-                alert(err.response.data.error); // Show the error message from the server
+                alert(err.response.data.error); // Show error message from the server
             } else {
                 console.log(err); // Log other errors
             }
+        } finally {
+            setIsSending(false); // Reset sending state
         }
     }
 
@@ -108,7 +110,6 @@ export default function ContactForm() {
                                     multiple // Allow multiple file selection
                                     onChange={(e) => {
                                         const files = e.target.files;
-                                        console.log(files);  // Log selected files to check if they're correct
                                         if (files.length > 16) {
                                             alert("Можно отправить 16 изображений максимум");
                                             e.target.value = ""; // Clear the selection if too many files are selected
@@ -131,8 +132,14 @@ export default function ContactForm() {
                             <span>{errors?.message?.message}</span>
                         </div>
                         <div className={style.RowButtonSend}>
-                            <button className={style.primary}>Отправить Заявку</button>
+                            <button
+                                className={`${style.primary} ${isSending ? style.sending : ''}`}
+                                disabled={isSending}
+                            >
+                                {isSending ? 'Отправляю...' : 'Отправить Заявку'}
+                            </button>
                         </div>
+                        {isSuccess && <p className={style.successMessage}>Спасибо за ваше сообщение!</p>}
                     </form>
                 </div>
             </div>

@@ -41,8 +41,8 @@ app.post('/api/contactapi', upload.fields([
     console.log('Message:', message);
     console.log('Files:', pictures);
 
-    // If no files are uploaded, return a 400 error
-    if (!pictures || pictures.length === 0) {
+    // If no files are uploaded, skip the file attachment process and send the form without files
+    if (pictures && pictures.length === 0) {
         return res.status(400).json({ error: 'No files uploaded' });
     }
 
