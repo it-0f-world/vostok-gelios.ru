@@ -9,19 +9,15 @@ export default function ContactForm() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [isSending, setIsSending] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
-
     async function onSubmitForm(data) {
         setIsSending(true); // Set sending state
         setIsSuccess(false); // Reset success state
-
         const formData = new FormData();
-
         // Append all text data
         formData.append('name', data.name);
         formData.append('email', data.email);
         formData.append('phone', data.phone);
         formData.append('message', data.message);
-
         // Handle file inputs
         const pictureInput = document.querySelector('input[name="picture"]');
         if (pictureInput && pictureInput.files.length > 0) {
@@ -29,7 +25,6 @@ export default function ContactForm() {
                 formData.append('picture', pictureInput.files[i]);
             }
         }
-
         try {
             const response = await axios.post('http://localhost:5000/api/contactapi', formData, {
                 headers: {
@@ -53,7 +48,6 @@ export default function ContactForm() {
             setIsSending(false); // Reset sending state
         }
     }
-
     return (
         <div className={style.wrapper}>
             <div className={style.container}>
@@ -65,7 +59,7 @@ export default function ContactForm() {
                                 <input
                                     type="text"
                                     name="name"
-                                    {...register("name", { required: { value: true, message: 'Вам нужно ввести ваше имя' } })}
+                                    {...register("name", { required: { value: true, message: 'Нужно ввести ваше имя' } })}
                                     placeholder="Как к Вам обращаться?"
                                 />
                                 <span>{errors?.name?.message}</span>
@@ -75,7 +69,7 @@ export default function ContactForm() {
                                     type="text"
                                     name="email"
                                     {...register("email", {
-                                        required: { value: false, message: 'Вам нужно ввести ваш e-mail адрес' },
+                                        required: { value: true, message: 'Нужно ввести ваш e-mail адрес' },
                                         minLength: { value: 7, message: 'Не меньше 7 символов' },
                                         maxLength: { value: 120, message: 'Слишком много символов' },
                                         pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: 'Введите почту в правильном формате' }
@@ -91,7 +85,7 @@ export default function ContactForm() {
                                     type="phone"
                                     name="phone"
                                     {...register("phone", {
-                                        required: { value: true, message: "Вам нужно ввести ваш номер телефона" },
+                                        required: { value: true, message: "Нужно ввести ваш номер телефона" },
                                         minLength: { value: 4, message: "Телефон должен быть длинее 4 символов" },
                                         maxLength: { value: 21, message: 'Слишком много цифр' },
                                         pattern: { value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s./0-9]*$/g, message: "Неверный формат" },
@@ -111,7 +105,7 @@ export default function ContactForm() {
                                     onChange={(e) => {
                                         const files = e.target.files;
                                         if (files.length > 16) {
-                                            alert("Можно отправить 16 изображений максимум");
+                                            alert("16 изображений максимум");
                                             e.target.value = ""; // Clear the selection if too many files are selected
                                         }
                                     }}
@@ -124,7 +118,7 @@ export default function ContactForm() {
                                 name="message"
                                 rows="5"
                                 {...register("message", {
-                                    required: { value: false, message: "Вам нужно ввести здесь ваше сообщение" },
+                                    required: { value: false, message: "Нужно ввести здесь ваше сообщение" },
                                     maxLength: { value: 1618, message: "Сообщение не может быть больше 1618 символов" },
                                     minLength: { value: 4, message: "Сообщение должно быть длиннее 4 символов" }
                                 })}
@@ -139,7 +133,7 @@ export default function ContactForm() {
                                 {isSending ? 'Отправляю...' : 'Отправить Заявку'}
                             </button>
                         </div>
-                        {isSuccess && <p className={style.successMessage}>Спасибо за ваше сообщение!</p>}
+                        {isSuccess && <p className={style.successMessage}>Данные с формы получены, ожидайте ответа.</p>}
                     </form>
                 </div>
             </div>

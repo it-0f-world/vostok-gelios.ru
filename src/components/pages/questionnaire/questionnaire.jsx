@@ -2,43 +2,53 @@ import React, { useState } from 'react';
 import style from './questionnaire.module.css';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import { LuImagePlus } from "react-icons/lu";
 
 import WebSiteSections from './webSiteSections'
 
 export default function Questionnaire() {
     const { register, handleSubmit, reset, formState: { errors }, watch } = useForm();
-    const navigate = useNavigate();
     const [support, setSupport] = useState(false); // Track switch button state (false = "No", true = "Yes")
+    const [isSending, setIsSending] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
 
     async function onSubmitForm(data) {
+        setIsSending(true); // Set sending state
+        setIsSuccess(false); // Reset success state
         const formData = new FormData();
-
-        // Append all form data to FormData object
+        // Append all text data
         formData.append('name', data.name);
         formData.append('email', data.email);
         formData.append('phone', data.phone);
         formData.append('message', data.message);
-        formData.append('support', support ? 'Да' : 'Нет'); // Add support value
-
-        // Append the selected file (if any)
-        if (data.picture && data.picture.length > 0) {
-            formData.append('picture', data.picture[0]); // Only send one file
+        // Handle file inputs
+        const pictureInput = document.querySelector('input[name="picture"]');
+        if (pictureInput && pictureInput.files.length > 0) {
+            for (let i = 0; i < pictureInput.files.length; i++) {
+                formData.append('picture', pictureInput.files[i]);
+            }
         }
-
         try {
             const response = await axios.post('http://localhost:5000/api/contactapi', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
+
             if (response.status === 200) {
-                reset();  // Reset form after successful submission
-                navigate('/');  // Redirect to homepage or another route
+                reset(); // Reset form after successful submission
+                setIsSuccess(true); // Show success message
+                setTimeout(() => setIsSuccess(false), 6000); // Hide success message after 6 seconds
             }
         } catch (err) {
-            console.log(err);  // Log any errors
+            console.error(err);
+            if (err.response && err.response.status === 400) {
+                alert(err.response.data.error); // Show error message from the server
+            } else {
+                console.log(err); // Log other errors
+            }
+        } finally {
+            setIsSending(false); // Reset sending state
         }
     }
     return (
@@ -52,7 +62,7 @@ export default function Questionnaire() {
                                 <input
                                     type="text"
                                     name="name"
-                                    {...register("name", { required: { value: true, message: 'Вам нужно ввести ваше имя' } })}
+                                    {...register("name", { required: { value: true, message: 'Нужно ввести ваше имя' } })}
                                     placeholder="Как к Вам обращаться?"
                                 />
                                 <span>{errors?.name?.message}</span>
@@ -62,7 +72,7 @@ export default function Questionnaire() {
                                     type="text"
                                     name="email"
                                     {...register("email", {
-                                        required: { value: false, message: 'Вам нужно ввести ваш e-mail адрес' },
+                                        required: { value: true, message: 'Нужно ввести ваш e-mail адрес' },
                                         minLength: { value: 7, message: 'Не меньше 7 символов' },
                                         maxLength: { value: 120, message: 'Слишком много символов' },
                                         pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: 'Введите почту в правильном формате' }
@@ -76,7 +86,7 @@ export default function Questionnaire() {
                                     type="phone"
                                     name="phone"
                                     {...register("phone", {
-                                        required: { value: true, message: "Вам нужно ввести ваш номер телефона" },
+                                        required: { value: true, message: "Нужно ввести ваш номер телефона" },
                                         minLength: { value: 4, message: "Телефон должен быть длинее 4 символов" },
                                         maxLength: { value: 21, message: 'Слишком много цифр' },
                                         pattern: { value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s./0-9]*$/g, message: "Неверный формат" },
@@ -89,10 +99,10 @@ export default function Questionnaire() {
                                 <input
                                     type="text"
                                     name="time"
-                                    {...register("time", { required: { value: false, message: 'Удобное время для связи по МСК' } })}
+                                    {...register("time", { required: { value: false, message: 'Укажите время для связи по МСК' } })}
                                     placeholder="Время для связи по МСК"
                                 />
-                                <span>{errors?.name?.message}</span>
+                                <span>{errors?.time?.message}</span>
                             </div>
                         </div>
                         <div className={style.combineRowWithColumns}>
@@ -100,7 +110,7 @@ export default function Questionnaire() {
                                 <select
                                     name="installationPower"
                                     {...register("installationPower", {
-                                        required: { value: true, message: "Вам нужно выбрать ориентировочную мощность установки" },
+                                        required: { value: true, message: "Нужно выбрать ориентировочную мощность установки" },
                                     })}
                                 >
                                     <option value="" disabled selected>
@@ -109,7 +119,7 @@ export default function Questionnaire() {
                                     <option value="Да, у меня есть примерное представление">Да, у меня есть примерное представление (укажите мощность, если известно)</option>
                                     <option value="Рассчитываю на помощь специалистов">Нет, рассчитываю на помощь специалистов</option>
                                 </select>
-                                <span>{errors?.object?.message}</span>
+                                <span>{errors?.installationPower?.message}</span>
                             </div>
                             {watch("installationPower") === "Да, у меня есть примерное представление" && (
                                 <div className={style.Row}>
@@ -119,19 +129,19 @@ export default function Questionnaire() {
                                         {...register("installationPowerWatt", {
                                             required: {
                                                 value: true,
-                                                message: "Пожалуйста, укажите мощность установки в кВт",
+                                                message: "Укажите мощность установки в кВт",
                                             },
                                         })}
                                         placeholder="Укажите мощность установки в кВт"
                                     />
-                                    <span>{errors?.otherObject?.message}</span>
+                                    <span>{errors?.installationPowerWatt?.message}</span>
                                 </div>
                             )}
                             <div className={style.Row}>
                                 <select
                                     name="installationType"
                                     {...register("installationType", {
-                                        required: { value: true, message: "Вам нужно выбрать цели и задачи проекта" },
+                                        required: { value: true, message: "Нужно выбрать тип установки СЭС" },
                                     })}
                                 >
                                     <option value="" disabled selected>
@@ -143,7 +153,7 @@ export default function Questionnaire() {
                                     <option value="Гибридные системы (солнечная и другая энергия)">Гибридные системы (солнечная и другая энергия)</option>
                                     <option value="Нужна консультация для выбора оптимального варианта">Нужна консультация для выбора оптимального варианта</option>
                                 </select>
-                                <span>{errors?.object?.message}</span>
+                                <span>{errors?.installationType?.message}</span>
                             </div>
                         </div>
                         <div className={style.combineRow}>
@@ -151,7 +161,7 @@ export default function Questionnaire() {
                                 <select
                                     name="object"
                                     {...register("object", {
-                                        required: { value: true, message: "Вам нужно выбрать тип объекта" },
+                                        required: { value: true, message: "Нужно выбрать тип объекта" },
                                     })}
                                 >
                                     <option value="" disabled selected>
@@ -173,7 +183,7 @@ export default function Questionnaire() {
                                         {...register("otherObject", {
                                             required: {
                                                 value: true,
-                                                message: "Пожалуйста, укажите тип объекта",
+                                                message: "Укажите свой тип объекта",
                                             },
                                         })}
                                         placeholder="Укажите тип объекта"
@@ -185,7 +195,7 @@ export default function Questionnaire() {
                                 <select
                                     name="objectPurpose"
                                     {...register("objectPurpose", {
-                                        required: { value: true, message: "Вам нужно выбрать цели и задачи проекта" },
+                                        required: { value: true, message: "Нужно выбрать цели и задачи проекта" },
                                     })}
                                 >
                                     <option value="" disabled selected>
@@ -197,7 +207,7 @@ export default function Questionnaire() {
                                     <option value="Экологичное решение для бизнеса">Экологичное решение для бизнеса</option>
                                     <option value="Другое (опишите, уникальные цели)">Другое (опишите, уникальные цели)</option>
                                 </select>
-                                <span>{errors?.object?.message}</span>
+                                <span>{errors?.objectPurpose?.message}</span>
                             </div>
                             {watch("objectPurpose") === "Другое (опишите, уникальные цели)" && (
                                 <div className={style.Row}>
@@ -207,21 +217,21 @@ export default function Questionnaire() {
                                         {...register("otherObjectPurpose", {
                                             required: {
                                                 value: true,
-                                                message: "Пожалуйста, укажите цель проекта",
+                                                message: "Пожалуйста, укажите свою цель проекта",
                                             },
                                         })}
                                         placeholder="Укажите цель проекта"
                                     />
-                                    <span>{errors?.otherObject?.message}</span>
+                                    <span>{errors?.otherObjectPurpose?.message}</span>
                                 </div>
                             )}
                         </div>
                         <div className={style.combineRow}>
                             <div className={style.Row}>
                                 <select
-                                    name="installationType"
-                                    {...register("installationType", {
-                                        required: { value: false, message: "Вам нужно обозначить сроки реализации проекта" },
+                                    name="expiration"
+                                    {...register("expiration", {
+                                        required: { value: false, message: "Нужно обозначить сроки реализации проекта" },
                                     })}
                                 >
                                     <option value="" disabled selected>
@@ -232,13 +242,13 @@ export default function Questionnaire() {
                                     <option value="В течение полугода">В течение полугода</option>
                                     <option value="Нет жестких сроков, главное – качество">Нет жестких сроков, главное – качество</option>
                                 </select>
-                                <span>{errors?.object?.message}</span>
+                                <span>{errors?.expiration?.message}</span>
                             </div>
                             <div className={style.Row}>
                                 <select
-                                    name="installationType"
-                                    {...register("installationType", {
-                                        required: { value: false, message: "Вам нужно обозначить бюджет проекта" },
+                                    name="budget"
+                                    {...register("budget", {
+                                        required: { value: false, message: "Нужно обозначить бюджет проекта" },
                                     })}
                                 >
                                     <option value="" disabled selected>
@@ -250,13 +260,13 @@ export default function Questionnaire() {
                                     <option value="Более 2 млн рублей">Более 2 млн рублей</option>
                                     <option value="Бюджет пока не определен">Бюджет пока не определен, рассчитываю на рекомендации специалистов</option>
                                 </select>
-                                <span>{errors?.object?.message}</span>
+                                <span>{errors?.budget?.message}</span>
                             </div>
                             <div className={style.Row}>
                                 <select
-                                    name="installationType"
-                                    {...register("installationType", {
-                                        required: { value: false, message: "Укажите нужна ли вам поддержка в обслуживании" },
+                                    name="support"
+                                    {...register("support", {
+                                        required: { value: false, message: "Нужна ли вам поддержка в обслуживании" },
                                     })}
                                 >
                                     <option value="" disabled selected>
@@ -266,7 +276,7 @@ export default function Questionnaire() {
                                     <option value="Нет, достаточно базовой гарантии">Нет, достаточно базовой гарантии</option>
                                     <option value="Еще не решил(а)">Еще не решил(а)</option>
                                 </select>
-                                <span>{errors?.object?.message}</span>
+                                <span>{errors?.support?.message}</span>
                             </div>
                         </div>
                         <div className={style.combineRow}>
@@ -287,8 +297,15 @@ export default function Questionnaire() {
                                     type="file"
                                     id="picture"
                                     name="picture"
-                                    {...register("picture", { required: false })}
                                     className={style.hiddenFileInput}
+                                    multiple // Allow multiple file selection
+                                    onChange={(e) => {
+                                        const files = e.target.files;
+                                        if (files.length > 16) {
+                                            alert("16 изображений максимум");
+                                            e.target.value = ""; // Clear the selection if too many files are selected
+                                        }
+                                    }}
                                 />
                             </div>
                         </div>
@@ -300,7 +317,7 @@ export default function Questionnaire() {
                                     name="message"
                                     rows="5"
                                     {...register("message", {
-                                        required: { value: false, message: "Вам нужно ввести здесь ваше сообщение" },
+                                        required: { value: false, message: "Нужно ввести здесь ваше сообщение" },
                                         maxLength: { value: 1618, message: "Сообщение не может быть больше 1618 символов" },
                                         minLength: { value: 4, message: "Сообщение должно быть длиннее 4 символов" }
                                     })}
@@ -309,8 +326,14 @@ export default function Questionnaire() {
                             </div>
                         </div>
                         <div className={style.RowButtonSend}>
-                            <button className={style.primary}>Отправить Заявку</button>
+                            <button
+                                className={`${style.primary} ${isSending ? style.sending : ''}`}
+                                disabled={isSending}
+                            >
+                                {isSending ? 'Отправляю...' : 'Отправить Заявку'}
+                            </button>
                         </div>
+                        {isSuccess && <p className={style.successMessage}>Данные с опросного листа получены, ожидайте ответа.</p>}
                     </form>
                 </div>
                 <WebSiteSections />
