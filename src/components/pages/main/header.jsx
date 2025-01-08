@@ -5,10 +5,17 @@ import { LuFactory } from "react-icons/lu";
 import { BiBuildingHouse } from "react-icons/bi";
 import { FiPhoneCall, FiMail, FiPhoneForwarded, FiList } from "react-icons/fi";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
+import PhoneCallBackModal from "./modals/callBack/callBack";
+import {useState} from 'react'
+import Modal from 'react-modal'
+
+Modal.setAppElement('#root')
 
 export default function Header() {
+    const [PhoneCallBack, setPhoneCallBack] = useState(false)
     return (
         <header className={style.header}>
+            <PhoneCallBackModal isOpen={PhoneCallBack} onRequestClose={() => setPhoneCallBack(false)} />
             <div className={style.сap}>
                 <div className={style.logo}>
                     <img src={Logo} className={style.logoImg} alt="logo"/>
@@ -35,7 +42,7 @@ export default function Header() {
             </div>
             <h1>Солнечная энергия для Вашего бизнеса и дома. <br />Ваш путь к экономии и независимости.</h1>
             <div className={style.buttonContainer}>
-                <button className={style.buttonOrder}>< FiPhoneForwarded style={{ fontSize: '1.5em', marginBottom: '-.2em', paddingRight: '.5rem'}} /> ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</button>
+                <button onClick={() => setPhoneCallBack(true)} className={style.buttonOrder}>< FiPhoneForwarded style={{ fontSize: '1.5em', marginBottom: '-.2em', paddingRight: '.5rem'}} /> ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</button>
                 <NavLink to='/questionnaire' className={style.buttonContacts}>< FiList style={{ fontSize: '1.5em', marginBottom: '-.2em', paddingRight: '.5rem'}} /> ЗАПОЛНИТЬ ОПРОСНЫЙ ЛИСТ</NavLink>
             </div>
             <p className={style.headerDescription}>Эффективные решения по установке солнечных станций для бизнеса и частных домов. Выбирайте свое будущее с солнечной энергией.</p>

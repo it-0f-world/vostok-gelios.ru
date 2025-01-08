@@ -3,7 +3,7 @@ import style from './questionnaire.module.css';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { LuImagePlus } from "react-icons/lu";
-import WebSiteSections from './webSiteSections'
+import WebSiteSections from './webSiteSections';
 
 export default function Questionnaire() {
     const { register, handleSubmit, reset, formState: { errors }, watch } = useForm();
@@ -122,6 +122,7 @@ export default function Questionnaire() {
                                     {...register("installationPower", {
                                         required: { value: true, message: "Нужно выбрать ориентировочную мощность установки" },
                                     })}
+                                    defaultValue=""
                                 >
                                     <option value="" disabled selected>
                                         Представляете ли вы, какой мощности установка вам нужна?
@@ -153,6 +154,7 @@ export default function Questionnaire() {
                                     {...register("installationType", {
                                         required: { value: true, message: "Нужно выбрать тип установки СЭС" },
                                     })}
+                                    defaultValue=""
                                 >
                                     <option value="" disabled selected>
                                         Выберите интересный вам тип установки
@@ -173,6 +175,7 @@ export default function Questionnaire() {
                                     {...register("installationObject", {
                                         required: { value: true, message: "Нужно выбрать тип объекта" },
                                     })}
+                                    defaultValue=""
                                 >
                                     <option value="" disabled selected>
                                         Выберите тип объекта
@@ -207,6 +210,7 @@ export default function Questionnaire() {
                                     {...register("objectPurpose", {
                                         required: { value: true, message: "Нужно выбрать цели и задачи проекта" },
                                     })}
+                                    defaultValue=""
                                 >
                                     <option value="" disabled selected>
                                         Выберите цели и задачи проекта
@@ -215,7 +219,7 @@ export default function Questionnaire() {
                                     <option value="Полная энергетическая автономия">Полная энергетическая автономия</option>
                                     <option value="Резервный источник питания">Резервный источник питания</option>
                                     <option value="Экологичное решение для бизнеса">Экологичное решение для бизнеса</option>
-                                    <option value="Другое (опишите, уникальные цели)">Другое (опишите, уникальные цели)</option>
+                                    <option value="Другое">Другое (опишите, уникальные цели)</option>
                                 </select>
                                 <span>{errors?.objectPurpose?.message}</span>
                             </div>
@@ -243,6 +247,7 @@ export default function Questionnaire() {
                                     {...register("expiration", {
                                         required: { value: false, message: "Нужно обозначить сроки реализации проекта" },
                                     })}
+                                    defaultValue=""
                                 >
                                     <option value="" disabled selected>
                                         Какой срок реализации проекта
@@ -260,6 +265,7 @@ export default function Questionnaire() {
                                     {...register("budget", {
                                         required: { value: false, message: "Нужно обозначить бюджет проекта" },
                                     })}
+                                    defaultValue=""
                                 >
                                     <option value="" disabled selected>
                                         Ваш бюджет на проект
@@ -278,6 +284,7 @@ export default function Questionnaire() {
                                     {...register("guarantee", {
                                         required: { value: false, message: "Нужна ли вам поддержка в обслуживании" },
                                     })}
+                                    defaultValue=""
                                 >
                                     <option value="" disabled selected>
                                         Нужна ли вам поддержка в обслуживании
