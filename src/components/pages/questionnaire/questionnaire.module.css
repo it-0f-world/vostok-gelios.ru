@@ -135,6 +135,21 @@ textarea:focus {
     color: #1b1f3d;
     border: 1px solid #1b1f3d;
 }
+.primary.sending {
+    background-color: #ffd700;
+    color: #1b1f3d;
+    border: 1px solid #1b1f3d;
+    cursor: not-allowed; /* Optional: prevent hover effect during sending */
+}
+.primary.sending:hover {
+    background-color: #ffd700;
+}
+.successMessage {
+    display: flex;
+    justify-content: center;
+    padding-top: .5rem;
+    color: #ff8c00;
+}
 /* Switch button style */
 .switch {
     position: relative;

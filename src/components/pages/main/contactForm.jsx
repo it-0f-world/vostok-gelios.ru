@@ -105,7 +105,7 @@ export default function ContactForm() {
                                     onChange={(e) => {
                                         const files = e.target.files;
                                         if (files.length > 16) {
-                                            alert("16 изображений максимум");
+                                            alert("16 файлов максимум");
                                             e.target.value = ""; // Clear the selection if too many files are selected
                                         }
                                     }}

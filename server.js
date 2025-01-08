@@ -26,11 +26,23 @@ app.post('/api/contactapi', upload.fields([
     { name: 'name', maxCount: 1 },
     { name: 'email', maxCount: 1 },
     { name: 'phone', maxCount: 1 },
+    { name: 'time', maxCount: 1 },
+    { name: 'installationPower', maxCount: 1 },
+    { name: 'installationPowerOwn', maxCount: 1 },
+    { name: 'installationType', maxCount: 1 },
+    { name: 'installationObject', maxCount: 1 },
+    { name: 'otherInstallationObject', maxCount: 1 },
+    { name: 'objectPurpose', maxCount: 1 },
+    { name: 'otherObjectPurpose', maxCount: 1 },
+    { name: 'expiration', maxCount: 1 },
+    { name: 'budget', maxCount: 1 },
+    { name: 'guarantee', maxCount: 1 },
+    { name: 'support', maxCount: 1 },
     { name: 'message', maxCount: 1 },
     { name: 'picture', maxCount: 16 }  // Handle up to 16 file uploads with the name 'picture'
 ]), async (req, res) => {
     // Extract the text fields and the uploaded files
-    const { name, email, phone, message } = req.body;
+    const { name, email, phone, time, installationPower, installationPowerOwn, installationType, installationObject, otherInstallationObject, objectPurpose, otherObjectPurpose, expiration, budget, guarantee, support, message } = req.body;
     const pictures = req.files['picture'];  // Get the uploaded files
 
     // Debugging: Log the form data
@@ -38,6 +50,18 @@ app.post('/api/contactapi', upload.fields([
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Phone:', phone);
+    console.log('Time:', time);
+    console.log('InstallationPower:', installationPower);
+    console.log('InstallationPowerOwn:', installationPowerOwn);
+    console.log('InstallationType:', installationType);
+    console.log('InstallationObject:', installationObject);
+    console.log('otherInstallationObject:', otherInstallationObject);
+    console.log('ObjectPurpose:', objectPurpose);
+    console.log('OtherObjectPurpose:', otherObjectPurpose);
+    console.log('Expiration:', expiration);
+    console.log('Budget:', budget);
+    console.log('Guarantee:', guarantee);
+    console.log('Support:', support);
     console.log('Message:', message);
     console.log('Files:', pictures);
 
@@ -61,12 +85,24 @@ app.post('/api/contactapi', upload.fields([
     const mailOptions = {
         from: API_KEY.user,
         to: '79278500916@ya.ru',  // The recipient email address
-        subject: `Contact form submission from ${name}`,
-        html: `<p>You have a new contact form submission</p><br>
-               <p><strong>Name:</strong> ${name}</p><br>
-               <p><strong>Email:</strong> ${email}</p><br>
-               <p><strong>Phone:</strong> ${phone}</p><br>
-               <p><strong>Message:</strong> ${message}</p><br>`,
+        subject: `Данные формы обратной связи с vostok-gelios.ru от ${name}`,
+        html: `<p><strong>ВОСТОК-ГЕЛИОС получил новые данные с формы обратной связи:</strong></p>
+               <p><strong>Имя:</strong> ${name}</p>
+               <p><strong>Email:</strong> ${email}</p>
+               <p><strong>Телефон:</strong> ${phone}</p>
+               <p><strong>Время:</strong> ${time}</p>
+               <p><strong>Мощность установки:</strong> ${installationPower}</p>
+               <p><strong>Собственная мощность установки:</strong> ${installationPowerOwn}</p>
+               <p><strong>Тип установки:</strong> ${installationType}</p>
+               <p><strong>Объект установки:</strong> ${installationObject}</p>
+               <p><strong>Другой объект установки:</strong> ${otherInstallationObject}</p>
+               <p><strong>Цель установки:</strong> ${objectPurpose}</p>
+               <p><strong>Другая цель установки:</strong> ${otherObjectPurpose}</p>
+               <p><strong>Срок службы:</strong> ${expiration}</p>
+               <p><strong>Бюджет:</strong> ${budget}</p>
+               <p><strong>Гарантия:</strong> ${guarantee}</p>
+               <p><strong>Поддержка:</strong> ${support}</p>
+               <p><strong>Сообщение:</strong> ${message}</p>`,
         attachments: [], // Initialize empty attachments array
     };
 

@@ -3,12 +3,10 @@ import style from './questionnaire.module.css';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { LuImagePlus } from "react-icons/lu";
-
 import WebSiteSections from './webSiteSections'
 
 export default function Questionnaire() {
     const { register, handleSubmit, reset, formState: { errors }, watch } = useForm();
-    const [support, setSupport] = useState(false); // Track switch button state (false = "No", true = "Yes")
     const [isSending, setIsSending] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
@@ -20,6 +18,18 @@ export default function Questionnaire() {
         formData.append('name', data.name);
         formData.append('email', data.email);
         formData.append('phone', data.phone);
+        formData.append('time', data.time);
+        formData.append('installationPower', data.installationPower);
+        formData.append('installationPowerOwn', data.installationPowerOwn);
+        formData.append('installationType', data.installationType);
+        formData.append('installationObject', data.installationObject);
+        formData.append('otherInstallationObject', data.otherInstallationObject);
+        formData.append('objectPurpose', data.objectPurpose);
+        formData.append('otherObjectPurpose', data.otherObjectPurpose);
+        formData.append('expiration', data.expiration);
+        formData.append('budget', data.budget);
+        formData.append('guarantee', data.guarantee);
+        formData.append('support', data.support ? "Yes" : "No");  // For checkbox support
         formData.append('message', data.message);
         // Handle file inputs
         const pictureInput = document.querySelector('input[name="picture"]');
@@ -125,8 +135,8 @@ export default function Questionnaire() {
                                 <div className={style.Row}>
                                     <input
                                         type="text"
-                                        name="installationPowerWatt"
-                                        {...register("installationPowerWatt", {
+                                        name="installationPowerOwn"
+                                        {...register("installationPowerOwn", {
                                             required: {
                                                 value: true,
                                                 message: "Укажите мощность установки в кВт",
@@ -134,7 +144,7 @@ export default function Questionnaire() {
                                         })}
                                         placeholder="Укажите мощность установки в кВт"
                                     />
-                                    <span>{errors?.installationPowerWatt?.message}</span>
+                                    <span>{errors?.installationPowerOwn?.message}</span>
                                 </div>
                             )}
                             <div className={style.Row}>
@@ -159,8 +169,8 @@ export default function Questionnaire() {
                         <div className={style.combineRow}>
                             <div className={style.Row}>
                                 <select
-                                    name="object"
-                                    {...register("object", {
+                                    name="installationObject"
+                                    {...register("installationObject", {
                                         required: { value: true, message: "Нужно выбрать тип объекта" },
                                     })}
                                 >
@@ -175,12 +185,12 @@ export default function Questionnaire() {
                                 </select>
                                 <span>{errors?.object?.message}</span>
                             </div>
-                            {watch("object") === "Другое" && (
+                            {watch("installationObject") === "Другое" && (
                                 <div className={style.Row}>
                                     <input
                                         type="text"
-                                        name="otherObject"
-                                        {...register("otherObject", {
+                                        name="otherInstallationObject"
+                                        {...register("otherInstallationObject", {
                                             required: {
                                                 value: true,
                                                 message: "Укажите свой тип объекта",
@@ -188,7 +198,7 @@ export default function Questionnaire() {
                                         })}
                                         placeholder="Укажите тип объекта"
                                     />
-                                    <span>{errors?.otherObject?.message}</span>
+                                    <span>{errors?.otherInstallationObject?.message}</span>
                                 </div>
                             )}
                             <div className={style.Row}>
@@ -264,8 +274,8 @@ export default function Questionnaire() {
                             </div>
                             <div className={style.Row}>
                                 <select
-                                    name="support"
-                                    {...register("support", {
+                                    name="guarantee"
+                                    {...register("guarantee", {
                                         required: { value: false, message: "Нужна ли вам поддержка в обслуживании" },
                                     })}
                                 >
@@ -276,7 +286,7 @@ export default function Questionnaire() {
                                     <option value="Нет, достаточно базовой гарантии">Нет, достаточно базовой гарантии</option>
                                     <option value="Еще не решил(а)">Еще не решил(а)</option>
                                 </select>
-                                <span>{errors?.support?.message}</span>
+                                <span>{errors?.guarantee?.message}</span>
                             </div>
                         </div>
                         <div className={style.combineRow}>
@@ -285,8 +295,8 @@ export default function Questionnaire() {
                                 <label className={style.switch}>
                                     <input
                                         type="checkbox"
-                                        checked={support}
-                                        onChange={() => setSupport(prev => !prev)}
+                                        name="support"
+                                        {...register("support")}  // Register the checkbox with react-hook-form
                                     />
                                     <span className={style.slider}></span>
                                 </label>
@@ -302,7 +312,7 @@ export default function Questionnaire() {
                                     onChange={(e) => {
                                         const files = e.target.files;
                                         if (files.length > 16) {
-                                            alert("16 изображений максимум");
+                                            alert("16 файлов максимум");
                                             e.target.value = ""; // Clear the selection if too many files are selected
                                         }
                                     }}
