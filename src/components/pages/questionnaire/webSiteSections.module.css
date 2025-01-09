@@ -49,6 +49,7 @@
 .rules p {
     font-family: "Roboto";
     font-size: .8rem;
+    text-align: justify;
 }
 .line {
     background-color: #1B1F3D;
@@ -56,4 +57,21 @@
     margin-right: 10px;
     height: auto; /* Change this to auto for flexibility */
     align-self: stretch; /* This will make it stretch to the height of the parent */
+}
+@media only screen and (max-width: 1240px) {
+    .wrapper {
+        flex-wrap: wrap;
+    }
+    .container {
+        flex-wrap: wrap;
+        overflow: visible;
+    }
+    .pages {
+        flex: 1 1 280px;
+        max-height: 90px;
+        
+    }
+    .pages a {
+        max-height: 90px;
+    }
 }

@@ -115,7 +115,7 @@ export default function Questionnaire() {
                                 <span>{errors?.time?.message}</span>
                             </div>
                         </div>
-                        <div className={style.combineRowWithColumns}>
+                        <div className={style.combineRow}>
                             <div className={style.Row}>
                                 <select
                                     name="installationPower"
@@ -223,7 +223,7 @@ export default function Questionnaire() {
                                 </select>
                                 <span>{errors?.objectPurpose?.message}</span>
                             </div>
-                            {watch("objectPurpose") === "Другое (опишите, уникальные цели)" && (
+                            {watch("objectPurpose") === "Другое" && (
                                 <div className={style.Row}>
                                     <input
                                         type="text"
@@ -297,7 +297,7 @@ export default function Questionnaire() {
                             </div>
                         </div>
                         <div className={style.combineRow}>
-                            <div className={style.Row}>
+                            <div className={`${style.Row} ${style.RowBottom}`}>
                                 <p>Хотите ли вы предварительную консультацию от нашего специалиста?</p>
                                 <label className={style.switch}>
                                     <input
@@ -308,7 +308,7 @@ export default function Questionnaire() {
                                     <span className={style.slider}></span>
                                 </label>
                             </div>
-                            <div className={style.Row}>
+                            <div className={`${style.Row} ${style.RowBottom}`}>
                                 <label htmlFor="picture" className={style.customFileLabel}><LuImagePlus style={{ paddingRight: '.5rem' }} /> загрузить фото</label>
                                 <input
                                     type="file"
@@ -328,7 +328,7 @@ export default function Questionnaire() {
                         </div>
                         <div className={style.Col}>
                             <p>Есть ли у вас вопросы или комментарии?</p>
-                            <div className={style.Row}>
+                            <div className={style.RowMessage}>
                                 <textarea
                                     type="text"
                                     name="message"
