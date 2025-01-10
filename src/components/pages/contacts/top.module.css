@@ -1,4 +1,4 @@
-.container {
+.wrapper {
     display: flex;
     flex-direction: column;
     padding: 2rem 12rem;
@@ -11,24 +11,28 @@
     color: #133449;
     font-weight: 600;
 }
-.logoContainer {
+.container {
     display: flex;
     padding: 2rem 0;
     gap: 2rem;
+    justify-content: space-between;
 }
 .logoSlogan {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #133449;
+
 }
 .logoDescription {
     display: flex;
     flex-direction: column;
+
 }
 .logoSlogan h2 {
     font-size: 5rem;
     font-weight: 400;
+    white-space: nowrap;
 }
 .logoSlogan p {
     font-size: 2rem;
@@ -110,7 +114,7 @@
     flex-grow: 1;
     justify-content: center;
     background-color: white;
-    height: 80px;
+    max-height: 80px;
 }
 .variants a {
     color: #133449;
@@ -154,22 +158,22 @@
     padding-right: .5rem;
 }
 @media only screen and (max-width: 2240px) {
-    .container {
+    .wrapper {
         padding: 2rem 8rem;
     }
 }
 @media only screen and (max-width: 2120px) {
-    .container {
+    .wrapper {
         padding: 2rem 4rem;
     }
 }
 @media only screen and (max-width: 1974px) {
-    .container {
+    .wrapper {
         padding: 2rem;
     }
 }
 @media only screen and (max-width: 1920px) {
-    .container {
+    .wrapper {
         padding: 2rem 1rem 0;
     }
     .logotype {
@@ -184,15 +188,15 @@
     .description {
         display: none;
     }
+    .title {
+        font-size: 3.2rem;
+    }
 }
 @media only screen and (max-width: 1600px) {
     .variants {
         display: none;
     }
-    .title {
-        font-size: 3.2rem;
-    }
-    .logoContainer {
+    .container {
         padding: 1rem 0;
     }
     .logotype {
@@ -209,7 +213,7 @@
     }
 }
 @media only screen and (max-width: 1340px) {
-    .logoContainer {
+    .container {
         flex-direction: column;
         gap: .66rem;
     }
@@ -237,7 +241,7 @@
     }
 }
 @media only screen and (max-width: 760px) {
-    .logoContainer {
+    .container {
         padding: 0;
     }
     .buttonContainer {
@@ -266,7 +270,7 @@
     }
 }
 @media only screen and (max-width: 540px) {
-    .container {
+    .wrapper {
         padding-top: 4rem;
     }
     .title {
@@ -280,7 +284,7 @@
     .title {
         display: none;
     }
-    .container {
+    .wrapper {
         padding-top: 1.6rem;
     }
 }
@@ -294,7 +298,7 @@
     }
 }
 @media only screen and (max-width: 380px) {
-    .container {
+    .wrapper {
         padding-top: 3.2rem;
     }
     .logotype {

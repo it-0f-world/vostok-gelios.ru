@@ -8,14 +8,12 @@
     border: 1px solid #1B1F3D;
     border-radius: .25rem;
     align-items: center;
-    overflow: hidden;
     margin: .3rem 0 0;
 }
 .pages {
     display: flex;
     flex: 1;
     font-size: 1.4rem;
-    height: 100%;
     align-items: center;
     justify-content: center;
     padding: 1rem;
@@ -30,7 +28,7 @@
 .pages:hover .icon {
     color: #ff8c00; /* Change buttonIcon styles when varItem is hovered */
 }
-.divider {
+.divider, .divider1, .divider2, .divider3 {
     height: 80%;
     width: 2px;
     background-color: #0b3d91;
@@ -59,8 +57,8 @@
     align-self: stretch; /* This will make it stretch to the height of the parent */
 }
 @media only screen and (max-width: 1240px) {
-    .wrapper {
-        flex-wrap: wrap;
+    .divider {
+        display: none;
     }
     .container {
         flex-wrap: wrap;
@@ -68,10 +66,6 @@
     }
     .pages {
         flex: 1 1 280px;
-        max-height: 90px;
-        
-    }
-    .pages a {
-        max-height: 90px;
+        padding: .5rem;
     }
 }

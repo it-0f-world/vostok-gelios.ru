@@ -60,7 +60,12 @@ export default function PhoneCallBackModal({ isOpen, onRequestClose }) {
         >
             <div className={style.wrapper}>
                 <div className={style.container}>
-                    <h2>Заказать обратный звонок</h2>
+                    <div className={style.headerAndClose}>
+                        <h2>Заказать обратный звонок</h2>
+                        <button onClick={onRequestClose} className={style.CloseModalMobile}>
+                            <ImCross />
+                        </button>
+                    </div>
                     <form onSubmit={handleSubmit(onSubmitForm)}>
                         <div className={style.combineRow}>
                             <InputField

@@ -11,8 +11,6 @@
     border-radius: .5rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     padding: 1rem;
-    min-width: 600px;
-    padding-right: 2.5rem;
     flex: 1;
 }
 .container h2 {
@@ -26,13 +24,13 @@
 .Row {
     margin-bottom: 10px;
     display: flex;
-    flex-direction: column;
     flex: 1; /* This will make all .Row elements take equal space */
+    min-width: 230px;
 }
 .combineRow {
     display: flex;
-    gap: 2rem;
     width: 100%; /* Ensure full width */
+    gap: .5rem;
 }
 .Row span {
     font-size: .8rem;
@@ -40,9 +38,9 @@
     color: #ff8c00;
 }
 /* Input and textarea styles */
-input[type="text"],
-input[type="phone"],
-input[type="time"] {
+.Row input[type="text"],
+.Row input[type="phone"],
+.Row input[type="time"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #1b1f3d;
@@ -53,9 +51,9 @@ input[type="time"] {
     transition: border-color 0.3s ease;
 }
 /* Change border color on focus */
-input[type="text"]:focus,
-input[type="phone"]:focus,
-input[type="time"]:focus {
+.Row input[type="text"]:focus,
+.Row input[type="phone"]:focus,
+.Row input[type="time"]:focus {
     border-color: #ff8c00;
 }
 /* Button container */
@@ -108,60 +106,44 @@ input[type="time"]:focus {
     color: #ffd700;
     cursor: pointer;
 }
-@media only screen and (max-width: 1600px) {
-    .container {
-        padding: 2rem 3rem 2rem 2rem;
-    }
+.CloseModalMobile {
+    display: none;
 }
-@media only screen and (max-width: 1160px) {
-    .wrapper {
-        flex-direction: column;
-    }
-    .container {
-        margin-bottom: 0;
-        border-radius: .5rem .5rem 0 0;
-    }
-}
-@media only screen and (max-width: 840px) {
-    .container {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-}
-@media only screen and (max-width: 800px) {
-    .wrapper {
-        padding: 1.6rem;
-    }
-    .container {
-        max-width: 440px;
-        align-self: center;
-    }
-}
-@media only screen and (max-width: 520px) {
-    .combineRow, .combineRow1 {
+@media only screen and (max-width: 820px) {
+    .combineRow {
         flex-direction: column;
         gap: 0;
     }
-    .container {
-        min-width: auto;
-    }
-    .container h2 {
-        font-size: 2rem;
-    }
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 740px) {
     .container h2 {
         font-size: 1.6rem;
     }
 }
-@media only screen and (max-width: 420px) {
-    .wrapper {
-        padding: 1rem .25rem;
+@media only screen and (max-width: 720px) {
+    .headerAndClose {
+        display: flex;
+        justify-content: space-between;
+    }
+    .CloseModal {
+        display: none;
+    }
+    .CloseModalMobile {
+        display: flex;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-right: -.5rem;
+        color: #ff8c00;
+        border: none;
+        background-color: transparent;
+    }
+    .CloseModalMobile:hover {
+        color: #ffd700;
+        cursor: pointer;
     }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 560px) {
     .container {
-        padding-left: 1.2rem;
-        padding-right: 2.4rem;
+        padding: 1rem .5rem;
     }
 }

@@ -5,12 +5,19 @@ import { Gi3dStairs, GiCalculator , GiElectricalSocket  } from "react-icons/gi";
 import { FiPhoneForwarded, FiList } from "react-icons/fi";
 import { LuFactory } from "react-icons/lu";
 import { BiBuildingHouse } from "react-icons/bi";
+import PhoneCallBackModal from "../main/modals/callBack/callBack";
+import {useState} from 'react'
+import Modal from 'react-modal'
+
+Modal.setAppElement('#root')
 
 const Top = () => {
+    const [PhoneCallBack, setPhoneCallBack] = useState(false)
     return (
-        <div className={style.container}>
+        <div className={style.wrapper}>
+            <PhoneCallBackModal isOpen={PhoneCallBack} onRequestClose={() => setPhoneCallBack(false)} />
             <h1 className={style.title}>Свяжитесь с нами</h1>
-            <div className={style.logoContainer}>
+            <div className={style.container}>
                 <div className={style.logoSlogan}>
                     <img src={logo} alt="логотип ООО Восток Гелиос" className={style.logotype} />
                     <h2>ВОСТОК ГЕЛИОС</h2>
@@ -38,7 +45,7 @@ const Top = () => {
                         </div>
                     </div>
                     <div className={style.buttonContainer}>
-                        <button className={style.buttonOrder}><FiPhoneForwarded className={style.buttonsIcons} /> ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</button>
+                        <button onClick={() => setPhoneCallBack(true)} className={style.buttonOrder}><FiPhoneForwarded className={style.buttonsIcons} /> ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</button>
                         <NavLink to='/questionnaire' className={style.buttonContacts}><FiList className={style.buttonsIcons} /> ЗАПОЛНИТЬ ОПРОСНЫЙ ЛИСТ</NavLink>
                     </div>
                     <div className={style.description}>
