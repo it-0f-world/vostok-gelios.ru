@@ -186,7 +186,7 @@ export default function Questionnaire() {
                                     <option value="Промышленный объект">Промышленный объект</option>
                                     <option value="Другое">Другое (укажите тип объекта)</option>
                                 </select>
-                                <span>{errors?.object?.message}</span>
+                                <span>{errors?.installationObject?.message}</span>
                             </div>
                             {watch("installationObject") === "Другое" && (
                                 <div className={style.Row}>

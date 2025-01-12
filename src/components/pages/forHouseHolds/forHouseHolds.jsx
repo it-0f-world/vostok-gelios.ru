@@ -1,6 +1,5 @@
 import Header from './header'
 import Profitability from './profitability'
-import HowItWorks from './howItWorks'
 import InstallationStages from '../forIndustrial/installationStages'
 import HireUs from '../forIndustrial/hireUs'
 import WhyUs from '../forIndustrial/whyUs'

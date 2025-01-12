@@ -3,7 +3,7 @@ import dron from './img/dron.svg'
 import counter from './img/analysis.svg'
 import bus from './img/logistic.svg'
 import solarPanel from './img/instalation.svg'
-import { LuArrowRightSquare } from "react-icons/lu";
+import { LuSquareArrowRight } from "react-icons/lu";
 
 export default function installationStages () {
     return (
@@ -19,7 +19,7 @@ export default function installationStages () {
                     <p className={style.highlight}>1 день</p>
                 </li>
                 <li className={style.stageArrow}>
-                    <div className={style.arrow}><LuArrowRightSquare /></div>
+                    <div className={style.arrow}><LuSquareArrowRight /></div>
                 </li>
                 <li className={style.stage}>
                     <div className={style.icon}>
@@ -30,7 +30,7 @@ export default function installationStages () {
                     <p className={style.highlight}>10 дней</p>
                 </li>
                 <li className={style.stageArrow}>
-                    <div className={style.arrow}><LuArrowRightSquare /></div>
+                    <div className={style.arrow}><LuSquareArrowRight /></div>
                 </li>
                 <li className={style.stage}>
                     <div className={style.icon}>
@@ -41,7 +41,7 @@ export default function installationStages () {
                     <p className={style.highlight}>2 недели</p>
                 </li>
                 <li className={style.stageArrow}>
-                    <div className={style.arrow}><LuArrowRightSquare /></div>
+                    <div className={style.arrow}><LuSquareArrowRight /></div>
                 </li>
                 <li className={style.stage}>
                     <div className={style.icon}>
